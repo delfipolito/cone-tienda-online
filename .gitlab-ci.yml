@@ -52,7 +52,7 @@ deploy develop:
   tags:
     - uy-shared-services-noprod
   environment:
-    name: development
+    name: develop
   before_script:
     - kubectl get namespace
     - kubectl get namespace "${NAMESPACE_K8S}"
