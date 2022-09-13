@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY . .
-RUN npm i --loglevel verbose
+RUN npm i
 RUN npm install -g nodemon mocha supervisor
 
 # Set grants SA and bundle app source
