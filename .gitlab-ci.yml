@@ -54,6 +54,7 @@ deploy develop:
   environment:
     name: development
   before_script:
+    - kubectl get namespace
     - kubectl get namespace "${NAMESPACE_K8S}"
     - kubectl get pods -n "${NAMESPACE_K8S}"
   script:
