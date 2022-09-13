@@ -5,11 +5,13 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY . .
-RUN npm i
-RUN npm install -g nodemon mocha supervisor
+RUN yarn install
 
 # Set grants SA and bundle app source
 RUN chown -R node:node .
+
+# Build App
+RUN yarn build
 
 # Change SA
 USER node
