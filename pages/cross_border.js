@@ -17,7 +17,7 @@ export default function CrossBorder() {
                         </Col>
                         <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/cross_border_settlements.png")} alt="Wallet as Service illustration" className="img-fluid" />
+                                <Image src={require("../public/assets/products/cross_border_settlements.svg")} alt="Cross Border Settlements illustration" className="img-fluid" />
                             </div>
                         </Col>
                     </Row>

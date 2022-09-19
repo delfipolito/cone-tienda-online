@@ -17,7 +17,7 @@ export default function CryptoCheckout() {
                         </Col>
                         <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/crypto_checkout.png")} alt="Crypto Checkout illustration" className="img-fluid" />
+                                <Image src={require("../public/assets/products/crypto_checkout.svg")} alt="Crypto Checkout illustration" className="img-fluid" />
                             </div>
                         </Col>
                     </Row>

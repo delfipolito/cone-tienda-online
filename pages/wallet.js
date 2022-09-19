@@ -17,7 +17,7 @@ export default function Wallet() {
                         </Col>
                         <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/wallet_as_service.png")} alt="Wallet as Service illustration" className="img-fluid" />
+                                <Image src={require("../public/assets/products/wallet_as.svg")} alt="Wallet as Service illustration" className="img-fluid" />
                             </div>
                         </Col>
                     </Row>
