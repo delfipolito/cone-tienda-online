@@ -2623,8 +2623,6 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
 }
 
 .form-check-input[type=checkbox] {
@@ -8572,7 +8570,7 @@ fieldset:disabled .btn {
 }
 
 .fs-8 {
-  font-size: .8rem !important;
+  font-size: .7rem !important;
 }
 
 .fst-italic {
@@ -12378,6 +12376,136 @@ header.masthead {
   background-size: cover;
 }
 
+@media (max-width: 1000px) {
+  header.mobile-masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 0, 0.5) 100%),
+      url("../public/assets/img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .home-video{
+    display: none;
+  }
+  .pt-6 {
+    margin-top: 3rem!important;
+  }
+  header {
+    padding-top: 10rem!important;
+    padding-bottom: 25rem!important;
+  }
+}
+@media (max-width: 800px) {
+  header.mobile-masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 0, 0.5) 100%),
+      url("../public/assets/img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .home-video{
+    display: none;
+  }
+  .pt-6 {
+    margin-top: 3rem!important;
+  }
+  header {
+    padding-top: 10rem!important;
+    padding-bottom: 25rem!important;
+  }
+}
+
+@media (max-width: 650px) {
+  header.mobile-masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 0, 0.5) 100%),
+      url("../public/assets/img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .home-video{
+    display: none;
+  }
+  .pt-6 {
+    margin-top: 3rem!important;
+  }
+  header {
+    padding-top: 10rem!important;
+    padding-bottom: 20rem!important;
+  }
+}
+/* Z-position */
+.z-front-1 {
+  z-index: 2000;
+}
+@media (max-width: 500px) {
+  header.mobile-masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 0, 0.5) 100%),
+      url("../public/assets/img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .home-video{
+    display: none;
+  }
+  .pt-6 {
+    margin-top: 3rem!important;
+  }
+  header {
+    padding-top: 10rem!important;
+    padding-bottom: 20rem!important;
+  }
+}
+/* Z-position */
+.z-front-1 {
+  z-index: 2000;
+}
+
+.z-front-2 {
+  z-index: 3000;
+}
+
+.z-back-1 {
+  z-index: -2000;
+}
+
+.absolute-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Header text vertical align */
+.pt-6 {
+  padding-top: 8rem!important;
+}
+
+@media (max-width: 1200px){
+  .pt-6 {
+    padding-top: 2rem!important;
+  }
+
+}
+
 header.masthead h1,
 header.masthead .h1 {
   font-size: 2.25rem;
@@ -12495,6 +12623,7 @@ header.masthead .h1 {
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 200 !important;
+  font-size: .8rem !important;
 }
 
 
@@ -12508,14 +12637,6 @@ header.masthead .h1 {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-}
-
-.rotated {
-  -webkit-transform: rotate(-90deg) !important;
-  -moz-transform: rotate(-90deg) !important;
-  -ms-transform: rotate(-90deg) !important;
-  -o-transform: rotate(-90deg) !important;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
 }
 
 
@@ -12730,13 +12851,10 @@ iframe {
 }
 
 @media (max-width: 750px) {
-  #background-video {
-    display: none;
-  }
 
   .about-masthead {
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 4.5rem);
+    padding-top: 1rem;
+    padding-bottom: calc(1rem - 4.5rem);
     background: url("../public/assets/img/bg-about-koi.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -12744,10 +12862,6 @@ iframe {
     background-size: cover;
   }
 
-  .img-mobile {
-    width: 200px;
-    height: 200px;
-  }
 }
 
 .row-press {

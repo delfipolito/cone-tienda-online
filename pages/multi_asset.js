@@ -17,7 +17,7 @@ export default function MultiAsset() {
                         </Col>
                         <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/asset_issuing_platform.png")} alt="Asset Issuing Platform illustration" className="img-fluid" />
+                                <Image src={require("../public/assets/products/issuing_platform.svg")} alt="Asset Issuing Platform illustration" className="img-fluid" />
                             </div>
                         </Col>
                     </Row>

@@ -17,7 +17,7 @@ export default function CryptoService() {
                         </Col>
                         <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/crypto_service.png")} alt="Crypto Service illustration" className="img-fluid" />
+                                <Image src={require("../public/assets/products/crypto_service.svg")} alt="Crypto Service illustration" className="img-fluid" />
                             </div>
                         </Col>
                     </Row>

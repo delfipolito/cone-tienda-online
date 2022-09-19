@@ -12,7 +12,7 @@ export default function About() {
           <Row>
             <Col md={12} sm={12} lg={12} className="text-center p-0">
               <video className="about-video" id="background-video" autoPlay loop muted poster="/assets/img/bg-about-koi.jpg">
-                <source src="/assets/video_about_us.mp4" type="video/mp4" />
+                <source src="https://koibanx.com/videos/AboutUs.mp4" type="video/mp4" />
               </video>
             </Col>
           </Row>
@@ -70,15 +70,16 @@ export default function About() {
           <Row className="text-white gx-5">
             <Col sm={12} md={3} lg={3} className="gx-5">
               <Row className="d-flex align-items-center">
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <Image
-                    src={require("../public/assets/img/leo-elduayen.png")}
+                    src="/assets/img/leo-elduayen.png"
                     alt="Leo Elduayen Photo"
                     className="img-fluid my-5 img-mobile"
-                    style={{ height: "auto" }}
+                    width={200}
+                    height={200}
                   />
                 </Col>
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <h6>Leo Elduayen</h6>
                   <p className="font-p">Co Founder & CEO</p>
                   <p className="font-p">VP Bitcoin Argentina ONG. Crypto Pioneer. Abogado Coder. Trabajó previamente en MercadoLibre (Nasdaq: Meli) y Philip Morris International.</p>
@@ -95,15 +96,16 @@ export default function About() {
             </Col>
             <Col sm={12} md={3} lg={3} className="gx-5">
               <Row className="d-flex align-items-center">
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <Image
-                    src={require("../public/assets/img/edy-weber.png")}
+                    src="/assets/img/edy-weber.png"
                     alt="Edy Weber Photo"
                     className="img-fluid my-5 img-mobile"
-                    style={{ height: "auto" }}
+                    width={200}
+                    height={200}
                   />
                 </Col>
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <h6>Edy Weber</h6>
                   <p className="font-p">Co Founder & CEO</p>
                   <p className="font-p">Ingeniero en sistemas. Web Pioneer. +25 años de experiencia liderando el área de IT de distintas empresas como Clarín, Staples y Arcos Dorados.</p>
@@ -120,15 +122,16 @@ export default function About() {
             </Col>
             <Col sm={12} md={3} lg={3} className="gx-5">
               <Row className="d-flex align-items-center">
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <Image
-                    src={require("../public/assets/img/lety-lopez.png")}
+                    src="/assets/img/lety-lopez.png"
                     alt="Lety Lopez Photo"
                     className="img-fluid my-5 img-mobile"
-                    style={{ height: "auto" }}
+                    width={200}
+                    height={200}
                   />
                 </Col>
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <h6>Lety Lopez Tiznado</h6>
                   <p className="font-p">Chief of Staff</p>
                   <p className="font-p">Chief of Staff to the CEO of Koibanx. Economist and Public Policy Specialist. +9 years of professional experience across the public and private sector.</p>
@@ -145,15 +148,16 @@ export default function About() {
             </Col>
             <Col sm={12} md={3} lg={3} className="gx-5">
               <Row className="d-flex align-items-center">
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <Image
-                    src={require("../public/assets/img/fran-mayora.png")}
+                    src="/assets/img/fran-mayora.png"
                     alt="Fran Mayora Photo"
                     className="img-fluid my-5 img-mobile"
-                    style={{ height: "auto" }}
+                    width={200}
+                    height={200}
                   />
                 </Col>
-                <Col sm={6} md={12} lg={12}>
+                <Col xs={6} sm={6} md={12} lg={12}>
                   <h6>Fran Mayora</h6>
                   <p className="font-p">CFO</p>
                   <p className="font-p">Economista, Magíster en Finanzas, CFA. +10 años de experiencia en mercados financieros, especializado en pricing y estructuración financiera.</p>
