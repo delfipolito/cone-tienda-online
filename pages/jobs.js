@@ -30,14 +30,14 @@ export default function Jobs() {
         </Container>
         <Container className="px-4 px-lg-5 py-4 text-white">
           <Row>
-            <Col md={11} lg={11} className="text-left">
+            <Col xs={11} md={11} lg={11} className="text-left">
               <Row className="gy-5 gx-lg-5">
                 {jobs && jobs.map((job) => (
                   <Job title={job.title} description={job.description} key={job.title} />
                 ))}
               </Row>
             </Col>
-            <Col md={1} lg={1} className="text-center">
+            <Col xs={1} md={1} lg={1} className="text-center">
               <Image
                 src={require("../public/assets/img/jobs.svg")}
                 alt="Products section"

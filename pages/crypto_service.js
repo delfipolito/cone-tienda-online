@@ -65,7 +65,7 @@ export default function CryptoService() {
                 </Container>
                 <Container className="px-4 pt-5 pt-sm-5 px-lg-5">
                     <Row className="pt-5 ge-5 d-flex align-items-center">
-                        <Col sm={11} md={11} lg={11}>
+                        <Col xs={11} sm={11} md={11} lg={11}>
                             <Row className="d-flex align-items-center gx-5">
                                 <Col sm={12} md={3} lg={3} className="ps-0 pe-5 pe-sm-0 pe-md-0 pe-lg-0">
                                     <Image
@@ -74,7 +74,6 @@ export default function CryptoService() {
                                         className="pe-5 pe-lg-3 img-fluid"
                                         style={{ height: "auto" }}
                                     />
-                                    <p className="font-p text-white">Breve descripción del proyecto</p>
                                 </Col>
                                 <Col sm={12} md={3} lg={3} className="ps-0 pe-5 pe-sm-0 pe-md-0 pe-lg-0">
                                     <Image
@@ -83,11 +82,10 @@ export default function CryptoService() {
                                         className="pe-5 pe-lg-3 img-fluid"
                                         style={{ height: "auto" }}
                                     />
-                                    <p className="font-p text-white">Breve descripción del proyecto</p>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col sm={1} md={1} lg={1} className="text-center">
+                        <Col xs={1} sm={1} md={1} lg={1} className="text-center">
                             <Image
                                 src={require("../public/assets/img/cases.svg")}
                                 alt="Products section"
