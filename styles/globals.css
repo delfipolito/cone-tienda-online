@@ -12886,3 +12886,48 @@ iframe {
   padding-right: 6em;
   padding-left: 8em;
 }
+
+
+@media only screen and (max-width: 1025px) {
+.desktop-press {
+  display: none;
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mobil-press {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobil-press  {
+    display: none;
+  }
+}
+
+.container-button {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.container-button .btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.btn-holder {
+  width: 50px!important;
+}
+
+.carousel-inner{
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-inner{
+    height: 380px!important;
+    font-size: .6rem!important;
+  }
+}

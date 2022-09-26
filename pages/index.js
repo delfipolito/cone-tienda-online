@@ -95,83 +95,93 @@ export default function Home() {
         </Container>
       </section>
       <section className="sections" id="products">
-        <Container className="px-4 px-lg-5 py-4 text-white">
-          <Row>
+        <Container className="px-4 px-lg-5 py-4 text-white pb-5">
+          <Row className="pb-5">
             <Col xs={11} md={11} lg={11} sm={11} className="text-left">
               <Row className="gy-5 gx-lg-5">
-                <Col sm={12} md={4} lg={4}>
+                <Col sm={12} md={4} lg={4} className="container-button">
+                  <div>
                   <h5 className="fs-6">Wallet as a service</h5>
                   <p className="font-p fs-8">
                     We connect your mobile banking app, wallet or payment
                     channel to our platform, enabling to transfer, trade,
                     collect in any tokenized asset…
                   </p>
-                  <Link href="/wallet" passHref>
+                  </div>
+                  <Link href="/wallet" className="btn-holder" passHref>
                     <Button
-                      className="rounded-pill fs-8"
+                      className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
                       Learn More
                     </Button>
                   </Link>
                 </Col>
-                <Col md={4} lg={4} sm={12}>
+                <Col md={4} lg={4} sm={12} className="container-button">
+                  <div>
                   <h5 className="fs-6">Crypto as a service</h5>
                   <p className="font-p fs-8">
                     Cryptocurrencies infrastructure for your channels. Plug and
                     play solution, we enable banks and digital wallets to give
                     their own customers…
                   </p>
-                  <Link href="/crypto_service" passHref>
+                  </div>
+                  <Link href="/crypto_service" className="btn-holder" passHref>
                     <Button
-                      className="rounded-pill fs-8"
+                      className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
                       Learn More
                     </Button>
                   </Link>
                 </Col>
-                <Col md={4} lg={4} sm={12}>
+                <Col md={4} lg={4} sm={12} className="container-button">
+                  <div>
                   <h5 className="fs-6">Crypto check out</h5>
                   <p className="font-p fs-8">
                     Enable your merchants, e-commerce platform, collecting
                     provider and gateways to receive payments in any
                     cryptocurrency. Payments can be credited…
                   </p>
-                  <Link href="/crypto_checkout" passHref>
+                  </div>
+                  <Link href="/crypto_checkout" className="btn-holder" passHref>
                     <Button
-                      className="rounded-pill fs-8"
+                      className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
                       Learn More
                     </Button>
                   </Link>
                 </Col>
-                <Col md={4} lg={4} sm={12}>
+                <Col md={4} lg={4} sm={12} className="container-button">
+                  <div>
                   <h5 className="fs-6">Issuing platform</h5>
                   <p className="font-p fs-8">
                     Deploy your own platform to issue, trade and exchange
                     digital assets. Minting series of security, utility and
                     asset backed tokens with management and market features…
                   </p>
-                  <Link href="/multi_asset" passHref>
+                  </div>
+                  <Link href="/multi_asset" className="btn-holder" passHref>
                     <Button
-                      className="rounded-pill fs-8"
+                      className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
                       Learn More
                     </Button>
                   </Link>
                 </Col>
-                <Col md={4}>
+                <Col md={4} lg={4} sm={12} className="container-button">
+                  <div>
                   <h5 className="fs-6">Cross border settlements</h5>
                   <p className="font-p fs-8">
                     Collect and settle value transactions across the region.
                     Receive in the US…
                   </p>
-                  <Link href="/cross_border" passHref>
+                  </div>
+                  <Link href="/cross_border" className="btn-holder" passHref>
                     <Button
-                      className="rounded-pill fs-8"
+                      className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
                       Learn More
@@ -198,8 +208,8 @@ export default function Home() {
                   <Carousel className="main-carousel">
                     <Carousel.Item>
                       <h1 className="font-h1 d-block">&Prime;<br />Implement cryptocurrencies
-                        to the remittances it could bring
-                        benefits to its users
+                          to the remittances it could bring
+                          benefits to its users
                       </h1>
                       <Button className="rounded-pill text-right mt-5" variant="outline-light" href="https://bit.ly/3Jd3WIZ" target="_blank">Ver nota completa</Button>
                     </Carousel.Item>
@@ -226,7 +236,7 @@ export default function Home() {
                   </Carousel>
                 </Col>
               </Row>
-          <Row className="pt-8">
+          <Row className="desktop-press pt-8">
             <hr />
             <Col>
                   <Image
@@ -282,6 +292,60 @@ export default function Home() {
                 width={20}
                 height={450}
               />
+            </Col>
+          </Row>
+          <Row className="mobil-press g-2 align-items-center justify-content-center text-white">
+            <Col md={12} lg={12} sm={12} className="g-0 g-x">
+            <hr />
+              <Marquee gradient={false} speed={60} className="slider-clients">
+                <div className="slide">
+                  <Image
+                    src="/assets/press/el_financiero.svg"
+                    alt="Logo El Financiero"
+                    className="img-fluid py-4"
+                    width={150}
+                    height={50}
+                  />
+                </div>
+                <div className="slide">
+            <Col>
+                  <Image
+                    src="/assets/press/la_fm.svg"
+                    alt="Logo La FM"
+                    className="img-fluid py-4"
+                    width={150}
+                    height={50}
+                  />
+            </Col>
+                </div>
+                <div className="slide">
+                  <Image
+                    src="/assets/press/ambito_financiero.svg"
+                    alt="Logo Ambito Financiero"
+                    className="img-fluid py-4"
+                    width={150}
+                    height={50}
+                  />
+                </div>
+                <div className="slide">
+                  <Image
+                    src="/assets/press/c5n.svg"
+                    alt="Logo c5n"
+                    className="img-fluid py-4"
+                    width={150}
+                    height={50}
+                  />
+                </div>
+                <div className="slide">
+                  <Image
+                    src="/assets/press/iprofesional.svg"
+                    alt="Logo iProfesional"
+                    className="img-fluid py-4"
+                    width={150}
+                    height={50}
+                  />
+                </div>
+              </Marquee>
             </Col>
           </Row>
           <Row className="py-5">
