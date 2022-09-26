@@ -1,0 +1,63 @@
+stages:
+  - build
+  - deploy
+
+build index:
+  stage: build
+  image:
+    name: amazon/aws-cli:latest
+    entrypoint: [""]
+  services:
+    - docker:dind
+  tags:
+    - docker-build
+  environment:
+    name: $environment
+    url: $url
+  before_script:
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
+  script:
+    # Build and Push
+    - docker build -t $DOCKER_REGISTRY/$CI_PROJECT_NAME:${environment}-$VERSION .
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY
+    - docker push $DOCKER_REGISTRY/$CI_PROJECT_NAME:${environment}-$VERSION
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+      variables:
+        environment: development
+        url: ${URL_DEVELOP}
+    - if: $CI_COMMIT_BRANCH == "testing"
+      variables:
+        environment: testing
+        url: ${URL_TESTING}
+    - if: $CI_COMMIT_BRANCH == "preproduction"
+      variables:
+        environment: preproduction
+        url: ${URL_PREPRODUCTION}        
+    - if: $CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH == "main"
+      variables:
+        environment: production
+        url: ${URL_MASTER}
+
+deploy develop:
+  stage: deploy
+  only:
+    - develop
+  image:
+    name: bitnami/kubectl:latest
+  services:
+    - docker:dind
+  tags:
+    - uy-shared-services-noprod
+  environment:
+    name: develop
+  before_script:
+    - kubectl get namespace
+    - kubectl get namespace "${NAMESPACE_K8S}"
+    - kubectl get pods -n "${NAMESPACE_K8S}"
+  script:
+    - kubectl rollout restart deployment.v1.apps/${CI_PROJECT_NAME} -n "${NAMESPACE_K8S}"
+    - sleep 110
+    - kubectl get pods -n "${NAMESPACE_K8S}"
