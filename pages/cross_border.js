@@ -67,14 +67,7 @@ export default function CrossBorder() {
                     <Row className="pt-5 ge-5 d-flex align-items-center">
                         <Col xs={11} sm={11} md={11} lg={11}>
                             <Row className="d-flex align-items-center gx-5">
-                                <Col sm={12} md={3} lg={3} className="ps-0 pe-5 pe-sm-0 pe-md-0 pe-lg-0">
-                                    <Image
-                                        src={require("../public/assets/clients-koi/tigo.svg")}
-                                        alt="Logo TIGO"
-                                        className="pe-5 pe-lg-3 img-fluid"
-                                        style={{ height: "auto" }}
-                                    />
-                                </Col>
+                        
                             </Row>
                         </Col>
                         <Col xs={1} sm={1} md={1} lg={1} className="text-center">
