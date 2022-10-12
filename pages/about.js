@@ -2,33 +2,41 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Image from "next/future/image";
 import Link from "next/link";
+import { BsChevronDown } from "react-icons/bs";
 
 export default function About() {
   return (
     <>
-      <header className="about-navbar"></header>
-      <header className="about-masthead">
-        <Container fluid>
-          <Row>
-            <Col md={12} sm={12} lg={12} className="text-center p-0">
-              <video className="about-video" id="background-video" autoPlay loop muted poster="/assets/img/bg-about.jpg">
-                <source src="https://koibanx.com/videos/AboutUs.mp4" type="video/mp4" />
-              </video>
-            </Col>
-          </Row>
-        </Container>
-      </header>
-      <section className="about-sections">
-        <Container className="px-4 px-lg-5 py-4 text-white">
+    <container fluid className="bg-dark container-scroll">
+      <section className="section-snap-align">
+        <header className="mobile-masthead-about pt-5">
+          <Container fluid>
+            <Row>
+              <Col md={12} sm={12} lg={12} className="text-center p-0 z-back-1 pt-5">
+                <video className="home-video pt-4" id="background-video" autoPlay loop muted poster="/assets/img/bg-about.jpg">
+                  <source src="https://koibanx.com/videos/AboutUs.mp4" type="video/mp4" />
+                </video>
+              </Col>
+            </Row>
+            <Row className="text-center">
+              <a href="#about-data" rel="noreferrer">
+                <BsChevronDown className="arrow-down text-white fs-2" />
+              </a>
+            </Row>
+          </Container>
+        </header>
+      </section>
+      <section className="px-sm-4 text-white pb-5 section-snap-align" id="about-data">
+        <Container className="px-4 px-lg-5 py-4 text-white h-100 d-flex flex-column justify-content-center">
           <Row>
             <Col auto={12} md={12} sm={12} lg={12} className="text-left">
               <Row className="gy-5 gx-lg-5">
                 <Col md={5} lg={5} sm={5}>
                   <Row>
                     <Col xs={6} md={6} lg={6} sm={6} className="d-flex">
-                  <h5 className="fs-4">About us</h5><hr />
+                  <h5 className="fs-4">About us</h5>
                     </Col>
-                    <Col xs={3} md={3} lg={3} sm={3}><hr /></Col>
+                    <Col xs={3} md={3} lg={3} sm={3}></Col>
                   </Row>
                   <Row>
                     <Col xs={2} md={2} lg={2} sm={2}>
@@ -60,8 +68,6 @@ export default function About() {
               </Row>
             </Col>
           </Row>
-        </Container>
-        <Container className="px-4 px-lg-5 py-4 text-white">
           <Row>
             <Col md={4} className="text-left"></Col>
             <Col sm={12} md={6} lg={6} className="text-left">
@@ -74,10 +80,12 @@ export default function About() {
             </Col>
           </Row>
         </Container>
-        <Container className="px-4 px-lg-5 py-4 text-white">
+      </section>
+      <section className="px-sm-4 text-white pb-5 section-snap-align-team">
+        <Container className="px-4 px-lg-5 py-4 text-white d-flex flex-column justify-content-center">
           <Row>
             <Col md={12} sm={12} lg={12} className="text-left pt-5">
-              <h5 className="fs-4">Board</h5>
+              <h5 className="fs-4">Executive team</h5>
             </Col>
           </Row>
           <Row className="text-white gx-5">
@@ -177,15 +185,17 @@ export default function About() {
                   <h6>Lety Lopez Tiznado</h6>
                   <p className="font-p">Chief of Staff</p>
                   <p className="font-p">Chief of Staff to the CEO of Koibanx. Economist and Public Policy Specialist. +9 years of professional experience across the public and private sector.</p>
-                  <a href="https://www.linkedin.com/in/leticia-l%C3%B3pez-tiznado-27699337/" target="_blank" rel="noreferrer">
-                    <Image
-                      src={require("../public/assets/img/linkedin-icon.svg")}
-                      alt="Logo Linkedin"
-                      className="d-flex align-items-end"
-                      width={20}
-                      height={20}
-                    />
-                  </a>
+                  <div className="d-flex align-items-end">
+                    <a href="https://www.linkedin.com/in/leticia-l%C3%B3pez-tiznado-27699337/" target="_blank" rel="noreferrer">
+                      <Image
+                        src={require("../public/assets/img/linkedin-icon.svg")}
+                        alt="Logo Linkedin"
+                        className="d-flex align-items-end"
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  </div>
                 </Col>
               </Row>
             </Col>
@@ -200,20 +210,22 @@ export default function About() {
                     height={200}
                   />
                 </Col>
-                <Col xs={6} sm={6} md={6} lg={6}>
+                <Col xs={6} sm={6} md={6} lg={6} className="row-eq-height">
                   <div className="d-flex align-self-start flex-column">
-                  <h6>Tulio Nuñez</h6>
-                  <p className="font-p">Head of Legal & Compliance</p>
-                  <p className="font-p">Lawyer in 2 countries. Compliance officer in 3 countries.  +5 years in Crypto. AML expert. Previously worked at Venezuela Supreme Court. </p>
-                  <a href="https://www.linkedin.com/in/leo-elduayen-a2314399/" target="_blank" rel="noreferrer">
-                    <Image
-                      src={require("../public/assets/img/linkedin-icon.svg")}
-                      alt="Logo Linkedin"
-                      className="d-flex align-items-end"
-                      width={20}
-                      height={20}
-                    />
-                  </a>
+                    <h6>Tulio Nuñez</h6>
+                    <p className="font-p">Head of Legal & Compliance</p>
+                    <p className="font-p">Lawyer in 2 countries. Compliance officer in 3 countries.  +5 years in Crypto. AML expert. Previously worked at Venezuela Supreme Court. </p>
+                  </div>
+                  <div className="d-flex align-items-end ">
+                      <a href="https://www.linkedin.com/in/leo-elduayen-a2314399/" target="_blank" rel="noreferrer">
+                        <Image
+                          src={require("../public/assets/img/linkedin-icon.svg")}
+                          alt="Logo Linkedin"
+                          className="mt-auto"
+                          width={20}
+                          height={20}
+                        />
+                      </a>
                   </div>
                 </Col>
               </Row>
@@ -252,7 +264,9 @@ export default function About() {
             </Col>
           </Row>
         </Container>
-        <Container className="text-white" fluid>
+      </section>
+      <section className="text-white pb-5 section-snap-align d-flex flex-column justify-content-center">
+        <Container fluid className="text-white" >
           <div className="text-primary">
             <Marquee gradient={false} speed={120}>
               <h3 className="h3-marquee">
@@ -287,6 +301,7 @@ export default function About() {
           </Row>
         </Container>
       </section>
+    </container>
     </>
   );
 }
