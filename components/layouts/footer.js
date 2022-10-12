@@ -7,8 +7,8 @@ import styles from "../../styles/Footer.module.css";
 
 export default function AppFooter() {
   return (
-    <footer className="footer bg-dark mt-0 fs-7">
-      <Container className="px-4 px-lg-5 py-4 text-white">
+    <footer className="footer bg-dark mt-0 fs-7 z-index-footer">
+      <Container className="px-4 px-lg-5 py-4 text-white z-index-footer">
         <Row className="align-items-center justify-content-between align-middle">
           <Col md={2} lg={2} className="text-center">
             <Image
