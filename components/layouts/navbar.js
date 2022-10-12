@@ -44,7 +44,7 @@ export default function AppNavbar() {
         className={classNames("py-3 z-front-2", { "navbar-shrink": isShrunk })}
         id="mainNav"
       >
-        <Container className="px-4 px-lg-5 sticky-top">
+        <Container className="sticky-top">
           <Link href="/" passHref>
             <Navbar.Brand >
               <Image

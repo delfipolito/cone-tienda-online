@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
+import CarouselItem from "../components/press";
 
 export default function CrossBorder() {
     return (

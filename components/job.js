@@ -12,7 +12,7 @@ export default function Job({ title, description }) {
                 </div>
                 <Button
                     variant="outline-primary"
-                    className="rounded-pill fs-8"
+                    className="rounded-pill fs-8 btn-orange"
                     href="mailto:info@koibanx.com"
                 >
                     Apply now
