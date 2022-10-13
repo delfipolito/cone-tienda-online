@@ -2014,6 +2014,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-known-props@npm:^2.4.5":
+  version: 2.4.5
+  resolution: "react-known-props@npm:2.4.5"
+  checksum: 7727e55794ac4f2ed7159f3da42f73facb8268eade9785bd65753e01257206c134f9aa6b650e7034ba945fa6580f6722ecbf0986709df97605c75e03f65d7f17
+  languageName: node
+  linkType: hard
+
 "react-lifecycles-compat@npm:^3.0.4":
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
@@ -2399,6 +2406,7 @@ __metadata:
     react-dom: 18.2.0
     react-fast-marquee: ^1.3.5
     react-icons: ^4.4.0
+    react-known-props: ^2.4.5
   languageName: unknown
   linkType: soft
 
