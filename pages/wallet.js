@@ -2,17 +2,19 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
 
-export default function Wallet() {
+export default function Wallet(props) {
+    const{Wallet} = props;
+    console.log(props);
     return (
         <>
             <section className="products-masthead-wallet text-white pt-5">
-                <Container className="px-4 px-lg-5 pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
                         <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
                             <div className="text-white">
-                                <h4 className="pb-4 fst-normal">Issuing Platform</h4>
+                                <h4 className="pb-4 fst-normal">Wallet as a service</h4>
                                 <p className="fs-5 fw-light">
-                                    We connect your mobile banking application, wallet or payment channel to our platform, allowing you to transfer, exchange and collect any tokenized asset. We deploy white-label wallets for institutions to power their acquiring networks and offer their users and merchants e-commerce and transfers in their own currencies.
+                                    {Wallet.text}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
@@ -40,10 +42,10 @@ export default function Wallet() {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="px-4 px-lg-5 pb-5">
+                <Container className="px-4 px-lg-3 pb-5">
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
-                            <h4>Main Benefits</h4>
+                            <h4>{Wallet.beneficiostitle}</h4>
                         </Col>
                     </Row>
                     <Row className="pt-0 pt-md-3 pt-lg-5">
@@ -51,31 +53,31 @@ export default function Wallet() {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    Decreased risk of theft or loss of cash, by not having to carry it with you.
+                                {Wallet.main1}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    Greater security when making transactions.
+                                {Wallet.main2}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    APIs available for easy integration.
+                                {Wallet.main3}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    Reduces the risk of fraud. Time saving.
+                                {Wallet.main4}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    They offer greater security to the user.
+                                {Wallet.main5}
                                 </p>
                             </Col>
                         </Row>
@@ -84,4 +86,17 @@ export default function Wallet() {
             </section>
         </>
     );
+}
+export async function getStaticProps({locale}) {
+  // const response = await fetch("URL");
+  // const result = await response.json();
+
+    const response = await import(`../lang/${locale}.json`);
+
+    console.log(response.default.Wallet);
+    return {
+        props: {
+            Wallet: response.default.Wallet,
+        }
+    }
 }

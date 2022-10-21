@@ -1,0 +1,100 @@
+{
+    "Home":{
+        "herotitle": "Blockchain Payment Rails",
+        "herodescription": "Koibanx is the leading tokenization & Blockchain payments platform in Latam, with regional presence, +7 years of track record, “real-world” gateways that bridges the traditional financial system with the web3 ecosystem. Tokenization + on/off ramps made avaible within the regulatory framework for each country in the region.",
+        "customerbar": "Our Main Customers",
+        "products": "A regulated end to end platform for financial institutions to tokenize, trade and exchange assets, enabling their usage as means of payment and seamlessly integrating them with crypto & fiat on/off ramps.",
+        "button": "Learn more",
+        "wallettitle": "Wallet As a Service",
+        "walletdescription": "We connect your mobile banking application, wallet or payment channel to our platform, allowing you to manage, transfer, exchange and collect any tokenized asset and/or crypto currencies.",
+        "cryptochecktitle": "Crypto check out",
+        "cryptocheckdescription": "It allows your merchants, e-Commerce platforms, collecting providers and gateways to receive payments in any cryptocurrency, fiat and cards.",
+        "cryptoservtitle": "Crypto as a service",
+        "cryptoservdescription": "We enable banks and digital wallets to provide their own customers the ability to buy, sell, receive, transfer and store cryptocurrencies on their own platforms.",
+        "crosstitle": "Cross Border Settlements",
+        "crossdescription": "Instant transfers to +8 countries in LATAM. Collecting USD in the USA via ACH transfers, credit, debit or prepaid cards and/or cryptocurrencies and settling real time payments in local currency at the final destination.",
+        "issuingtitle": "Issuing platform",
+        "issuingdescription": "Implement your own platform to issue, trade and exchange digital assets. Equity, utility and asset backed token minting series with management and market features. ",
+        "news":"News blog",
+        "investors": "Our Main Investors",
+        "privacy": "Privacy policies",
+        "terms": "Terms $ Conditions El Salvador",
+        "join": "Join our team",
+        "contact": "Contact us"
+    },
+    "AppFooter": {
+        "privacy": "Privacy policies",
+        "terms": "Terms & Conditions El Salvador",
+        "join": "Join our team",
+        "contact": "Contact us"
+    },
+    "About":{
+        "abouttext": "About us",
+        "regional": "Regional presence.",
+        "rampas": "+5 on/off ramps in Latam.",
+        "tokenizados": "+900M USD worth of tokenized assets.",
+        "platform": "Koibanx is redefining Latam´s financial infrastructure by allowing instant issuing, exchanging, trading and conversion of digital assets into fiat from within TradFi institutions.",
+        "ejecutivos": "Executive Team",
+        "leo": "+ 10 years in Crypto. VP Bitcoin Argentina NGO. Crypto Pioneer. Lawyer & Coder. He previously worked at MercadoLibre and Philip Morris International.",
+        "edy": "Systems engineer. Web Pioneer. +25 years of experience leading the IT area of different companies such as Clarín, Staples and Arcos Dorados.",
+        "francisco": "Economist, Master in Finance, CFA. +10 years of experience in financial markets, specializing in pricing and financial structuring.",
+        "lety": "Economist and Public Policy Specialist. +9 years of professional experience across the public and private sector.",
+        "tulio": "Lawyer in 2 countries. Compliance officer in 3 countries. +5 years in Crypto. AML expert. Previously worked at Venezuela Supreme Court.",
+        "mar": "Publicist & Art. + 10 years of experience in Brand design, building and growth. Member of women in crypto & women in fintech.",
+        "buttonteam": "Meet the rest of the team",
+        "hiring": "We are constantly looking for people who want to transform, to transcend, to be a part of our dream. We embrace talented people who also want to create a good atmosphere, based in companionship, who share our values and our ambition for professional and personal growth.",
+        "buttonjob": "Ready to join our team!"
+    },
+    "Wallet": {
+        "text": "Blockchain-based virtual accounts system. Concentrating accounts. Master and sub-accounts. Transfer, receive, collect and define transactional rules. Processing multiple type of assets (Fiat and cryptos) transactions. Built-in on/off ramps to crypto, cards and utilities payments.",
+        "beneficiostitle": "Main features",
+        "main1": "Decreased risk of theft or loss of cash, by not having to carry it with you.",
+        "main2": "Greater security when making transactions.",
+        "main3": "APIs available for easy and rapid integration.",
+        "main4": "Reduces the risk of fraud. Time saving.",
+        "main5": "They offer greater security to the user."
+    },
+    "CrossBorder": {
+        "text": "Instant transfers in +8 LATAM countries by collecting USD in the USA via ACH transfers, credit, debit or prepaid cards and/or cryptocurrencies and settling that money into the final destination at the local currency.",
+        "beneficiostitle": "Main features",
+        "main1": "Allows payments, collections and personal or corporate remittances.",
+        "main2": "SaaS platform.",
+        "main3": "APIs are very intuitive and easy to integrate.",
+        "main4": "Integrated KYC, AML and FinCen regulated.",
+        "main5": "Instant settlements through crypto rails."
+    },
+    "Issuing": {
+        "text": "Implement your own platform to issue, trade and exchange digital assets. Equity, utility and asset backed token minting series with management and market features. It boosts the liquidity of its users by enabling investment and trading of fractional and partial assets.",
+        "beneficiostitle": "Main features",
+        "main1": "Allows usage of token as a means of payment.",
+        "main2": "Auditable from start to finish.",
+        "main3": "Assets become fractionable.",
+        "main4": "Generation of NFTs.",
+        "main5": "Access to liquidity via market and crowdfunding opportunities."
+    },
+    "CryptoService": {
+        "text": "Cryptocurrency infrastructure for your channels. We offer a “plug and play” solution. We enable banks and digital wallets to provide their own customers the ability to buy, sell, receive, transfer and store cryptocurrencies on their own platforms.",
+        "beneficiostitle": "Main features",
+        "main1": "Allows the purchase, holding and sale of cryptocurrencies.",
+        "main2": "Easy integration with wallets or banking systems.",
+        "main3": "Total traceability and monitoring of transactions in real time.",
+        "main4": "Ability to keep records of sub-accounts.",
+        "main5": "We have the best security and technology practices to ensure the best custody management."
+    },
+    "CryptoCheckout": {
+        "text": "It allows your merchants, eCommerce platform, collection provider, and gateways to receive payments in any cryptocurrency. All payments can be credited directly in cryptocurrencies or automatically converted (in whole or in part) into fiat money, or it can also be invested in other cryptocurrencies or stablecoins.",
+        "beneficiostitle": "Main features",
+        "main1": "Enables the commerce to accept payment in multiple cryptocurrencies and/or custom assets.",
+        "main2": "SaaS platform accessible from any device.",
+        "main3": "APIs are very intuitive and easy to integrate.",
+        "main4": "Reduces payment transaction costs in stores.",
+        "main5": "Automatic convertibility of cryptocurrencies to local currency."
+    },
+    "Press": {
+        "coindesk": "We want to remain at the forefront of redefining Latin America's financial system. A blockchain-based financial system inevitably results in faster, scalable and programmable financial products that will grant access to a broader segment of the population that is currently underserved.",
+        "forbes": "The forms of intellectual property reached by the agreement include trademarks, patents and all kinds of copyright: such as songs, lyrics, videos, shows, conferences, podcasts and all forms of content that can be transmitted.",
+        "tiempo": "Mi Vacuna provides exact statistics on the penetration rate of the COVID-19 vaccination program. This application connects with the Koibanx platform, where a blockchain identity is created for each citizen with the records or information of each care and/or interaction with the Colombian health system.",
+        "infobae": "It is necessary to resolve, in advance, important technological and regulatory aspects to achieve an orderly massification of tokenization and, especially, to advance in a legal framework on the scope of smart contracts.",
+        "beincrypto": "In the 2022 edition of the Green Awards festival, Algorand and Koibanx were invited to provide an explanatory workshop on blockchain technology and the different use cases. Thus, they listed the benefits of the Algorand blockchain in sustainable projects."
+    }
+}

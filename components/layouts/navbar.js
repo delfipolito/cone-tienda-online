@@ -5,6 +5,7 @@ import Image from "next/future/image";
 import Link from 'next/link'
 import logo from "../../public/assets/img/Logo_Koibanx_Blanco.svg";
 import styles from "../../styles/Navbar.module.css";
+import LanguageSelector from "../LanguageSelector";
 
 export default function AppNavbar() {
   const [isShrunk, setShrunk] = useState(false);
@@ -84,7 +85,7 @@ export default function AppNavbar() {
               </Nav.Item>
               <Nav.Item as="li">
                 <Nav.Link className="fs-8" href="#">
-                  ES
+                  <LanguageSelector />
                 </Nav.Link>
               </Nav.Item>
             </Nav>

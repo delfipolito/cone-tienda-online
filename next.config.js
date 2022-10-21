@@ -4,6 +4,10 @@ const nextConfig = {
   poweredByHeader: false,
   swcMinify: true,
   experimental: { images: { allowFutureImage: true } },
+  i18n:{
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+  },
 };
 
 module.exports = nextConfig;

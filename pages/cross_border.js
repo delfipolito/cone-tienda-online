@@ -2,17 +2,19 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
 
-export default function CrossBorder() {
+export default function CrossBorder(props) {
+    const{CrossBorder} = props;
+    console.log(props);
     return (
         <>
             <section className="products-masthead text-white pt-5">
-                <Container className="px-4 px-lg-5 pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
                         <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
                             <div className="text-white">
                                 <h4 className="pb-4 fst-normal">Cross Border Settlements</h4>
                                 <p className="fs-5 fw-light">
-                                    Instant transfers in +8 LATAM countries by collecting USD in the USA via ACH transfers, credit, debit or prepaid cards and/or cryptocurrencies and settling that money into the final destination at the local currency.
+                                {CrossBorder.text}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="/wallet" className="btn-holder" passHref>
@@ -40,10 +42,12 @@ export default function CrossBorder() {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="px-4 px-lg-5 pb-5">
+                <Container className="px-4 px-lg-3 pb-5">
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
-                            <h4>Main Benefits</h4>
+                            <h4>
+                            {CrossBorder.beneficiostitle}
+                            </h4>
                         </Col>
                     </Row>
                     <Row className="pt-0 pt-md-3 pt-lg-5">
@@ -51,31 +55,31 @@ export default function CrossBorder() {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    Allows payments, collections and personal or corporate remittances.
+                                {CrossBorder.main1}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    SaaS platform.
+                                {CrossBorder.main2}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    APIs very intuitive and easy to integrate.
+                                {CrossBorder.main3}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    Integrated KYC & AML.
+                                {CrossBorder.main4}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    Better prices and times using crypto behind the scenes.
+                                {CrossBorder.main5}
                                 </p>
                             </Col>
                         </Row>
@@ -84,4 +88,17 @@ export default function CrossBorder() {
             </section>
         </>
     );
+}
+export async function getStaticProps({locale}) {
+  // const response = await fetch("URL");
+  // const result = await response.json();
+
+    const response = await import(`../lang/${locale}.json`);
+
+    console.log(response.default.CrossBorder);
+    return {
+        props: {
+            CrossBorder: response.default.CrossBorder,
+        }
+    }
 }
