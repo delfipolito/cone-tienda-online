@@ -16,14 +16,13 @@ export default function Jobs() {
 
   return (
     <>
-      <header className="about-navbar jobs-sections"></header>
-      <section className="jobs-sections">
-        <Container className="text-white" fluid>
+      <section className="jobs-sections pt-5">
+        <Container className="text-white pt-5" fluid>
           <div className="text-primary">
             <Marquee gradient={false} speed={120}>
-              <h3>
+              <h3 className='fs-0'>
                   We are hiring!&nbsp;
-                  <span className="text-stroke-black"> We are hiring!</span>
+                  <span className="text-stroke-black"> We are hiring!&nbsp;</span>
                 </h3>
               </Marquee>
             </div>
@@ -37,7 +36,7 @@ export default function Jobs() {
                 ))}
               </Row>
             </Col>
-            <Col xs={1} md={1} lg={1} className="text-center">
+            <Col xs={1} md={1} lg={1} className="text-center display-mobile-none">
               <Image
                 src={require("../public/assets/img/jobs.svg")}
                 alt="Products section"

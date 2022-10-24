@@ -6,7 +6,7 @@ export default function MultiAsset() {
     return (
         <>
             <section className="products-masthead-issuing text-white pt-5">
-                <Container className="px-4 px-lg-5 pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
                         <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
                             <div className="text-white">
@@ -40,7 +40,7 @@ export default function MultiAsset() {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="px-4 px-lg-5 pb-5">
+                <Container className="px-4 px-lg-3 pb-5">
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
                             <h4>Main Benefits</h4>

@@ -2,17 +2,19 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
 
-export default function CryptoService() {
+export default function CryptoService(props) {
+    const{CryptoService} = props;
+    console.log(props);
     return (
         <>
             <section className="products-masthead-cryptoser text-white pt-5">
-                <Container className="px-4 px-lg-5 pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
                         <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
                             <div className="text-white">
                                 <h4 className="pb-4 fst-normal">Crypto As a Service</h4>
                                 <p className="fs-5 fw-light">
-                                Cryptocurrency infrastructure for your channels. Plug and play solution, we enable banks and digital wallets to provide their own customers with the ability to buy, sell, receive, send and store cryptocurrencies on their platforms.
+                                {CryptoService.text}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
@@ -40,10 +42,12 @@ export default function CryptoService() {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="px-4 px-lg-5 pb-5">
+                <Container className="px-4 px-lg-3 pb-5">
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
-                            <h4>Main Benefits</h4>
+                            <h4>
+                                {CryptoService.beneficiostitle}
+                            </h4>
                         </Col>
                     </Row>
                     <Row className="pt-0 pt-md-3 pt-lg-5">
@@ -51,31 +55,31 @@ export default function CryptoService() {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    Allows the purchase, holding and sale of cryptocurrencies.
+                                {CryptoService.main1}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    Easy integration with wallets or banking systems.
+                                {CryptoService.main2}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    Total traceability and monitoring of transactions in real time.
+                                {CryptoService.main3}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    APIs very intuitive and easy to integrate.
+                                {CryptoService.main4}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    We have the best security and technology practices to ensure the best custody management.
+                                {CryptoService.main5}
                                 </p>
                             </Col>
                         </Row>
@@ -84,4 +88,17 @@ export default function CryptoService() {
             </section>
         </>
     );
+}
+export async function getStaticProps({locale}) {
+  // const response = await fetch("URL");
+  // const result = await response.json();
+
+    const response = await import(`../lang/${locale}.json`);
+
+    console.log(response.default.CryptoService);
+    return {
+        props: {
+            CryptoService: response.default.CryptoService,
+        }
+    }
 }

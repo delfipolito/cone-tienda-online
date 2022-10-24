@@ -8,13 +8,13 @@ export default function Job({ title, description }) {
             <Card className="bg-transparent h-100">
                 <Card.Body className="d-flex flex-column ">
                     <Card.Title className="fs-6">{title}</Card.Title>
-                    <Card.Text className="font-p fs-8">
-                        {description}
+                    <Card.Text>
+                        <p>{description}</p>
                     </Card.Text>
-                  <Link href="/job" passHref>
+                    <Link href="/job" passHref>
                     <Button 
                     variant="outline-primary"
-                    className="rounded-pill fs-8 btn-orange mt-auto w-50"
+                    className="rounded-pill btn-orange mt-auto w-50 fw-bold"
                     href="mailto:info@koibanx.com">Apply now</Button>
                     </Link>
                 </Card.Body>
