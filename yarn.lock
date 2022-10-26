@@ -2043,6 +2043,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-use-scroll-snap@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "react-use-scroll-snap@npm:0.0.4"
+  dependencies:
+    tweezer.js: ^1.5.0
+  peerDependencies:
+    react: ">=16.8.1"
+  checksum: 1a254afcd0c4f4cead4310d96042deb2814e31f061779af15e6cee5c9f61f9a8baaf48ee19c992854760f95da77155813e1baa571317f1db958931778426ad44
+  languageName: node
+  linkType: hard
+
 "react@npm:18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
@@ -2169,6 +2180,13 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+  languageName: node
+  linkType: hard
+
+"scroll-snap@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "scroll-snap@npm:4.0.3"
+  checksum: e77097094033d4ef3de2ae255387a6b41c51ed9c39225b044c368ebfac5cc741d55755c25416b318b3efdda35f14120e21df86879925b4ac2b235de2fd710a17
   languageName: node
   linkType: hard
 
@@ -2377,6 +2395,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tweezer.js@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "tweezer.js@npm:1.5.0"
+  checksum: c6802b5a4f10fd5a2e60e5eb378367845dc0eb05dfbb3a49922f17933e1c8cdd0827deee760de512826aacbfbc090848b4718398a8d4a7df61ce39329b2bd1e3
+  languageName: node
+  linkType: hard
+
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -2407,6 +2432,8 @@ __metadata:
     react-fast-marquee: ^1.3.5
     react-icons: ^4.4.0
     react-known-props: ^2.4.5
+    react-use-scroll-snap: ^0.0.4
+    scroll-snap: ^4.0.3
   languageName: unknown
   linkType: soft
 

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link";
-import { BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import styles from "../../styles/Footer.module.css";
 
 export default function AppFooter() {
@@ -40,8 +40,8 @@ export default function AppFooter() {
               <a href="https://twitter.com/koibanx" className="text-white px-1" target="_blank" rel="noreferrer">
                 <BsTwitter style={{ "marginRight": "0.2em" }} />
               </a>
-              <a href="https://www.instagram.com/koibanx/?hl=es" className="text-white px-1" target="_blank" rel="noreferrer">
-                <BsInstagram />
+              <a href=" https://www.youtube.com/c/Koibanx " className="text-white px-1" target="_blank" rel="noreferrer">
+                <BsYoutube />
               </a>
             </p>
           </Col>

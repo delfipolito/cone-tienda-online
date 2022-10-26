@@ -3,21 +3,26 @@ import Image from "next/future/image";
 
 export default function Pressmobile() {
     return (
-        <Row className="ps-5 display-mobile-yes">
+        <Row className="display-mobile-yes">
             <Carousel className="ps-5 mt-5">
                 <Carousel.Item>
                     <div>
-                        <Row>
-                            <Col xs={9} sm={9} md={12} lg={12}>
+                        <Row className="px-4">
+                            <Col xs={9} sm={9} md={12} lg={12} className="px-2">
                             <h3>"</h3>
                             <p>
                             We want to remain at the forefront of redefining Latin America's financial system. A blockchain-based financial system inevitably results in faster, scalable and programmable financial products that will grant access to a broader segment of the population that is currently underserved.
                             </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6} sm={6} md={6} lg={6} className="pt-3">
-                            <h4>Coindesk</h4>
+                        <Row className="px-4">
+                            <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
+                                <Image
+                                src="/assets/press/coindesk.svg"
+                                alt="Coindesk"
+                                width={120}
+                                height={50}
+                                />
                             </Col>
                             <Col xs={6} sm={6} md={6} lg={6}>
                                 <Button className="rounded-pill text-right mt-3 w-75 align-items-end fs-7" variant="outline-light" href="https://www.coindesk.com/business/2022/08/18/blockchain-protocol-algorand-leads-22m-investment-round-in-tokenization-firm-koibanx/" target="_blank">Read more</Button>
@@ -27,7 +32,7 @@ export default function Pressmobile() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div>
-                        <Row>
+                        <Row className="px-4">
                             <Col xs={9} sm={9} md={12} lg={12}>
                             <h3>"</h3>
                             <p>
@@ -35,9 +40,14 @@ export default function Pressmobile() {
                             </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6} sm={6} md={6} lg={6} className="pt-3">
-                            <h4>Forbes</h4>
+                        <Row className="px-4">
+                            <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
+                                <Image
+                                src="/assets/press/forbes.svg"
+                                alt="Forbes"
+                                width={120}
+                                height={50}
+                                />
                             </Col>
                             <Col xs={6} sm={6} md={6} lg={6}>
                                 <Button className="rounded-pill text-right mt-3 w-75 align-items-end fs-7" variant="outline-light" href="https://www.coindesk.com/business/2022/08/18/blockchain-protocol-algorand-leads-22m-investment-round-in-tokenization-firm-koibanx/" target="_blank">Read more</Button>
@@ -47,7 +57,7 @@ export default function Pressmobile() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div>
-                        <Row>
+                        <Row className="px-4">
                             <Col xs={9} sm={9} md={12} lg={12}>
                             <h3>"</h3>
                             <p>
@@ -55,9 +65,14 @@ export default function Pressmobile() {
                             </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6} sm={6} md={6} lg={6} className="pt-3">
-                            <h4>El Tiempo</h4>
+                        <Row className="px-4">
+                            <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
+                                <Image
+                                src="/assets/press/el_tiempo.svg"
+                                alt="El Tiempo"
+                                width={120}
+                                height={50}
+                                />
                             </Col>
                             <Col xs={6} sm={6} md={6} lg={6}>
                                 <Button className="rounded-pill text-right mt-3 w-75 align-items-end fs-7" variant="outline-light" href="https://www.coindesk.com/business/2022/08/18/blockchain-protocol-algorand-leads-22m-investment-round-in-tokenization-firm-koibanx/" target="_blank">Read more</Button>
@@ -67,7 +82,7 @@ export default function Pressmobile() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div>
-                        <Row>
+                        <Row className="px-4">
                             <Col xs={9} sm={9} md={12} lg={12}>
                             <h3>"</h3>
                             <p>
@@ -75,9 +90,14 @@ export default function Pressmobile() {
                             </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6} sm={6} md={6} lg={6} className="pt-3">
-                            <h4>Infobae</h4>
+                        <Row className="px-4">
+                            <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
+                                <Image
+                                src="/assets/press/infobae.svg"
+                                alt="Infobae"
+                                width={120}
+                                height={50}
+                                />
                             </Col>
                             <Col xs={6} sm={6} md={6} lg={6}>
                                 <Button className="rounded-pill text-right mt-3 w-75 align-items-end fs-7" variant="outline-light" href="https://www.coindesk.com/business/2022/08/18/blockchain-protocol-algorand-leads-22m-investment-round-in-tokenization-firm-koibanx/" target="_blank">Read more</Button>
@@ -87,7 +107,7 @@ export default function Pressmobile() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <div>
-                        <Row>
+                        <Row className="px-4">
                             <Col xs={9} sm={9} md={12} lg={12}>
                             <h3>"</h3>
                             <p>
@@ -95,9 +115,14 @@ export default function Pressmobile() {
                             </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6} sm={6} md={6} lg={6} className="pt-3">
-                            <h4>BeinCrypto</h4>
+                        <Row className="px-4">
+                            <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
+                                <Image
+                                src="/assets/press/be_in_crypto.svg"
+                                alt="Be In Crypto"
+                                width={120}
+                                height={50}
+                                />
                             </Col>
                             <Col xs={6} sm={6} md={6} lg={6}>
                                 <Button className="rounded-pill text-right mt-3 w-75 align-items-end fs-7" variant="outline-light" href="https://www.coindesk.com/business/2022/08/18/blockchain-protocol-algorand-leads-22m-investment-round-in-tokenization-firm-koibanx/" target="_blank">Read more</Button>
