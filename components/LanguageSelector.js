@@ -13,8 +13,8 @@ export default function LanguageSelector() {
     }
     return (
         <select onChange={changeLang}>
-            <option value="en">En</option>
             <option value="es">Es</option>
+            <option value="en">En</option>
         </select>
     )
 }

@@ -8,14 +8,14 @@ export default function Pressmobile() {
                 <Carousel.Item>
                     <div>
                         <Row className="px-4">
-                            <Col xs={9} sm={9} md={12} lg={12} className="px-2">
-                            <h3>"</h3>
+                            <Col xs={11} sm={11} md={12} lg={12} className="px-0">
+                            <h3 className="margin-mobile">"</h3>
                             <p>
                             We want to remain at the forefront of redefining Latin America's financial system. A blockchain-based financial system inevitably results in faster, scalable and programmable financial products that will grant access to a broader segment of the population that is currently underserved.
                             </p>
                             </Col>
                         </Row>
-                        <Row className="px-4">
+                        <Row className="px-1">
                             <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
                                 <Image
                                 src="/assets/press/coindesk.svg"
@@ -33,14 +33,14 @@ export default function Pressmobile() {
                 <Carousel.Item>
                     <div>
                         <Row className="px-4">
-                            <Col xs={9} sm={9} md={12} lg={12}>
-                            <h3>"</h3>
+                            <Col xs={10} sm={10} md={12} lg={12} className="px-0">
+                            <h3 className="margin-mobile">"</h3>
                             <p>
                             The forms of intellectual property reached by the agreement include trademarks, patents and all kinds of copyright: such as songs, lyrics, videos, shows, conferences, podcasts and all forms of content that can be transmitted.
                             </p>
                             </Col>
                         </Row>
-                        <Row className="px-4">
+                        <Row className="px-1">
                             <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
                                 <Image
                                 src="/assets/press/forbes.svg"
@@ -58,14 +58,14 @@ export default function Pressmobile() {
                 <Carousel.Item>
                     <div>
                         <Row className="px-4">
-                            <Col xs={9} sm={9} md={12} lg={12}>
-                            <h3>"</h3>
+                            <Col xs={10} sm={10} md={12} lg={12} className="px-0">
+                            <h3 className="margin-mobile">"</h3>
                             <p>
                             Mi Vacuna provides exact statistics on the penetration rate of the COVID-19 vaccination program. This application connects with the Koibanx platform, where a blockchain identity is created for each citizen with the records or information of each care and/or interaction with the Colombian health system.
                             </p>
                             </Col>
                         </Row>
-                        <Row className="px-4">
+                        <Row className="px-1">
                             <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
                                 <Image
                                 src="/assets/press/el_tiempo.svg"
@@ -83,14 +83,14 @@ export default function Pressmobile() {
                 <Carousel.Item>
                     <div>
                         <Row className="px-4">
-                            <Col xs={9} sm={9} md={12} lg={12}>
-                            <h3>"</h3>
+                            <Col xs={10} sm={10} md={12} lg={12} className="px-0">
+                            <h3 className="margin-mobile">"</h3>
                             <p>
                             It is necessary to resolve, in advance, important technological and regulatory aspects to achieve an orderly massification of tokenization and, especially, to advance in a legal framework on the scope of smart contracts.
                             </p>
                             </Col>
                         </Row>
-                        <Row className="px-4">
+                        <Row className="px-0">
                             <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
                                 <Image
                                 src="/assets/press/infobae.svg"
@@ -108,14 +108,14 @@ export default function Pressmobile() {
                 <Carousel.Item>
                     <div>
                         <Row className="px-4">
-                            <Col xs={9} sm={9} md={12} lg={12}>
-                            <h3>"</h3>
+                            <Col xs={10} sm={10} md={12} lg={12} className="px-0">
+                            <h3 className="margin-mobile">"</h3>
                             <p>
                             In the 2022 edition of the Green Awards festival, Algorand and Koibanx were invited to provide an explanatory workshop on blockchain technology and the different use cases. Thus, they listed the benefits of the Algorand blockchain in sustainable projects.
                             </p>
                             </Col>
                         </Row>
-                        <Row className="px-4">
+                        <Row className="px-1">
                             <Col xs={6} sm={6} md={6} lg={6} className="pt-2">
                                 <Image
                                 src="/assets/press/be_in_crypto.svg"

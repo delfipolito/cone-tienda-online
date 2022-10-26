@@ -63,30 +63,30 @@ export default function AppNavbar() {
             aria-controls="basic-navbar-nav"
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto my-2 my-lg-0" as="ul">
+            <Nav className="ms-auto my-2 my-lg-0 d-flex align-items-center" as="ul">
               <Nav.Item as="li">
-                <Link href="/#products" passHref>
-                  <Nav.Link className="fs-8">
-                    PRODUCTS
-                  </Nav.Link>
-                </Link>
+                  <Link href="/#products" passHref>
+                    <Nav.Link>
+                      PRODUCTS
+                    </Nav.Link>
+                  </Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Link href="/about" passHref>
-                  <Nav.Link className="fs-8">
-                    ABOUT US
-                  </Nav.Link>
-                </Link>
+                  <Link href="/about" passHref>
+                    <Nav.Link>
+                      ABOUT US
+                    </Nav.Link>
+                  </Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link className="fs-8" href="https://contact.koibanx.com/" target="_blank">
+                  <Nav.Link href="https://contact.koibanx.com/" target="_blank">
                   DEMO
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link className="fs-8" href="#">
-                  <LanguageSelector />
-                </Nav.Link>
+                  <Nav.Link href="#">
+                    <LanguageSelector />
+                  </Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
