@@ -12358,6 +12358,7 @@ address {
 @media (max-width:500px){
   .fs-0{
     font-size: 3rem !important;
+    line-height: 3rem;
   }
 }
 
@@ -12480,18 +12481,25 @@ select:hover{
   position: absolute;
 }
 @media (max-width:500px){
-  .circulo {
-    display: none!important;
+  .circulo{
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    position: absolute;
   }
   .rectangulo video{
     display: none;
   }
   .rectangulo {
+    height: 100vh!important;
     background: url("../public/assets/img/fondo-mobile-home.jpg")!important;
     background-repeat: no-repeat!important;
     background-attachment: scroll!important;
     background-position: top!important;
     background-size: cover!important;
+  }
+  .index-row-mobile{
+    height: auto!important;
   }
   .p-mobile{
     font-size: 12pt!important;
@@ -12506,6 +12514,9 @@ select:hover{
     color: rgba(255, 255, 255, 1) !important;
     padding-right: 3rem !important;
     padding-left: 3rem !important;
+  }
+  .fw-hero-mobile{
+    font-weight: 900;
   }
 }
 .absolute-top {
@@ -12539,6 +12550,11 @@ select:hover{
 }
 .slider-clients .marquee {
   padding: 1em
+}
+@media (max-width:500px){
+  .slider-clients .marquee {
+    padding: 0em
+  }
 }
 /* ---------- LINES HR ---------- */
 hr {
@@ -12651,6 +12667,7 @@ hr:not([size]) {
 }
 
 /* ---------- ABOUT SECTION ---------- */
+
 .main-video-about{
   width: 100vw;
   height: 100vh;
@@ -12659,27 +12676,94 @@ hr:not([size]) {
   align-items: center;
   justify-content: start;
 }
+
 .main-video-about video{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 5000;
+  z-index: -1000;
+}
+.rectangulo-about{
+  margin-top: 80px;
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.cuadrado-about{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: absolute;
+  background-color: transparent;
+}
+.circulo-about{
+  width: 100%;
+  height: 70px;
+  bottom: 60px;
+  position: absolute;
+}
+
+@media (max-width:500px){
+  .main-video-about{
+    top: 0;
+    width: 100vw;
+    height: 100vh!important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: -1000;
+  }
+  .main-video-about video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1000;
+  }
+  .rectangulo-about{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: -1000;
+  }
+
+}
+
+.main-video-about video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1000;
 }
 .arrow-down{
-  margin-top: 70px;
+  margin-top: 10px;
   text-align: center;
+  z-index: 5000;
+}
+@media (max-width:500px){
+  .arrow-down{
+    text-align: center;
+    z-index: 5000;
+  }
 }
 .bg-000{
   background-color: #000;
 }
 #about-data{
+  margin-top: 35px;
   height: 100vh!important;
 }
 #about-team{
   height: 100vh!important;
 }
 #about-hiring{
-  height: 70vh!important;
+  height: 85vh!important;
 }
 @media (max-width: 500px){
   #about-data{
@@ -12697,24 +12781,16 @@ hr:not([size]) {
     height: auto!important;
   }
   .team-width{
-    width: 1600px!important;
-    overflow-x: hidden!important;
-    overflow-y: hidden!important;
-    margin: 50px 0 70px 0;
-    -ms-overflow-style: none!important;  /* IE and Edge */
-    scrollbar-width: none!important;  /* Firefox */
+    overflow: hidden!important;
+    width: 1200px;
+    height: 400px;
   }
-  .team-width:-webkit-scrollbar {
-    display: none;
-  }
-  .p-team{
-    width:200px!important;
-  }
+
   .right-shadow {
-    margin-left: 270px;
-    width:200px;
-    margin-top: -100vh;
-    box-shadow: inset -80px 10px 50px 10px rgba(0, 0, 0, .5);
+    position: absolute;
+    right: 0;
+    width:100px;
+    box-shadow: inset -50px 10px 40px 10px rgba(0, 0, 0, .5);
     height: 100vh;
     z-index: 1000;
   }
@@ -12777,9 +12853,10 @@ h3.h3-marquee {
 }
 
 /* ---------- JOBS PAGES ---------- */
-.jobs-sections {
-  background-color: #171717;
-  padding-bottom: calc(10rem - 4.5rem);
+#jobs-sections {
+  height: 100vh!important;
+  min-height: 100vh!important;
+  background-color: #171717!important;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -12838,45 +12915,27 @@ h3.h3-marquee {
   color: #ffffff!important;
   border: 0px;
 }
-.file-button {
-  display: block;
-  margin: 10px auto;
-  width: 400px;
-  border-radius: 5px;
-  text-align: center;
-  justify-content: center;
-  color: black;
-  font-weight: normal;
-  font-size: 18pt;
-  border: 1px solid grey;
-}
-.custom-file-input::-webkit-file-upload-button {
-  width: 10px!important;
-  font-weight: 400!important;
-  font-size: 10pt!important;
-  border-color: 0px solid #ffffff!important;
+
+input[type="file"] {
   display: none;
 }
-.custom-file-input::before {
-  content: 'Cargar Curriculum';
-  padding-right: 10px;
+.custom-file-upload {
+  border-radius: 50px;
+  border: 1px solid #FFFF3C;
+  text-align: center;
   display: inline-block;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
+  padding: 6px 12px;
   cursor: pointer;
-  font-weight: 400!important;
-  font-size: 9pt!important;
-}
-.custom-file-input:hover::before {
-  border-color: 1px solid #ffcd39;
-  color: #FFFF3C
-}
-.custom-file-input:active::before {
   background: -webkit-linear-gradient(transparent);
-  border-color: 1px solid #ffcd39;
-  color: #FFFF3C
+  color: #FFFF3C;
 }
+.custom-file-upload:hover {
+  border: 1px solid #FFFF3C;
+  cursor: pointer;
+  background: #FFFF3C;
+  color: #000;
+}
+
 .col-container {
   display: table;
   width: 100%;
@@ -12899,8 +12958,6 @@ h3.h3-marquee {
 
 /* Products index */
 #products {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
   background: url("../public/assets/img/fondo_home.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -12950,6 +13007,8 @@ h3.h3-marquee {
 /* Products background */
 .products-masthead {
   height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background: url("../public/assets/img/fondo_cross_border.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -12958,6 +13017,8 @@ h3.h3-marquee {
 }
 .products-masthead-cryptoser{
   height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background: url("../public/assets/img/fondo_crypto_as_a_service.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -12966,6 +13027,8 @@ h3.h3-marquee {
 }
 .products-masthead-crypto{
   height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background: url("../public/assets/img/fondo_crypto_checkout.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -12974,6 +13037,8 @@ h3.h3-marquee {
 }
 .products-masthead-issuing{
   height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background: url("../public/assets/img/fondo_issuing_platform.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -12982,6 +13047,8 @@ h3.h3-marquee {
 }
 .products-masthead-wallet{
   height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background: url("../public/assets/img/fondo_wallet_as_a_service.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -13027,8 +13094,6 @@ h3.h3-marquee {
 
 /* ---------- PRESS SECTION ---------- */
 #press {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
   background: url("../public/assets/img/fondo_home.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -13041,7 +13106,6 @@ h3.h3-marquee {
 
 @media (max-width:500px){
   #press {
-    padding-bottom: calc(10rem - 4.5rem);
     background: url("../public/assets/img/fondo_home.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -13164,9 +13228,10 @@ h3.h3-marquee {
 
 /* --------- INVESTORS SECTION --------- */
 #investors {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
-  background: #262626;
+  /* padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);*/
+  height: 75vh!important;
+  background: #262626!important;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: bottom;
