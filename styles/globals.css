@@ -12352,13 +12352,42 @@ address {
 /* --------------------------- KOIBANX DETAILS --------------------------- */
 
 /* ---------- FONTS KOIBANX ---------- */
+
+h1{
+  font-family: proxima-soft,sans-serif!important;
+  font-weight: 200!important;
+  font-style: normal!important;
+}
+
+h2{
+  font-family: proxima-soft,sans-serif!important;
+  font-weight: 600!important;
+  font-style: normal!important;
+}
+
+h3{
+  font-family: proxima-soft,sans-serif!important;
+  font-weight: 700!important;
+  font-style: normal!important;
+}
+
+h4{
+  font-family: proxima-soft,sans-serif!important;
+  font-weight: 600!important;
+  font-style: normal!important;
+}
+
 .fs-0{
   font-size: 8rem !important;
+  font-weight: 600!important;
 }
 @media (max-width:500px){
   .fs-0{
     font-size: 3rem !important;
     line-height: 3rem;
+  }
+  .margin-mobile {
+    margin-bottom: -10px!important;
   }
 }
 
@@ -12424,13 +12453,6 @@ select:hover{
   scroll-snap-align: center;
 }
 /* ---------- INDEX SECTION ---------- */
-.bg-image{
-  background: url("../public/assets/img/fondo_home_body.jpg")!important;
-  background-repeat: repeat!important;
-  background-attachment: scroll!important;
-  background-position: top!important;
-  background-size: 100%!important;
-}
 .main-video{
   width: 100vw;
   height: 100vh;
@@ -12516,7 +12538,7 @@ select:hover{
     padding-left: 3rem !important;
   }
   .fw-hero-mobile{
-    font-weight: 900;
+    font-weight: 500;
   }
 }
 .absolute-top {
@@ -12958,11 +12980,11 @@ input[type="file"] {
 
 /* Products index */
 #products {
-  background: url("../public/assets/img/fondo_home.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: top;
-  background-size: cover;
+  background: url("../public/assets/img/fondo_productos_index.jpg")!important;
+  background-repeat: repeat!important;
+  background-attachment: scroll!important;
+  background-position: bottom!important;
+  background-size: cover!important;
   height: 100vh!important;
   min-height: 100vh;
   object-fit: fill;
@@ -12972,16 +12994,15 @@ input[type="file"] {
   #products {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: url("../public/assets/img/fondo_home.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top;
-    background-size: cover;
+    background: url("../public/assets/img/fondo_productos_index_mb.jpg")!important;
+    background-repeat: no-repeat!important;
+    background-attachment: scroll!important;
+    background-position: bottom!important;
+    background-size: cover!important;
     height: auto!important;
     min-height: 100vh;
     object-fit: fill;
   }
-
 }
 
 .img-stretch{
@@ -13094,11 +13115,11 @@ input[type="file"] {
 
 /* ---------- PRESS SECTION ---------- */
 #press {
-  background: url("../public/assets/img/fondo_home.png");
+  background: url("../public/assets/img/fondo_press_index.jpg")!important;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: bottom;
-  background-size: cover;
+  background-position: top!important;
+  background-size: cover!important;
   height: 100vh!important;
   min-height: 100vh;
   object-fit: fill;
@@ -13106,11 +13127,11 @@ input[type="file"] {
 
 @media (max-width:500px){
   #press {
-    background: url("../public/assets/img/fondo_home.png");
+    background: url("../public/assets/img/fondo_press_index_mb.jpg")!important;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: bottom;
-    background-size: cover;
+    background-position: top!important;
+    background-size: cover!important;
     height: auto!important;
     object-fit: fill;
   }
