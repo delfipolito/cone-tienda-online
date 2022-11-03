@@ -22,14 +22,14 @@ export default function AppFooter(props) {
             <span className="link-footer">{Footer && Footer.termsConditions || 'Terms & Conditions: El Salvador'}</span>
           </Col>
           <Col xs={6} sm={6} md={5} lg={5} className="h-100 text-center row-btn">
-            <Link href="/jobs" passHref>
-              <Button
-                variant="outline-light"
-                className="rounded-pill px-4 m-2 fs-8"
-              >
-                {Footer && Footer.join || 'Join our Team'}
-              </Button>
-            </Link>
+            {/*<Link href="/jobs" passHref>*/}
+            {/*  <Button*/}
+            {/*    variant="outline-light"*/}
+            {/*    className="rounded-pill px-4 m-2 fs-8"*/}
+            {/*  >*/}
+            {/*    {Footer && Footer.join || 'Join our Team'}*/}
+            {/*  </Button>*/}
+            {/*</Link>*/}
             <Button
               variant="outline-light"
               className="rounded-pill px-4 m-2 fs-8"
