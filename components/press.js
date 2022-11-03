@@ -81,7 +81,6 @@ export async function getStaticProps({locale}) {
 
     const response = await import(`../lang/${locale}.json`);
 
-    console.log(response.default.Press);
     return {
         props: {
             Press: response.default.Press,

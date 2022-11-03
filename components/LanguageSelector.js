@@ -1,20 +1,20 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { Form } from "react-bootstrap";
 
 export default function LanguageSelector() {
     const router = useRouter();
-    console.log(router);
 
     const changeLang = (en) => {
-        
+
         router.push(router.pathname, router.pathname, {
             locale: en.target.value,
         });
     }
     return (
-        <select onChange={changeLang}>
-            <option value="es">Es</option>
+        <Form.Select aria-label="language selector" onChange={changeLang}>
             <option value="en">En</option>
-        </select>
+            <option value="es">Es</option>
+        </Form.Select>
     )
 }
