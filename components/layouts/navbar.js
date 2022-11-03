@@ -5,9 +5,12 @@ import Image from "next/future/image";
 import Link from 'next/link'
 import logo from "../../public/assets/img/Logo_Koibanx_Blanco.svg";
 import styles from "../../styles/Navbar.module.css";
+import LanguageSelector from "../LanguageSelector";
 
-export default function AppNavbar() {
+export default function AppNavbar(props) {
+  const { NavBar } = props.children;
   const [isShrunk, setShrunk] = useState(false);
+
   useEffect(() => {
     const onScroll = () => {
       setShrunk((isShrunk) => {
@@ -44,7 +47,7 @@ export default function AppNavbar() {
         className={classNames("py-3 z-front-2", { "navbar-shrink": isShrunk })}
         id="mainNav"
       >
-        <Container className="px-4 px-lg-5 sticky-top">
+        <Container className="sticky-top">
           <Link href="/" passHref>
             <Navbar.Brand >
               <Image
@@ -62,30 +65,28 @@ export default function AppNavbar() {
             aria-controls="basic-navbar-nav"
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto my-2 my-lg-0" as="ul">
+            <Nav className="ms-auto my-2 my-lg-0 d-flex align-items-center" as="ul">
               <Nav.Item as="li">
                 <Link href="/#products" passHref>
-                  <Nav.Link className="fs-8">
-                    PRODUCTS
+                  <Nav.Link>
+                    {NavBar && NavBar.products || 'PRODUCTOS'}
                   </Nav.Link>
                 </Link>
               </Nav.Item>
               <Nav.Item as="li">
                 <Link href="/about" passHref>
-                  <Nav.Link className="fs-8">
-                    ABOUT US
+                  <Nav.Link>
+                    {NavBar && NavBar.aboutUs || 'SOBRE NOSOTROS'}
                   </Nav.Link>
                 </Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link className="fs-8" href="https://contact.koibanx.com/" target="_blank">
+                <Nav.Link href="https://contact.koibanx.com/" target="_blank">
                   DEMO
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link className="fs-8" href="#">
-                  ES
-                </Nav.Link>
+                <LanguageSelector />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

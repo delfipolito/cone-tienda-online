@@ -1,0 +1,11 @@
+
+use('koibanx');
+
+db.users.drop();
+
+// Insert a few documents into the users collection.
+db.users.insertMany([
+  { '_id': '63576b28bee2712bfd14d17b', 'firstname': 'test', 'lastname': 'test', 'email': 'test@example.com', 'password': '$2a$10$Be2/4V6UrkAj5NtBqFV9reodKKpBlaBgN8qDNs1A9b6KjTowNUyO6'} //admin123,
+  { '_id': '63576bc0bee2712bfd14d17e', 'firstname': 'test1', 'lastname': 'test1', 'email': 'test1@example.com', 'password': '$2a$10$Be2/4V6UrkAj5NtBqFV9reodKKpBlaBgN8qDNs1A9b6KjTowNUyO6'},
+]);
+

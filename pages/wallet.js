@@ -1,101 +1,103 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
+import Link from "next/link"
 
-export default function Wallet() {
+export default function Wallet(props) {
+    const { Wallet } = props;
+
     return (
         <>
-            <section className="products-masthead">
-                <Container className="px-4 px-lg-5">
+            <section className="products-masthead-wallet text-white pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
                         <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
                             <div className="text-white">
-                                <h4>Wallet As a Service</h4>
-                                <p className="font-p">
-                                    We connect your mobile banking application, wallet or payment channel to our platform, allowing you to transfer, exchange and collect any tokenized asset. We deploy white-label wallets for institutions to power their acquiring networks and offer their users and merchants e-commerce and transfers in their own currencies.
+                                <h4 className="pb-4 fst-normal">Wallet as a service</h4>
+                                <p className="fs-5 fw-light">
+                                    {Wallet.text}
                                 </p>
+                                <div className="pt-4">
+                                    <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
+                                        <Button
+                                            className="rounded-pill fs-5 w-50 btn-warning-koi"
+                                            variant="outline-warning"
+                                        >
+                                            Ask for a quote
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
                         </Col>
-                        <Col sm={12} md={8} lg={8} className="d-flex align-items-center">
+                        <Col sm={12} md={2} lg={2} className="d-flex align-items-center">
+                        </Col>
+                        <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
                             <div>
-                                <Image src={require("../public/assets/products/wallet_as.svg")} alt="Wallet as Service illustration" className="img-fluid" />
+                                <Image
+                                    src={require("../public/assets/products/wallet_as.svg")}
+                                    alt="Cross Border Settlements illustration"
+                                    className="img-fluid"
+                                    width={450}
+                                />
                             </div>
                         </Col>
                     </Row>
                 </Container>
-                <Container className="px-4 pt-5 pt-sm-5 px-lg-5">
-                    <Row className="d-flex aling-items-center">
+                <Container className="py-5">
+                    <Row className="container d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
-                            <h4>Main Benefits</h4>
+                            <h4>{Wallet.beneficiostitle}</h4>
                         </Col>
                     </Row>
-                    <Row className="pt-0 pt-md-3 pt-lg-5">
-                        <Row className="gx-sm-0 gx-md-3 gx-lg-3 gy-2 gy-lg-0">
+                    <Row className="container d-flex aling-items-center mt-2">
+                        <Row>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    Decreased risk of theft or loss of cash, by not having to carry it with you.
+                                    {Wallet.main1}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    Greater security when making transactions.
+                                    {Wallet.main2}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    APIs available for easy integration.
+                                    {Wallet.main3}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    Reduces the risk of fraud. Time saving.
+                                    {Wallet.main4}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    They offer greater security to the user.
+                                    {Wallet.main5}
                                 </p>
                             </Col>
                         </Row>
                     </Row>
                 </Container>
-                <Container className="px-4 pt-5 pt-sm-5 px-lg-5">
-                    <Row className="pt-5 ge-5 d-flex align-items-center">
-                        <Col xs={11} sm={11} md={11} lg={11}>
-                            <Row className="d-flex align-items-center gx-5">
-                                <Col sm={12} md={3} lg={3} className="ps-0 pe-5 pe-sm-0 pe-md-0 pe-lg-0">
-                                    <Image
-                                        src={require("../public/assets/clients-koi/rus.svg")}
-                                        alt="Logo RUS"
-                                        className="pe-5 pe-lg-3 img-fluid"
-                                        style={{ height: "auto" }}
-                                    />
-                                </Col>
-                                <Col sm={12} md={3} lg={3} className="ps-0 pe-5 pe-sm-0 pe-md-0 pe-lg-0">
-                                    <Image
-                                        src={require("../public/assets/clients-koi/banco-de-valores.svg")}
-                                        alt="Logo Banco de Valores"
-                                        className="pe-5 pe-lg-3 img-fluid"
-                                        style={{ height: "auto" }}
-                                    />
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col xs={1} sm={1} md={1} lg={1} className="text-center">
-                            <Image
-                                src={require("../public/assets/img/cases.svg")}
-                                alt="Products section"
-                                width={18}
-                                style={{ height: "auto" }}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
             </section>
         </>
     );
+}
+export async function getStaticProps({ locale }) {
+    // const response = await fetch("URL");
+    // const result = await response.json();
+
+    const response = await import(`../lang/${locale}.json`);
+
+    return {
+        props: {
+            Wallet: response.default.Wallet,
+            NavBar: response.default.NavBar,
+            Footer: response.default.Footer,
+        }
+    }
 }
