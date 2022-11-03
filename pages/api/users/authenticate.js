@@ -13,9 +13,11 @@ export default apiHandler({
 
 async function authenticate(req, res) {
     const { email, password } = req.body;
+    console.log('Login... ', email);
     const user = await User.findOne({ email: email });
     // validate
     if (!(user && bcrypt.compareSync(password, user.password))) {
+        console.log('Username or password is incorrect');
         throw 'Username or password is incorrect';
     }
     // create a jwt token that is valid for 7 days
