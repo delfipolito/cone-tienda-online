@@ -2,7 +2,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
 
-export default function MultiAsset() {
+export default function MultiAsset(props) {
     return (
         <>
             <section className="products-masthead-issuing text-white pt-5">
@@ -17,10 +17,10 @@ export default function MultiAsset() {
                                 <div className="pt-4">
                                     <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
                                         <Button
-                                        className="rounded-pill fs-5 w-50 btn-warning-koi"
-                                        variant="outline-warning"
+                                            className="rounded-pill fs-5 w-50 btn-warning-koi"
+                                            variant="outline-warning"
                                         >
-                                        Ask for a quote
+                                            Ask for a quote
                                         </Button>
                                     </Link>
                                 </div>
@@ -31,10 +31,10 @@ export default function MultiAsset() {
                         <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
                             <div>
                                 <Image
-                                src={require("../public/assets/products/issuing_platform.svg")}
-                                alt="Cross Border Settlements illustration"
-                                className="img-fluid"
-                                width={450}
+                                    src={require("../public/assets/products/issuing_platform.svg")}
+                                    alt="Cross Border Settlements illustration"
+                                    className="img-fluid"
+                                    width={450}
                                 />
                             </div>
                         </Col>
@@ -84,4 +84,18 @@ export default function MultiAsset() {
             </section>
         </>
     );
+}
+
+export async function getStaticProps({ locale }) {
+    // const response = await fetch("URL");
+    // const result = await response.json();
+
+    const response = await import(`../lang/${locale}.json`);
+
+    return {
+        props: {
+            NavBar: response.default.NavBar,
+            Footer: response.default.Footer,
+        }
+    }
 }

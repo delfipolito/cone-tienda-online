@@ -1,5 +1,5 @@
 {
-    "Home":{
+    "Home": {
         "herotitle": "Blockchain Payment Rails",
         "herodescription": "Koibanx es la plataforma de tokenización y pagos blockchain líder en Latam, operando en varios países de la región y con más de 7 años de trayectoria. Permite interconectar el mundo financiero tradicional con el mundo crypto, permitiendo la transacción de cualquier tipo de activo con licencias regulatorias vigentes.",
         "customerbar": "Principales clientes",
@@ -20,7 +20,7 @@
         "tiempo": "Mi Vacuna permite contar con una estadística exacta del índice de penetración del programa de vacunación contra el COVID-19. Este aplicativo se conecta con la plataforma de Koibanx, donde se crea una identidad blockchain para cada ciudadano con las constancias o información de cada atención y/o interacción con el sistema de salud colombiano.",
         "infobae": "Resulta necesario resolver, de forma previa, importantes aspectos tecnológicos y regulatorios para lograr una masificación ordenada de la tokenización y, especialmente, avanzar en un marco legal sobre el alcance de los contratos inteligentes.",
         "beincrypto": "En la edición 2022 del festival Premios Verdes, Algorand y Koibanx fueron convocados para brindar un workshop explicativo sobre la tecnología blockchain y los diferentes casos de uso. Así, enumeraron los beneficios de la blockchain de Algorand en proyectos sustentables.",
-        "news":"News blog",
+        "news": "News blog",
         "investors": "Principales Inversores"
     },
     "AppFooter": {
@@ -29,7 +29,7 @@
         "join": "Únete a nuestro equipo",
         "contact": "Contáctanos"
     },
-    "About":{
+    "About": {
         "abouttext": "Nosotros",
         "regional": "Presencia regional.",
         "rampas": "+5 rampas de entrada/salida en Latam.",
@@ -90,5 +90,15 @@
         "main3": "APIs muy intuitivas y fáciles de integrar.",
         "main4": "Reduce los costos de transacción de pago en comercios.",
         "main5": "Convertibilidad automática de las criptomonedas a moneda local."
+    },
+    "NavBar": {
+        "products": "PRODUCTOS",
+        "aboutUs": "SOBRE NOSOTROS"
+    },
+    "Footer": {
+        "privacy": "Políticas de privacidad",
+        "termsConditions": "Términos y Condiciones: El Salvador",
+        "join": "Unete a nosotros",
+        "contact": "Contactanos"
     }
 }

@@ -1,5 +1,5 @@
 {
-    "Home":{
+    "Home": {
         "herotitle": "Blockchain Payment Rails",
         "herodescription": "Koibanx is the leading tokenization & Blockchain payments platform in Latam, with regional presence, +7 years of track record, “real-world” gateways that bridges the traditional financial system with the web3 ecosystem. Tokenization + on/off ramps made avaible within the regulatory framework for each country in the region.",
         "customerbar": "Our Main Customers",
@@ -15,7 +15,7 @@
         "crossdescription": "Instant transfers to +8 countries in LATAM. Collecting USD in the USA via ACH transfers, credit, debit or prepaid cards and/or cryptocurrencies and settling real time payments in local currency at the final destination.",
         "issuingtitle": "Issuing platform",
         "issuingdescription": "Implement your own platform to issue, trade and exchange digital assets. Equity, utility and asset backed token minting series with management and market features. ",
-        "news":"News blog",
+        "news": "News blog",
         "investors": "Our Main Investors",
         "privacy": "Privacy policies",
         "terms": "Terms $ Conditions El Salvador",
@@ -28,7 +28,7 @@
         "join": "Join our team",
         "contact": "Contact us"
     },
-    "About":{
+    "About": {
         "abouttext": "About us",
         "regional": "Regional presence.",
         "rampas": "+5 on/off ramps in Latam.",
@@ -96,5 +96,15 @@
         "tiempo": "Mi Vacuna provides exact statistics on the penetration rate of the COVID-19 vaccination program. This application connects with the Koibanx platform, where a blockchain identity is created for each citizen with the records or information of each care and/or interaction with the Colombian health system.",
         "infobae": "It is necessary to resolve, in advance, important technological and regulatory aspects to achieve an orderly massification of tokenization and, especially, to advance in a legal framework on the scope of smart contracts.",
         "beincrypto": "In the 2022 edition of the Green Awards festival, Algorand and Koibanx were invited to provide an explanatory workshop on blockchain technology and the different use cases. Thus, they listed the benefits of the Algorand blockchain in sustainable projects."
+    },
+    "NavBar": {
+        "products": "PRODUCTS",
+        "aboutUs": "ABOUT US"
+    },
+    "Footer": {
+        "privacy": "Privacy Policies",
+        "termsConditions": "Terms & Conditions: El Salvador",
+        "join": "Join our Team",
+        "contact": "Contact Us"
     }
 }

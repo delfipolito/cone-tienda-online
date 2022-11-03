@@ -3,100 +3,101 @@ import Image from "next/future/image";
 import Link from "next/link"
 
 export default function Wallet(props) {
-    const{Wallet} = props;
-    console.log(props);
+    const { Wallet } = props;
+
     return (
         <>
-        <section className="products-masthead-wallet text-white pt-5">
-            <Container className="px-4 px-lg-3 pt-5">
-                <Row>
-                    <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
-                        <div className="text-white">
-                            <h4 className="pb-4 fst-normal">Wallet as a service</h4>
-                            <p className="fs-5 fw-light">
-                                {Wallet.text}
-                            </p>
-                            <div className="pt-4">
-                                <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
-                                    <Button
-                                    className="rounded-pill fs-5 w-50 btn-warning-koi"
-                                    variant="outline-warning"
-                                    >
-                                    Ask for a quote
-                                    </Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col sm={12} md={2} lg={2} className="d-flex align-items-center">
-                    </Col>
-                    <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
-                        <div>
-                            <Image
-                            src={require("../public/assets/products/wallet_as.svg")}
-                            alt="Cross Border Settlements illustration"
-                            className="img-fluid"
-                            width={450}
-                            />
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-            <Container className="py-5">
-                <Row className="container d-flex aling-items-center">
-                    <Col sm={12} md={12} lg={12}>
-                        <h4>{Wallet.beneficiostitle}</h4>
-                    </Col>
-                </Row>
-                <Row className="container d-flex aling-items-center mt-2">
+            <section className="products-masthead-wallet text-white pt-5">
+                <Container className="px-4 px-lg-3 pt-5">
                     <Row>
-                        <Col sm={6} className="col-md-5ths col-lg-5ths">
-                            <h5>| 01</h5>
-                            <p className="fs-8">
-                                {Wallet.main1}
-                            </p>
+                        <Col sm={12} md={4} lg={4} className="d-flex align-items-center">
+                            <div className="text-white">
+                                <h4 className="pb-4 fst-normal">Wallet as a service</h4>
+                                <p className="fs-5 fw-light">
+                                    {Wallet.text}
+                                </p>
+                                <div className="pt-4">
+                                    <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
+                                        <Button
+                                            className="rounded-pill fs-5 w-50 btn-warning-koi"
+                                            variant="outline-warning"
+                                        >
+                                            Ask for a quote
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
                         </Col>
-                        <Col sm={6} className="col-md-5ths col-lg-5ths">
-                            <h5>| 02</h5>
-                            <p className="fs-8">
-                                {Wallet.main2}
-                            </p>
+                        <Col sm={12} md={2} lg={2} className="d-flex align-items-center">
                         </Col>
-                        <Col sm={6} className="col-md-5ths col-lg-5ths">
-                            <h5>| 03</h5>
-                            <p className="fs-8">
-                                {Wallet.main3}
-                            </p>
-                        </Col>
-                        <Col sm={6} className="col-md-5ths col-lg-5ths">
-                            <h5>| 04</h5>
-                            <p className="fs-8">
-                                {Wallet.main4}
-                            </p>
-                        </Col>
-                        <Col sm={6} className="col-md-5ths col-lg-5ths">
-                            <h5>| 05</h5>
-                            <p className="fs-8">
-                                {Wallet.main5}
-                            </p>
+                        <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
+                            <div>
+                                <Image
+                                    src={require("../public/assets/products/wallet_as.svg")}
+                                    alt="Cross Border Settlements illustration"
+                                    className="img-fluid"
+                                    width={450}
+                                />
+                            </div>
                         </Col>
                     </Row>
-                </Row>
-            </Container>
-        </section>
+                </Container>
+                <Container className="py-5">
+                    <Row className="container d-flex aling-items-center">
+                        <Col sm={12} md={12} lg={12}>
+                            <h4>{Wallet.beneficiostitle}</h4>
+                        </Col>
+                    </Row>
+                    <Row className="container d-flex aling-items-center mt-2">
+                        <Row>
+                            <Col sm={6} className="col-md-5ths col-lg-5ths">
+                                <h5>| 01</h5>
+                                <p className="fs-8">
+                                    {Wallet.main1}
+                                </p>
+                            </Col>
+                            <Col sm={6} className="col-md-5ths col-lg-5ths">
+                                <h5>| 02</h5>
+                                <p className="fs-8">
+                                    {Wallet.main2}
+                                </p>
+                            </Col>
+                            <Col sm={6} className="col-md-5ths col-lg-5ths">
+                                <h5>| 03</h5>
+                                <p className="fs-8">
+                                    {Wallet.main3}
+                                </p>
+                            </Col>
+                            <Col sm={6} className="col-md-5ths col-lg-5ths">
+                                <h5>| 04</h5>
+                                <p className="fs-8">
+                                    {Wallet.main4}
+                                </p>
+                            </Col>
+                            <Col sm={6} className="col-md-5ths col-lg-5ths">
+                                <h5>| 05</h5>
+                                <p className="fs-8">
+                                    {Wallet.main5}
+                                </p>
+                            </Col>
+                        </Row>
+                    </Row>
+                </Container>
+            </section>
         </>
     );
 }
-export async function getStaticProps({locale}) {
-  // const response = await fetch("URL");
-  // const result = await response.json();
+export async function getStaticProps({ locale }) {
+    // const response = await fetch("URL");
+    // const result = await response.json();
 
     const response = await import(`../lang/${locale}.json`);
 
-    console.log(response.default.Wallet);
     return {
         props: {
             Wallet: response.default.Wallet,
+            NavBar: response.default.NavBar,
+            Footer: response.default.Footer,
         }
     }
 }

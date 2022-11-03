@@ -7,8 +7,10 @@ import logo from "../../public/assets/img/Logo_Koibanx_Blanco.svg";
 import styles from "../../styles/Navbar.module.css";
 import LanguageSelector from "../LanguageSelector";
 
-export default function AppNavbar() {
+export default function AppNavbar(props) {
+  const { NavBar } = props.children;
   const [isShrunk, setShrunk] = useState(false);
+
   useEffect(() => {
     const onScroll = () => {
       setShrunk((isShrunk) => {
@@ -65,28 +67,26 @@ export default function AppNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto my-2 my-lg-0 d-flex align-items-center" as="ul">
               <Nav.Item as="li">
-                  <Link href="/#products" passHref>
-                    <Nav.Link>
-                      PRODUCTS
-                    </Nav.Link>
-                  </Link>
+                <Link href="/#products" passHref>
+                  <Nav.Link>
+                    {NavBar && NavBar.products || 'PRODUCTOS'}
+                  </Nav.Link>
+                </Link>
               </Nav.Item>
               <Nav.Item as="li">
-                  <Link href="/about" passHref>
-                    <Nav.Link>
-                      ABOUT US
-                    </Nav.Link>
-                  </Link>
+                <Link href="/about" passHref>
+                  <Nav.Link>
+                    {NavBar && NavBar.aboutUs || 'SOBRE NOSOTROS'}
+                  </Nav.Link>
+                </Link>
               </Nav.Item>
               <Nav.Item as="li">
-                  <Nav.Link href="https://contact.koibanx.com/" target="_blank">
+                <Nav.Link href="https://contact.koibanx.com/" target="_blank">
                   DEMO
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                  <Nav.Link href="#">
-                    <LanguageSelector />
-                  </Nav.Link>
+                <LanguageSelector />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

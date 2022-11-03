@@ -3,8 +3,8 @@ import Image from "next/future/image";
 import Link from "next/link"
 
 export default function CryptoService(props) {
-    const{CryptoService} = props;
-    console.log(props);
+    const { CryptoService } = props;
+
     return (
         <>
             <section className="products-masthead-cryptoser text-white pt-5">
@@ -14,15 +14,15 @@ export default function CryptoService(props) {
                             <div className="text-white">
                                 <h4 className="pb-4 fst-normal">Crypto As a Service</h4>
                                 <p className="fs-5 fw-light">
-                                {CryptoService.text}
+                                    {CryptoService.text}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
                                         <Button
-                                        className="rounded-pill fs-5 w-50 btn-warning-koi"
-                                        variant="outline-warning"
+                                            className="rounded-pill fs-5 w-50 btn-warning-koi"
+                                            variant="outline-warning"
                                         >
-                                        Ask for a quote
+                                            Ask for a quote
                                         </Button>
                                     </Link>
                                 </div>
@@ -33,10 +33,10 @@ export default function CryptoService(props) {
                         <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
                             <div>
                                 <Image
-                                src={require("../public/assets/products/crypto_service.svg")}
-                                alt="Cross Border Settlements illustration"
-                                className="img-fluid"
-                                width={450}
+                                    src={require("../public/assets/products/crypto_service.svg")}
+                                    alt="Cross Border Settlements illustration"
+                                    className="img-fluid"
+                                    width={450}
                                 />
                             </div>
                         </Col>
@@ -55,31 +55,31 @@ export default function CryptoService(props) {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                {CryptoService.main1}
+                                    {CryptoService.main1}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                {CryptoService.main2}
+                                    {CryptoService.main2}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                {CryptoService.main3}
+                                    {CryptoService.main3}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                {CryptoService.main4}
+                                    {CryptoService.main4}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                {CryptoService.main5}
+                                    {CryptoService.main5}
                                 </p>
                             </Col>
                         </Row>
@@ -89,16 +89,17 @@ export default function CryptoService(props) {
         </>
     );
 }
-export async function getStaticProps({locale}) {
-  // const response = await fetch("URL");
-  // const result = await response.json();
+export async function getStaticProps({ locale }) {
+    // const response = await fetch("URL");
+    // const result = await response.json();
 
     const response = await import(`../lang/${locale}.json`);
 
-    console.log(response.default.CryptoService);
     return {
         props: {
             CryptoService: response.default.CryptoService,
+            NavBar: response.default.NavBar,
+            Footer: response.default.Footer,
         }
     }
 }
