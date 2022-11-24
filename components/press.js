@@ -1,8 +1,6 @@
 import { Row, Col, Carousel, Button } from "react-bootstrap";
 
 export default function Press(props) {
-    const{Press} = props;
-    console.log(props);
     return (
         <Row className="display-mobile-none">
             <Carousel className="main-carousel px-5">
@@ -76,9 +74,6 @@ export default function Press(props) {
     )
 }
 export async function getStaticProps({locale}) {
-  // const response = await fetch("URL");
-  // const result = await response.json();
-
     const response = await import(`../lang/${locale}.json`);
 
     return {
