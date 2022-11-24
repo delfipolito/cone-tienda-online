@@ -2,7 +2,7 @@
 
 Web institucional
 
-Instalacion
+## Instalacion
 
 Copiar .env.example como .env
 
@@ -39,3 +39,13 @@ yarn start
 
 ## Admin Panel
 Para loguearse al admin, deben entrar al sitio /admin/login. Pueden usar como usuario de prueba los que se encuentran en el archivo users.mongodb. Previamente, deben importar dicho archivo en la base de mongo
+
+## URLs
+
+**Develop**
+
+[https://koibanx-web-v2.dev.koibanx.link/es](https://koibanx-web-v2.dev.koibanx.link/es)
+
+**Production**
+
+[https://koibanx.com](https://koibanx.com)
