@@ -15,6 +15,7 @@ export default function JobPostulationForm({ job_id, position }) {
     const [validated, setValidated] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         const target = e.target
@@ -49,6 +50,7 @@ export default function JobPostulationForm({ job_id, position }) {
             return;
         }
 
+        setIsLoading(true);
         const jobFormData = new FormData();
         jobFormData.append('name', jobForm.name);
         jobFormData.append('email', jobForm.email);
@@ -56,11 +58,12 @@ export default function JobPostulationForm({ job_id, position }) {
         jobFormData.append('phone', jobForm.phone);
         jobFormData.append('resumee', jobForm.resumee);
 
+
         return jobService.postulate(job_id, jobFormData)
             .then((response) => {
                 setSuccess("Tu postulación fue guardada con éxito");
             })
-            .catch(error => { setError(error) });
+            .catch(error => { setError(error) }).finally(() => setIsLoading(false));
     }
 
     return (
@@ -108,18 +111,6 @@ export default function JobPostulationForm({ job_id, position }) {
                         type="text"
                         onChange={handleChange} />
                 </InputGroup>
-                {/* <InputGroup className="mb-3 ">
-                    <Form.Control
-                        placeholder="Job position"
-                        aria-label="position"
-                        name="position"
-                        type="text"
-                        required
-                        aria-describedby="basic-addon1"
-                        className="input-koi fs-7"
-                        value={jobForm.position}
-                        onChange={handleChange} />
-                </InputGroup> */}
                 <Form.Group controlId="formFile" className="mb-3 fs-7 w-75">
                     <Form.Label className="custom-file-upload">
                         Cargar curriculum
@@ -131,9 +122,10 @@ export default function JobPostulationForm({ job_id, position }) {
                         accept="application/pdf"
                         required
                         onChange={handleChange} />
+                    {jobForm && jobForm.resumee && <p>{jobForm.resumee.name}</p>}
                 </Form.Group>
-                <Button variant="outline-primary" type="submit" className="rounded-pill fs-7 btn-orange text-center">
-                    Apply now
+                <Button variant="outline-primary" type="submit" disabled={isLoading} className="rounded-pill fs-7 btn-orange text-center">
+                    {isLoading ? 'Loading…' : 'Apply now'}
                 </Button>
             </Form>
         </>
