@@ -23,6 +23,15 @@
         "news": "News blog",
         "investors": "Principales Inversores"
     },
+    "News": {
+        "buttonReadMore": "Leer más",
+        "buttonBlog": "Ir al blog",
+        "coindesk": "Queremos seguir a la vanguardia de la redefinición del sistema financiero de América Latina. Un sistema financiero basado en blockchain inevitablemente da como resultado productos financieros más rápidos, escalables y programables que otorgarán acceso a un segmento más amplio de la población que actualmente está desatendido.",
+        "forbes": "Los formularios de propiedad intelectual alcanzados por el acuerdo incluyen marcas comerciales, patentes y todo tipo de derechos de autor: como canciones, letras, videos, espectáculos, conferencias, podcasts y todas las formas de contenido que se puede transmitir.",
+        "eltiempo": "Mi Vacuna permite contar con una estadística exacta del índice de penetración del programa de vacunación contra el COVID-19. Este aplicativo se conecta con la plataforma de Koibanx, donde se crea una identidad blockchain para cada ciudadano con las constancias o información de cada atención y/o interacción con el sistema de salud colombiano.",
+        "infobae": "Resulta necesario resolver, de forma previa, importantes aspectos tecnológicos y regulatorios para lograr una masificación ordenada de la tokenización y, especialmente, avanzar en un marco legal sobre el alcance de los contratos inteligentes.",
+        "beincrypto": "En la edición 2022 del festival Premios Verdes, Algorand y Koibanx fueron convocados para brindar un workshop explicativo sobre la tecnología blockchain y los diferentes casos de uso. Así, enumeraron los beneficios de la blockchain de Algorand en proyectos sustentables."
+    },
     "AppFooter": {
         "privacy": "Políticas de privacidad",
         "terms": "Términos y Condiciones El Salvador",
@@ -36,7 +45,7 @@
         "tokenizados": "+900M USD tokenizados.",
         "platform": "Koibanx es la plataforma de tokenización y pagos blockchain líder en Latam, operando en varios países de la región y con más de 7 años de trayectoria. Permite interconectar el mundo financiero tradicional con el mundo crypto, permitiendo la transacción de cualquier tipo de activo con licencias regulatorias vigentes.",
         "ejecutivos": "Equipo Ejecutivo",
-        "leo": "VP Bitcoin Argentina ONG. Crypto Pioneer. Abogado. Coder. Trabajó previamente en MercadoLibre (Nasdaq: Meli) y Philip Morris International.",
+        "leo": "VP Bitcoin Argentina ONG. Crypto Pioneer. Abogado. Coder. Trabajó previamente en MercadoLibre (Nasdaq: MELI) y Philip Morris International.",
         "edy": "Ingeniero en sistemas. Web Pioneer. +25 años de experiencia liderando el área de IT de distintas empresas como Clarín, Staples y Arcos Dorados.",
         "francisco": "Economista, Magíster en Finanzas, CFA. +10 años de experiencia en mercados financieros, especializado en pricing y estructuración financiera.",
         "lety": "Jefe de Gabinete del CEO de Koibanx. Economista y Especialista en Políticas Públicas. +9 años de experiencia profesional en el sector público y privado.",
@@ -67,11 +76,11 @@
     "Issuing": {
         "text": "Implementa tu propia plataforma para emitir, comerciar e intercambiar activos digitales. Creación de tokens respaldados por valores, utilidades y activos con características de gestión y mercado. Impulsa la liquidez de tus usuarios habilitando la inversión y el comercio de activos fraccionarios y parciales.",
         "beneficiostitle": "Beneficios",
-        "main1": "Permite realizar pagos, cobros y remesas personales o corporativas.",
-        "main2": "Plataforma SaaS.",
-        "main3": "APIs muy intuitivas y fáciles de integrar.",
-        "main4": "KYC & AML integrado.",
-        "main5": "Mejores precios y ahorro de tiempo utilizando crypto tras bambalinas."
+        "main1": "Posibilidad de utilizar este token como medio de pago.",
+        "main2": "Auditoría de principio a fin.",
+        "main3": "Permite fraccionar bienes.",
+        "main4": "Generación de NFTs.",
+        "main5": "APIs muy intuitivas y fáciles de integrar."
     },
     "CryptoService": {
         "text": "Infraestructura de criptomonedas para tus canales. Permitimos que bancos y billeteras digitales brinden a sus propios clientes la capacidad de comprar, vender, recibir, enviar y almacenar criptomonedas en sus plataformas.",
@@ -98,7 +107,10 @@
     "Footer": {
         "privacy": "Políticas de privacidad",
         "termsConditions": "Términos y Condiciones: El Salvador",
-        "join": "Unete a nosotros",
+        "join": "Únete a nosotros",
         "contact": "Contactanos"
+    },
+    "Buttons": {
+        "askQuote": "Solicitar asesoría"
     }
 }

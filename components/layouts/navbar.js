@@ -4,11 +4,11 @@ import classNames from "classnames";
 import Image from "next/future/image";
 import Link from 'next/link'
 import logo from "../../public/assets/img/Logo_Koibanx_Blanco.svg";
-import styles from "../../styles/Navbar.module.css";
 import LanguageSelector from "../LanguageSelector";
+import useTranslation from 'next-translate/useTranslation';
 
-export default function AppNavbar(props) {
-  const { NavBar } = props.children;
+export default function AppNavbar() {
+  const {t} = useTranslation();
   const [isShrunk, setShrunk] = useState(false);
 
   useEffect(() => {
@@ -69,14 +69,14 @@ export default function AppNavbar(props) {
               <Nav.Item as="li">
                 <Link href="/#products" passHref>
                   <Nav.Link>
-                    {NavBar && NavBar.products || 'PRODUCTOS'}
+                    {t('common:NavBar.products')}
                   </Nav.Link>
                 </Link>
               </Nav.Item>
               <Nav.Item as="li">
                 <Link href="/about" passHref>
                   <Nav.Link>
-                    {NavBar && NavBar.aboutUs || 'SOBRE NOSOTROS'}
+                    {t('common:NavBar.aboutUs')}
                   </Nav.Link>
                 </Link>
               </Nav.Item>

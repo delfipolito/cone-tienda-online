@@ -1,13 +1,14 @@
-// pages/_document.js
 
 import {Html, Head, Main, NextScript} from 'next/document'
 import {Enviroment} from '../models/enviroments';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Document(props) {
+    const {lang} = useTranslation();
 
     const isProduction = process.env.NEXT_PUBLIC_ENVIRONMENT === Enviroment.Production;
     return (
-        <Html lang={'es'}>
+        <Html lang={lang}>
             <Head>
                 <meta charSet="utf-8"></meta>
                 <meta name="description" content="Koibanx es una compañía líder en proveer infraestructura blockchain en Latinoamérica, brindando tokenización y transacción de activos a la banca, gobiernos y al sector financiero de la región."/>

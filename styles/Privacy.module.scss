@@ -1,0 +1,63 @@
+.main {
+  font-size: 14px;
+  padding-top: 90px;
+  text-align: justify;
+  width: 90%;
+  color: white;
+  padding-left: 10px;
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 5px;;
+    }
+  }
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.subElements {
+  list-style-type: none;
+}
+
+.ulWithLetters {
+  list-style-type: none;
+
+  li {
+    gap: 5px;
+  }
+}

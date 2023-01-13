@@ -1,8 +1,11 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
+import useTranslation from 'next-translate/useTranslation';
 
-export default function MultiAsset(props) {
+export default function MultiAsset() {
+    const {t} = useTranslation();
+
     return (
         <>
             <section className="products-masthead-issuing text-white pt-5">
@@ -12,7 +15,7 @@ export default function MultiAsset(props) {
                             <div className="text-white">
                                 <h4 className="pb-4 fst-normal">Issuing Platform</h4>
                                 <p className="fs-5 fw-light">
-                                    Implement your own platform to issue, trade and exchange digital assets. Equity, utility and asset backed token minting series with management and market features. It boosts the liquidity of its users by enabling investment and trading of fractional and partial assets.
+                                    {t('common:Issuing.text')}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="https://contact.koibanx.com/" className="btn-holder" passHref>
@@ -20,7 +23,7 @@ export default function MultiAsset(props) {
                                             className="rounded-pill fs-5 w-50 btn-warning-koi"
                                             variant="outline-warning"
                                         >
-                                            Ask for a quote
+                                            {t('common:Buttons.askQuote')}
                                         </Button>
                                     </Link>
                                 </div>
@@ -43,7 +46,7 @@ export default function MultiAsset(props) {
                 <Container className="px-4 px-lg-3 pb-5">
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
-                            <h4>Main Benefits</h4>
+                            <h4>{t('common:Issuing.beneficiostitle')}</h4>
                         </Col>
                     </Row>
                     <Row className="pt-0 pt-md-3 pt-lg-5">
@@ -51,31 +54,31 @@ export default function MultiAsset(props) {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    Possibility of using this token in means of payment.
+                                    {t('common:Issuing.main1')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    Audit from start to finish.
+                                    {t('common:Issuing.main2')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    Allows dividing assets into parts.
+                                    {t('common:Issuing.main3')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    Generation of NFTs.
+                                    {t('common:Issuing.main4')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    APIs very intuitive and easy to integrate.
+                                    {t('common:Issuing.main5')}
                                 </p>
                             </Col>
                         </Row>
@@ -84,18 +87,4 @@ export default function MultiAsset(props) {
             </section>
         </>
     );
-}
-
-export async function getStaticProps({ locale }) {
-    // const response = await fetch("URL");
-    // const result = await response.json();
-
-    const response = await import(`../lang/${locale}.json`);
-
-    return {
-        props: {
-            NavBar: response.default.NavBar,
-            Footer: response.default.Footer,
-        }
-    }
 }

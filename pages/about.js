@@ -3,9 +3,10 @@ import Marquee from "react-fast-marquee";
 import Image from "next/future/image";
 import Link from "next/link";
 import { BsChevronDown } from "react-icons/bs";
+import useTranslation from 'next-translate/useTranslation';
 
-export default function About(props) {
-  const { About } = props;
+export default function About() {
+  const {t} = useTranslation();
 
   return (
     <>
@@ -31,7 +32,7 @@ export default function About(props) {
         <section id="about-data" className="container-fluid h-100 d-flex flex-column align-items-center justify-content-center">
           <Row className="container">
             <Col xs={8} sm={8} md={4} ld={4}>
-              <h5 className="fs-4 pt-5">{About.abouttext}</h5>
+              <h5 className="fs-4 pt-5">{t('common:About.abouttext')}</h5>
             </Col>
             <Col xs={4} md={4} lg={4} sm={4} className="d-flex pt-5">
               <hr className="hr-line-4" />
@@ -45,7 +46,7 @@ export default function About(props) {
                 </Col>
                 <Col xs={10} md={10} sm={11} lg={11}>
                   <p className="fs-6 text-warning fw-bold">
-                    {About.regional}
+                    {t('common:About.regional')}
                   </p>
                 </Col>
               </Row>
@@ -55,7 +56,7 @@ export default function About(props) {
                 </Col>
                 <Col xs={10} md={10} sm={11} lg={11}>
                   <p className="fs-6 text-warning fw-bold">
-                    {About.rampas}
+                    {t('common:About.rampas')}
                   </p>
                 </Col>
               </Row>
@@ -65,7 +66,7 @@ export default function About(props) {
                 </Col>
                 <Col xs={10} md={10} sm={11} lg={11}>
                   <p className="fs-6 text-warning fw-bold">
-                    {About.tokenizados}
+                    {t('common:About.tokenizados')}
                   </p>
                 </Col>
               </Row>
@@ -75,7 +76,7 @@ export default function About(props) {
             <Col md={4} className="text-left"></Col>
             <Col xs={12} sm={12} md={6} lg={6} className="text-left">
               <h4 className="p-5 text-white fw-normal">
-                {About.platform}
+                {t('common:About.platform')}
               </h4>
             </Col>
           </Row>
@@ -85,7 +86,7 @@ export default function About(props) {
         <section id="about-team" className="container-fluid h-100 d-flex flex-column align-items-center justify-content-center">
           <Row className="container my-3">
             <Col xs={8} sm={8} md={4} ld={4}>
-              <h5 className="fs-4">{About.ejecutivos}</h5>
+              <h5 className="fs-4">{t('common:About.ejecutivos')}</h5>
             </Col>
             <Col xs={4} md={4} lg={4} sm={4} className="d-flex">
               <hr className="hr-line-3" />
@@ -109,7 +110,7 @@ export default function About(props) {
                       <h6>Leo Elduayen</h6>
                       <p className="fw-bold">Co Founder & CEO</p>
                       <p>
-                        {About.leo}
+                        {t('common:About.leo')}
                       </p>
                       <a href="https://www.linkedin.com/in/leo-elduayen-a2314399/" target="_blank" rel="noreferrer">
                         <Image
@@ -138,7 +139,7 @@ export default function About(props) {
                       <h6>Edy Weber</h6>
                       <p className="fw-bold">Co Founder & CTO</p>
                       <p>
-                        {About.edy}
+                        {t('common:About.edy')}
                       </p>
                       <a href="https://www.linkedin.com/in/edy-weber-045258/" target="_blank" rel="noreferrer">
                         <Image
@@ -167,7 +168,7 @@ export default function About(props) {
                       <h6>Fran Mayora</h6>
                       <p className="fw-bold">CFO</p>
                       <p>
-                        {About.francisco}
+                        {t('common:About.francisco')}
                       </p>
                       <a href="https://www.linkedin.com/in/francisco-mayora-3301b93b/" target="_blank" rel="noreferrer">
                         <Image
@@ -196,7 +197,7 @@ export default function About(props) {
                       <h6>Lety Lopez Tiznado</h6>
                       <p className="fw-bold">Chief of Staff</p>
                       <p>
-                        {About.lety}
+                        {t('common:About.lety')}
                       </p>
                       <a href="https://www.linkedin.com/in/leticia-l%C3%B3pez-tiznado-27699337/" target="_blank" rel="noreferrer">
                         <Image
@@ -225,7 +226,7 @@ export default function About(props) {
                       <h6>Tulio Nuñez</h6>
                       <p className="fw-bold">Head of Legal & Compliance</p>
                       <p>
-                        {About.tulio}
+                        {t('common:About.tulio')}
                       </p>
                       <a href="https://www.linkedin.com/in/tulionunezh/" target="_blank" rel="noreferrer">
                         <Image
@@ -254,7 +255,7 @@ export default function About(props) {
                       <h6>Mar Fernández</h6>
                       <p className="fw-bold">Head of Marketing</p>
                       <p>
-                        {About.mar}
+                        {t('common:About.mar')}
                       </p>
                       <a href="https://www.linkedin.com/in/mariannferr/" target="_blank" rel="noreferrer">
                         <Image
@@ -280,7 +281,7 @@ export default function About(props) {
                 variant="outline-warning"
                 className="btn btn-outline-warning rounded-pill fs-8 btn-warning"
               >
-                Meet the rest of the team
+                {t('common:About.buttonteam')}
               </Button>
             </section>
           </Row>
@@ -299,14 +300,14 @@ export default function About(props) {
           <Row className="container">
             <Col md={4} lg={4} sm={4}>
               <p>
-                {About.hiring}
+                {t('common:About.hiring')}
               </p>
               <Link href="/jobs" passHref>
                 <Button
                   className="rounded-pill fs-8 btn-orange btn-index"
                   variant="outline-primary"
                 >
-                  {About.buttonjob}
+                  {t('common:About.buttonjob')}
                 </Button>
               </Link>
             </Col>
@@ -315,21 +316,4 @@ export default function About(props) {
       </container>
     </>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  // const response = await fetch("URL");
-  // const result = await response.json();
-
-  const response = await import(`../lang/${locale}.json`);
-
-  return {
-    props: {
-      About: response.default.About,
-      NavBar: response.default.NavBar,
-      Footer: response.default.Footer,
-    }
-  }
-
-
 }

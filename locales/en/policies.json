@@ -1,0 +1,159 @@
+{
+  "title": "Privacy Policy",
+  "subtitle": "Koibanx",
+  "explanation": {
+    "first": "This privacy policy (\"Policy\") describes how Koibanx Ltd. (\"Company\", \"we\" or \"our\") collects, uses, shares and stores personal information from users of its website, ",
+    "second": "(the “Site”). This Policy applies to the Site, applications, products, and services (collectively, \"Services\") on which the Company is posted, linked, or referenced."
+  },
+  "agree": {
+    "description": {
+      "first": "By using the Services, you agree to the terms of this Policy, and you consent to our collection, use, disclosure, and retention of your information as described in this Policy. The Policy contains provisions that limit our liability to you and require that you resolve any dispute with us on an individual basis and not as part of a class or representative action. ",
+      "second": "If you do not agree with any part of this privacy policy, please do not use any of the services."
+    }
+  },
+  "doNotApply": "Please note that this Policy does not apply to information collected through third-party websites or services that you may access through the Services or that you send to us by email, text or other electronic or offline message line.",
+  "subtitles": {
+    "whatCollect": "What we collect",
+    "weObtainInfo": "We obtain information about you in various ways.",
+    "infoProvideUs": "Information you provide to us. The information we collect from you may include:",
+    "usePersonalInfo": {
+      "title": "Use of personal information",
+      "description": "To provide our service, we will use your personal information for the following purposes:"
+    },
+    "sharePersonalInfo": {
+      "title": "Share personal information",
+      "description": "We do not share the personal information you provide to us with other organizations without your express consent, except as described in this Privacy Policy. We disclose personal information to third parties in the following circumstances:",
+      "otherUses": "We may also share aggregated and/or anonymous data with others for their own uses."
+    },
+    "internationalTransfer": {
+      "title": "International transfer",
+      "description": {
+        "first": "Solely to comply with the purposes established in this Privacy Policy and for the purpose of providing the Services, KOIBANX may transfer Personal Data and/or personal information to KOIBANX authorities, customers, suppliers and subcontractors and other third parties, such as, by example, those service providers used for the purpose of providing the Services.",
+        "second": "In some cases, personal information may be transferred outside the territory in which you are located to countries with different levels of protection. If personal information is transferred to countries with lower levels of protection, KOIBANX will make such transfers subject to appropriate safeguards and security measures, such as the standard data protection clauses adopted in the respective agreements or approved by the authority applicable law.",
+        "third": "Therefore, the User understands, consents, and accepts, through this Privacy Policy, that their Personal Data may be transferred to other countries, whether they have an adequate standard of protection in accordance with current legal regulations. The withdrawal of consent by the User will not invalidate the previous actions of KOIBANX, nor will it make it legally responsible in any way."
+      }
+    },
+    "howWeProtectInfo": {
+      "title": "How we protect information",
+      "description": {
+        "first": "We retain the information we collect for as long as it is necessary and relevant to fulfill the purposes outlined in this privacy policy. In addition, we retain personal information to comply with applicable law where necessary, prevent fraud, resolve disputes, troubleshoot problems, assist with any investigation, enforce our policies, and other actions permitted by law. In determining the appropriate retention period for personal information, we consider the amount, nature, and sensitivity of the personal information, the potential risk of harm from unauthorized use or disclosure of your personal information, the purposes for which we process your personal information and whether we can achieve those purposes through other means, and the applicable legal requirements.",
+        "second": "In some circumstances, we may anonymize your personal information (so that it can no longer be associated with you), in which case we may use this information indefinitely without notice to you.",
+        "third": "We employ industry standard security measures designed to protect the security of all information submitted through the Services. However, the security of information transmitted over the Internet can never be guaranteed. We are not responsible for any interception or interruption of communications over the Internet or for changes or loss of data. Users of the Services are responsible for maintaining the security of any password, biometric data, user identification, or other form of authentication involved in gaining access to secure or password-protected areas of any of our digital services. To protect you and your data, we may suspend your use of any of the Services, without notice, pending investigation, if a breach of security is suspected."
+      }
+    },
+    "infoOptionAndChanges": {
+      "title": {
+        "first": "Information options and changes",
+        "second": "Access, update, correction, and deletion of your information"
+      },
+      "description": {
+        "first": "You can access the information you have voluntarily provided through your account on the Services and review, correct or delete it by sending a request to ",
+        "second": " You can request to change contact options, opt out of sharing with others, and update your personal information and preferences."
+      }
+    },
+    "trackingTech": {
+      "title": "Tracking technologies in general",
+      "description": {
+        "first": "Normal cookies can generally be disabled or deleted using tools available as part of most commercial browsers, and in some cases can be blocked in the future by selecting certain settings.",
+        "second": "Any changes to this Privacy Policy will be effective upon posting of the new terms and/or implementation of the changes on the Site (or as otherwise indicated at the time of posting). In all cases, your continued use of the Site or Services following the posting of any modified Privacy Policy indicates your acceptance of the terms of the modified Privacy Policy."
+      }
+    },
+    "eligibilityCriteria": {
+      "title": "Eligibility Criteria",
+      "description": "If you are a minor in your jurisdiction of residence, you may use the Services only with the consent or under the supervision of your parent or legal guardian. In accordance with the requirements of the Children's Online Privacy Protection Act (COPPA), if we learn that we have received information directly from a child under the age of 13 without first receiving verified parental consent, we will use that information only to respond directly. to that child (or their parent or legal guardian) to inform them that they cannot use the Site, and we will subsequently delete that information."
+    },
+    "sensitiveInfo": {
+      "title": "Sensitive information",
+      "description": "Some of the information you provide to us may constitute sensitive information (also called special categories of personal data), including identification of your race or ethnicity on government-issued identification documents."
+    },
+    "legalBases": {
+      "title": "Legal bases for processing",
+      "description": "We only use your personal information as permitted by law. We are required to inform you of the legal bases for our processing of your personal information, which are described in the table below. If you have questions about the legal bases under which we process your personal information, please contact us at ",
+      "table": {
+        "header": {
+          "purpose": "Purpose of the treatment",
+          "legalBase": "Legal base"
+        },
+        "rows": {
+          "first": {
+            "purpose": "To provide our service",
+            "legalBase": "Our processing of your personal information is necessary to perform the contract that governs our provision of the Services or to take steps you request prior to subscribing to the Service."
+          },
+          "second": {
+            "purpose": {
+              "first": "To communicate with you",
+              "second": "To optimize our platform",
+              "third": "For compliance, fraud prevention and security",
+              "fourth": "To provide our service"
+            },
+            "legalBase": "These processing activities constitute our legitimate interests. We make sure to consider and balance any potential impact on you (both positive and negative) and your rights before processing your personal information for our legitimate interests. We do not use your personal information for activities where our interests are overridden by any adverse impact on you (unless we have your consent or are required or permitted by law)."
+          },
+          "third": {
+            "purpose": "To comply with the law",
+            "legalBase": "We use your personal information to comply with applicable laws and our legal obligations, including anti-money laundering (AML) and know-your-customer (KYC) requirements."
+          },
+          "fourth": {
+            "purpose": "With your consent",
+            "legalBase": "Where our use of your personal information is based on your consent, you have the right to withdraw your consent at any time in the manner indicated on the Service or by contacting us at "
+          }
+        }
+      }
+    },
+    "newPurposes": {
+      "title": "Use for new purposes",
+      "description": "We may use your personal information for reasons not described in this Privacy Policy, when the law allows us to do so and when the reason is compatible with the purpose for which we collected it. If we need to use your personal information for an unrelated purpose, we will notify you and explain the applicable legal basis for that use. If we have relied on your consent for a particular use of your personal information, we will seek your consent for any unrelated purpose."
+    },
+    "rights": {
+      "title": "Your rights",
+      "description": {
+        "first": "You are informed that you have certain rights with respect to your personal information, as detailed below:",
+        "second": "You can send these requests by email to ",
+        "third": "We may request specific information from you to help us confirm your identity and process your request. Applicable law may require or permit us to deny your request. If we deny your request, we will tell you why, subject to legal restrictions. If you wish to make a complaint about our use of your personal information or a response to your requests regarding your personal information, you may contact us at ",
+        "fourth": "or file a complaint with the data protection regulator in your jurisdiction."
+      },
+      "bulletList": {
+        "a": "a) Right of access: right to request and obtain information about what personal data is processed and stored by the Company.",
+        "b": "b) Right to limitation of processing: you may oppose the processing of your personal data or request that they not be used for certain purposes.",
+        "c": "c) Right of rectification: right to request the Company to update or rectify personal data when they are inaccurate or out of date.",
+        "d": "d) Right of deletion: in case you wish to close your account, you will also have the right to have the data provided be deleted and to exercise the \"right to be forgotten\"."
+      }
+    }
+  },
+  "firstListBullets": {
+    "first": "Identity information, such as your first name, last name, or similar identifier, title, date of birth, and gender.",
+    "second": "Contact information, such as your postal address, email address, and telephone number.",
+    "third": "Usage information, such as information about how you use the Service and interact with us.",
+    "fourth": "Marketing information, such as your preferences for receiving marketing communications and details about how you interact with them."
+  },
+  "infoCollectedAutomatically": "Information Collected Automatically. We may automatically record certain information about how you use our Site (we refer to this information as \"Log Data\"). Log Data may include information such as a user's Internet Protocol (IP) address, browser device and type, operating system, the pages or features of our Site a user navigated to, and the length of time a user navigated. spent on those pages or features, the frequency with which the Site is used by a user, search terms, the links on our Site that a user clicked or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to the needs and preferences of our users.",
+  "weMayUseCookies": {
+    "first": "We may use cookies, local storage, or similar technologies to analyze trends, administer the Site, track users' movements around the Site, and gather demographic information about our user base. Users can control the use of cookies and local storage at the individual browser level.",
+    "second": "We may also use Google Analytics to help us provide you with an optimized user experience. You can find more information about Google Analytics' use of your personal data here: "
+  },
+  "secondListBullets": {
+    "first": "For the purposes of notifying you about changes to our Services or issues relevant to it; or when required by a requirement of current regulations.",
+    "second": "To contact you for the purposes of marketing campaigns, newsletters, and or any other type of service relevant to your operation. You can choose not to receive all these communications both when you have created your account and once created, by clicking on the link that allows you to unsubscribe.",
+    "third": "To advise you regarding the request for a demo of the platform developed by the Company.",
+    "fourth": "To comply with legal requirements or requirements of competent government entities.",
+    "fifth": "To optimize your user experience, we may use your personal information to operate, maintain, and improve our Services. We may also use your information to respond to your comments and questions regarding the Services, and to provide you and other users with general customer service.",
+    "sixth": "We may use your personal information to protect, investigate and deter fraudulent, unauthorized, or illegal activities.",
+    "seventh": "In addition, with your consent we may use or share your personal information with your consent, for example, when you allow us to post your testimonials or endorsements on our Site, direct us to take a specific action with respect to your personal information, or opt-in to third parties. marketing communications."
+  },
+  "thirdListBullets": {
+    "first": "We may disclose your personal information to our corporate subsidiaries and affiliates (for example, our corporate group of companies that are related by common ownership or corporate control) for purposes consistent with this Privacy Policy.",
+    "second": "Business Transfers. We may share personal information when we do a business deal, or negotiate a business deal, that involves the sale or transfer of all or part of our business or assets. These agreements may include any merger, financing, acquisition, or bankruptcy proceeding.",
+    "third": {
+      "title": "Compliance with Laws and Law Enforcement; Protection and Security. We may share personal information for legal, protection and security purposes.",
+      "subElements": {
+        "first": "We may share information to comply with laws, including KYC and AML requirements.",
+        "second": "We may share information to respond to legal requests and legal process.",
+        "third": "We may share information to protect the rights and property of the Company, our agents, customers, and others. This includes enforcing our agreements and policies.",
+        "fourth": "We may share information in an emergency. This includes protecting the safety of our employees and agents, our customers, or anyone else."
+      }
+    },
+    "fourth": "Professional advisers and service providers. We may share information with those who need it to work for us. These recipients may include third-party companies and individuals who administer and provide the Service on our behalf (such as bill and credit card payment processing, customer support, hosting, email delivery, and database management services), as well as lawyers, bankers, auditors, and insurance companies.",
+    "fifth": "Other. You may allow us to share your personal information with other companies or entities of your choice. Said uses will be subject to the privacy policies of the receiving entity or entities."
+  },
+  "modificationsPolicies": "MODIFICATIONS TO THIS PRIVACY POLICY. We may change this privacy policy at any time. We encourage you to periodically review this page for the latest information on our privacy practices. If we make any changes, we will change the date of the previous last update.",
+  "contactInformation": "CONTACT INFORMATION. We welcome your comments or questions about this Policy, and you can contact us at: "
+}

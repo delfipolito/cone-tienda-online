@@ -5,7 +5,7 @@ const nextConfig = {
   swcMinify: true,
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
+    locales: ['en', 'es']
   },
   serverRuntimeConfig: {
     secret: "pepe123", // replace with own secret for validating jwt tokens,
@@ -25,7 +25,13 @@ const nextConfig = {
     apiUrl: process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000/api' // development api
       : process.env.NEXT_PUBLIC_API_URL // production api
+  },
+  webpack: (config, { isServer, webpack }) => {
+    return config;
   }
 };
 
-module.exports = nextConfig;
+const nextTranslate = require('next-translate')
+
+
+module.exports = nextTranslate(nextConfig);

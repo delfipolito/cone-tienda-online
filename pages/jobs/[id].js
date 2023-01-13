@@ -138,17 +138,3 @@ export default function JobDetail({ id }) {
     </>
   );
 }
-
-export async function getServerSideProps({ locale, params }) {
-
-  const response = await import(`../../lang/${locale}.json`);
-
-  return {
-    props: {
-      id: params.id,
-      NavBar: response.default.NavBar,
-      Footer: response.default.Footer,
-      NoFooter: true
-    }
-  }
-}
