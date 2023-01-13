@@ -6,7 +6,7 @@ import styles from "../../styles/Footer.module.css";
 import useTranslation from 'next-translate/useTranslation';
 
 export default function AppFooter() {
-   const {t} = useTranslation();
+    const {t} = useTranslation();
 
     return (
         <footer className="bg-dark mt-0 fs-7">
@@ -22,14 +22,13 @@ export default function AppFooter() {
                            className="link-footer">{t('common:Footer.termsConditions')}</a>
                     </Col>
                     <Col xs={6} sm={6} md={5} lg={5} className="h-100 text-center row-btn">
-                        {/*<Link href="/jobs" passHref>*/}
-                        {/*  <Button*/}
-                        {/*    variant="outline-light"*/}
-                        {/*    className="rounded-pill px-4 m-2 fs-8"*/}
-                        {/*  >*/}
-                        {/*    {Footer && Footer.join || 'Join our Team'}*/}
-                        {/*  </Button>*/}
-                        {/*</Link>*/}
+                        <Link href="/jobs" passHref>
+                            <Button
+                                variant="outline-light"
+                                className="rounded-pill px-4 m-2 fs-8">
+                                {t('common:Footer.join')}
+                            </Button>
+                        </Link>
                         <Button
                             variant="outline-light"
                             className="rounded-pill px-4 m-2 fs-8"

@@ -64,7 +64,6 @@ export default function AdminLayout({ children }) {
                         <AdminSidenav />
                         <div id="layoutSidenav_content">
                             <main role="main">{children}</main>
-                            <AdminFooter />
                         </div>
                     </div>
                 </>

@@ -9,7 +9,7 @@ export default function JobDetail({ id }) {
 
   const [width, setWidth] = useState(null);
   const [job, setJob] = useState(null);
-  const isMobile = width <= 500;
+  const isMobile = width <= 768;
 
   useEffect(() => {
 

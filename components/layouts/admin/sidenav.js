@@ -39,11 +39,6 @@ export default function AdminSidenav() {
                         </Link>
                     </Nav>
                 </div>
-                <div className="sb-sidenav-footer">
-                    <div className="small text-center">
-                        <a href="https://www.kalosmk.com" rel="noreferrer" target="_blank" className="text-decoration-none">www.kalosmk.com</a>
-                    </div>
-                </div>
             </Nav>
         </div >
     )

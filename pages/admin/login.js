@@ -122,15 +122,6 @@ export default function Login() {
                         </Row>
                     </Container>
                 </div>
-                <div className='layoutAuthentication_footer'>
-                    <footer className="py-4 bg-dark mt-auto">
-                        <Container fluid className="px-4">
-                            <div className="d-flex align-items-center small">
-                                <div className="text-muted">Devoloped by <a href="https://kalosmk.com">Kalos MK</a>&copy; 2022</div>
-                            </div>
-                        </Container>
-                    </footer>
-                </div>
             </div>}
         </>
     );
