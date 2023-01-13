@@ -6,10 +6,10 @@ import Marquee from "react-fast-marquee";
 import styles from "../styles/Home.module.css";
 import Carouselkoi from "../components/press";
 import Pressmobile from "../components/press_mobile";
+import useTranslation from 'next-translate/useTranslation';
 
-export default function Home(props) {
-
-  const { Home } = props;
+export default function Home() {
+  const {t} = useTranslation();
 
   return (
     <>
@@ -20,11 +20,11 @@ export default function Home(props) {
         <section className="container text-white cuadrado absolute-top h-100 d-flex align-items-center">
           <Row className="d-flex flex-column container-sm">
             <Col xs={2} sm={2} md={2} lg={2}>
-              <h2 className="display-mobile-none">{Home.herotitle}</h2>
-              <h2 className="display-mobile-yes fs-0 fw-regular">{Home.herotitle}</h2>
+              <h2 className="display-mobile-none">{t('common:Home.herotitle')}</h2>
+              <h2 className="display-mobile-yes fs-0 fw-regular">{t('common:Home.herotitle')}</h2>
             </Col>
             <Col xs={12} sm={12} md={4} lg={4}>
-              <p className="display-mobile-none">{Home.herodescription}</p>
+              <p className="display-mobile-none">{t('common:Home.herodescription')}</p>
               <p className="display-mobile-yes d-flex flex-column">Koibanx is the leading tokenization
                 & blockchain payments platform in Latam,<span className="fw-hero-mobile"> with regional presence in 5 countries,
                   +7 years of track record, building “real-world” gateways that bridge the traditional
@@ -36,7 +36,7 @@ export default function Home(props) {
         <section className="container-fluid text-white circulo bg-dark d-flex justify-content-center">
           <Row className="container d-flex flex-row align-items-center">
             <Col xs={12} sm={12} md={2} lg={2}>
-              <h6>{Home.customerbar}</h6>
+              <h6>{t('common:Home.customerbar')}</h6>
             </Col>
             <Col xs={12} sm={12} md={12} lg={10}>
               <Marquee gradient={false} speed={60} className="slider-clients">
@@ -51,7 +51,7 @@ export default function Home(props) {
                 <div className="slide">
                   <Image
                     src="/assets/clients-koi/macro.svg"
-                    alt="Davivienda"
+                    alt="Macro"
                     width={150}
                     height={50}
                   />
@@ -59,7 +59,7 @@ export default function Home(props) {
                 <div className="slide">
                   <Image
                     src="/assets/clients-koi/abank.svg"
-                    alt="Davivienda"
+                    alt="Abank"
                     width={150}
                     height={50}
                   />
@@ -67,7 +67,7 @@ export default function Home(props) {
                 <div className="slide">
                   <Image
                     src="/assets/clients-koi/banco-de-valores.svg"
-                    alt="Davivienda"
+                    alt="Banco de valores"
                     width={150}
                     height={50}
                   />
@@ -75,7 +75,7 @@ export default function Home(props) {
                 <div className="slide">
                   <Image
                     src="/assets/clients-koi/rus.svg"
-                    alt="Davivienda"
+                    alt="Rus"
                     width={150}
                     height={50}
                   />
@@ -93,13 +93,13 @@ export default function Home(props) {
                 <h5 className="fs-4">Our products</h5>
                 <h5 className="fw-lighter line-position"> ___________</h5>
               </div>
-              <p className="fs-6 text-primary pb-5 fw-bold">{Home.products}</p>
+              <p className="fs-6 text-primary pb-5 fw-bold">{t('common:Home.products')}</p>
               <Row className="gy-5">
                 <Col xs={12} sm={12} md={4} lg={4} className="container-button">
                   <div>
                     <h5 className="fs-6">Wallet as a service</h5>
                     <p className="font-p fs-8">
-                      {Home.walletdescription}
+                      {t('common:Home.walletdescription')}
                     </p>
                   </div>
                   <Link href="/wallet" className="btn-holder" passHref>
@@ -107,7 +107,7 @@ export default function Home(props) {
                       className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
-                      {Home.button}
+                      {t('common:Home.button')}
                     </Button>
                   </Link>
                 </Col>
@@ -115,7 +115,7 @@ export default function Home(props) {
                   <div>
                     <h5 className="fs-6">Crypto as a service</h5>
                     <p className="font-p fs-8">
-                      {Home.cryptoservdescription}
+                      {t('common:Home.cryptoservdescription')}
                     </p>
                   </div>
                   <Link href="/crypto_service" className="btn-holder" passHref>
@@ -123,7 +123,7 @@ export default function Home(props) {
                       className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
-                      {Home.button}
+                      {t('common:Home.button')}
                     </Button>
                   </Link>
                 </Col>
@@ -131,7 +131,7 @@ export default function Home(props) {
                   <div>
                     <h5 className="fs-6">Crypto check out</h5>
                     <p className="font-p fs-8">
-                      {Home.cryptocheckdescription}
+                      {t('common:Home.cryptocheckdescription')}
                     </p>
                   </div>
                   <Link href="/crypto_checkout" className="btn-holder" passHref>
@@ -139,7 +139,7 @@ export default function Home(props) {
                       className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
-                      {Home.button}
+                      {t('common:Home.button')}
                     </Button>
                   </Link>
                 </Col>
@@ -147,7 +147,7 @@ export default function Home(props) {
                   <div>
                     <h5 className="fs-6">Issuing platform</h5>
                     <p className="font-p fs-8">
-                      {Home.issuingdescription}
+                      {t('common:Home.issuingdescription')}
                     </p>
                   </div>
                   <Link href="/multi_asset" className="btn-holder" passHref>
@@ -155,7 +155,7 @@ export default function Home(props) {
                       className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
-                      {Home.button}
+                      {t('common:Home.button')}
                     </Button>
                   </Link>
                 </Col>
@@ -163,7 +163,7 @@ export default function Home(props) {
                   <div>
                     <h5 className="fs-6">Cross border settlements</h5>
                     <p className="font-p fs-8">
-                      {Home.crossdescription}
+                      {t('common:Home.crossdescription')}
                     </p>
                   </div>
                   <Link href="/cross_border" className="btn-holder" passHref>
@@ -171,7 +171,7 @@ export default function Home(props) {
                       className="rounded-pill fs-8 w-50"
                       variant="outline-light"
                     >
-                      {Home.button}
+                      {t('common:Home.button')}
                     </Button>
                   </Link>
                 </Col>
@@ -209,7 +209,7 @@ export default function Home(props) {
                 <Pressmobile />
                 <Col md={12} className="d-flex justify-content-center mt-5">
                   <Button href="https://koibanx.medium.com/" variant="outline-warning" className="rounded-pill px-4 my-5 my-lg-0 btn-warning">
-                    News Blog
+                    {t('common:News.buttonBlog')}
                   </Button>
                 </Col>
               </Row>
@@ -229,7 +229,7 @@ export default function Home(props) {
         <section id="investors" className="container-fluid h-100 d-flex flex-column align-items-center justify-content-center">
           <Row className="container">
             <h5 className="text-warning">
-              {Home.investors}
+              {t('common:Home.investors')}
             </h5>
             <Col xs={12} sm={12} md={8} lg={8} className="gy-1">
               <Row className="gx-5 gx-lg-5 pb-5">
@@ -286,21 +286,4 @@ export default function Home(props) {
       </container>
     </>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  // const response = await fetch("URL");
-  // const result = await response.json();
-
-  const response = await import(`../lang/${locale}.json`);
-
-  return {
-    props: {
-      Home: response.default.Home,
-      NavBar: response.default.NavBar,
-      Footer: response.default.Footer,
-    }
-  }
-
-
 }

@@ -18,6 +18,7 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.1",
     "next": "12.2.2",
+    "next-translate": "^1.6.0",
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-bootstrap": "^2.4.0",
@@ -28,6 +29,7 @@
     "react-known-props": "^2.4.5",
     "react-use-scroll-snap": "^0.0.4",
     "rxjs": "^7.5.7",
+    "sass": "^1.57.1",
     "scroll-snap": "^4.0.3",
     "styled-components": "^5.3.6",
     "validator": "^13.7.0"

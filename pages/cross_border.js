@@ -1,9 +1,10 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/future/image";
 import Link from "next/link"
+import useTranslation from 'next-translate/useTranslation';
 
-export default function CrossBorder(props) {
-    const { CrossBorder } = props;
+export default function CrossBorder() {
+    const {t} = useTranslation();
 
     return (
         <>
@@ -14,7 +15,7 @@ export default function CrossBorder(props) {
                             <div className="text-white">
                                 <h4 className="pb-4 fst-normal">Cross Border Settlements</h4>
                                 <p className="fs-5 fw-light">
-                                    {CrossBorder.text}
+                                    {t('common:CrossBorder.text')}
                                 </p>
                                 <div className="pt-4">
                                     <Link href="/wallet" className="btn-holder" passHref>
@@ -22,7 +23,7 @@ export default function CrossBorder(props) {
                                             className="rounded-pill fs-5 w-50 btn-warning-koi"
                                             variant="outline-warning"
                                         >
-                                            Ask for a quote
+                                            {t('common:Buttons.askQuote')}
                                         </Button>
                                     </Link>
                                 </div>
@@ -33,10 +34,10 @@ export default function CrossBorder(props) {
                         <Col sm={12} md={6} lg={6} className="d-flex align-items-center">
                             <div>
                                 <Image
-                                    src={require("../public/assets/products/cross_border_settlements.svg")}
+                                    src={"/assets/products/cross_border_settlements.svg"}
                                     alt="Cross Border Settlements illustration"
-                                    className="img-fluid"
                                     width={450}
+                                    height={450}
                                 />
                             </div>
                         </Col>
@@ -46,7 +47,7 @@ export default function CrossBorder(props) {
                     <Row className="d-flex aling-items-center">
                         <Col sm={12} md={12} lg={12}>
                             <h4>
-                                {CrossBorder.beneficiostitle}
+                                {t('common:CrossBorder.beneficiostitle')}
                             </h4>
                         </Col>
                     </Row>
@@ -55,31 +56,31 @@ export default function CrossBorder(props) {
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 01</h5>
                                 <p className="fs-8">
-                                    {CrossBorder.main1}
+                                    {t('common:CrossBorder.main1')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 02</h5>
                                 <p className="fs-8">
-                                    {CrossBorder.main2}
+                                    {t('common:CrossBorder.main2')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 03</h5>
                                 <p className="fs-8">
-                                    {CrossBorder.main3}
+                                    {t('common:CrossBorder.main3')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 04</h5>
                                 <p className="fs-8">
-                                    {CrossBorder.main4}
+                                    {t('common:CrossBorder.main4')}
                                 </p>
                             </Col>
                             <Col sm={6} className="col-md-5ths col-lg-5ths">
                                 <h5>| 05</h5>
                                 <p className="fs-8">
-                                    {CrossBorder.main5}
+                                    {t('common:CrossBorder.main5')}
                                 </p>
                             </Col>
                         </Row>
@@ -88,18 +89,4 @@ export default function CrossBorder(props) {
             </section>
         </>
     );
-}
-export async function getStaticProps({ locale }) {
-    // const response = await fetch("URL");
-    // const result = await response.json();
-
-    const response = await import(`../lang/${locale}.json`);
-
-    return {
-        props: {
-            CrossBorder: response.default.CrossBorder,
-            NavBar: response.default.NavBar,
-            Footer: response.default.Footer,
-        }
-    }
 }

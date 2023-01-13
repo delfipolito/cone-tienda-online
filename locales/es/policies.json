@@ -1,0 +1,159 @@
+{
+  "title": "Política de Privacidad",
+  "subtitle": "Koibanx",
+  "explanation": {
+    "first": "Esta política de privacidad (\"Política\") describe cómo Koibanx Ltd. (\"Compañía\", \"nosotros\" o \"nuestro\") recopila, usa, comparte y almacena información personal de los usuarios de su sitio web, ",
+    "second": "(el “Sitio”). Esta Política se aplica al Sitio, las aplicaciones, los productos y los servicios (colectivamente, \"Servicios\") en los que se publica, vincula o hace referencia a la Compañía."
+  },
+  "agree": {
+    "description": {
+      "first": "Al hacer uso de los Servicios, usted acepta los términos de esta Política, y da su consentimiento para que recopilemos, usemos, divulguemos y retengamos su información como se describe en esta Política. La Política contiene disposiciones que limitan nuestra responsabilidad hacia usted y requieren que resuelva cualquier disputa con nosotros de forma individual y no como parte de una acción colectiva o representativa. ",
+      "second": "Si no está de acuerdo con alguna parte de esta política de privacidad, no utilice ninguno de los servicios."
+    }
+  },
+  "doNotApply": "Tenga en cuenta que esta Política no se aplica a la información recopilada a través de sitios web o servicios de terceros a los que puede acceder a través de los Servicios o que nos envía por correo electrónico, mensaje de texto u otro mensaje electrónico o fuera de línea.",
+  "subtitles": {
+    "whatCollect": "Lo que recopilamos",
+    "weObtainInfo": "Obtenemos información sobre usted de varias maneras.",
+    "infoProvideUs": "Información que nos proporciona. La información que recopilamos de usted puede incluir:",
+    "usePersonalInfo": {
+      "title": "Uso de información personal",
+      "description": "Para proporcionar nuestro servicio, utilizaremos su información personal para las siguientes finalidades:"
+    },
+    "sharePersonalInfo": {
+      "title": "Compartir información personal",
+      "description": "No compartimos la información personal que nos proporciona con otras organizaciones sin su consentimiento expreso, excepto como se describe en esta Política de privacidad. Divulgamos información personal a terceros en las siguientes circunstancias:",
+      "otherUses": "También podemos compartir datos agregados y/o anónimos con otros para sus propios usos."
+    },
+    "internationalTransfer": {
+      "title": "Transferencia internacional",
+      "description": {
+        "first": "Únicamente para cumplir con los fines establecidos en la presente Política de Privacidad y a efectos de prestar los Servicios, KOIBANX podrá transferir los Datos Personales y/o la información personal a las autoridades, clientes, proveedores y subcontratistas de KOIBANX y otros terceros, como, por ejemplo, aquellos proveedores de servicios utilizados a los fines de la prestación de los Servicios.",
+        "second": "En algunos casos, la información personal puede transferirse fuera del territorio en el que usted se encuentre a países con distintos niveles de protección. En caso de que la información personal se transfiera a países con niveles más bajos de protección, KOIBANX realizará esas transferencias sujetas a las salvaguardas y medidas de seguridad adecuadas, como las cláusulas estándar de protección de datos adoptadas en los respectivos acuerdos o aprobadas por la autoridad legal aplicable.",
+        "third": "Por consiguiente, el Usuario entiende, consiente y acepta, a través de la presente Política de Privacidad, que sus Datos Personales puedan ser transferidos a otros países, tengan o no un adecuado estándar de protección de acuerdo con la normativa legal vigente. El retiro del consentimiento por parte del Usuario no invalidará las acciones anteriores de KOIBANX, ni la hará responsable legalmente de modo alguno."
+      }
+    },
+    "howWeProtectInfo": {
+      "title": "Cómo protegemos la información",
+      "description": {
+        "first": "Retenemos la información que recopilamos mientras sea necesaria y relevante para cumplir con los propósitos descritos en esta política de privacidad. Además, retenemos información personal para cumplir con la ley aplicable cuando sea necesario, prevenir fraudes, resolver disputas, solucionar problemas, ayudar con cualquier investigación, hacer cumplir nuestras políticas y otras acciones permitidas por la ley. Para determinar el período de retención adecuado para la información personal, consideramos la cantidad, la naturaleza y la confidencialidad de la información personal, el riesgo potencial de daño por el uso no autorizado o la divulgación de su información personal, los fines para los que procesamos su información personal y si podemos lograr esos propósitos a través de otros medios, y los requisitos legales aplicables.",
+        "second": "En algunas circunstancias, podemos anonimizar su información personal (para que ya no pueda asociarse con usted), en cuyo caso podemos usar esta información indefinidamente sin previo aviso.",
+        "third": "Empleamos medidas de seguridad estándar de la industria diseñadas para proteger la seguridad de toda la información enviada a través de los Servicios. Sin embargo, nunca se puede garantizar la seguridad de la información transmitida a través de Internet. No somos responsables de ninguna intercepción o interrupción de las comunicaciones a través de Internet ni de los cambios o pérdidas de datos. Los usuarios de los Servicios son responsables de mantener la seguridad de cualquier contraseña, datos biométricos, identificación de usuario u otra forma de autenticación involucrada en la obtención de acceso a áreas seguras o protegidas por contraseña de cualquiera de nuestros servicios digitales. Para protegerlo a usted y a sus datos, podemos suspender su uso de cualquiera de los Servicios, sin previo aviso, en espera de una investigación, si se sospecha alguna violación de la seguridad."
+      }
+    },
+    "infoOptionAndChanges": {
+      "title": {
+        "first": "Opciones de información y cambios",
+        "second": "Acceso, actualización, corrección y eliminación de su información"
+      },
+      "description": {
+        "first": "Puede acceder a la información que ha proporcionado voluntariamente a través de su cuenta en los Servicios y revisarla, corregirla o eliminarla enviando una solicitud a ",
+        "second": " Puede solicitar cambiar las opciones de contacto, optar por no compartir con otros y actualizar su información personal y sus preferencias."
+      }
+    },
+    "trackingTech": {
+      "title": "Tecnologías de seguimiento en general",
+      "description": {
+        "first": "Las cookies normales generalmente se pueden desactivar o eliminar mediante herramientas disponibles como parte de la mayoría de los navegadores comerciales y, en algunos casos, se pueden bloquear en el futuro seleccionando ciertas configuraciones.",
+        "second": "Cualquier modificación a esta Política de privacidad entrará en vigencia a partir de la publicación de los nuevos términos y/o la implementación de los cambios en el Sitio (o según se indique en el momento de la publicación). En todos los casos, su uso continuado del Sitio o los Servicios después de la publicación de cualquier Política de privacidad modificada indica su aceptación de los términos de la Política de privacidad modificada."
+      }
+    },
+    "eligibilityCriteria": {
+      "title": "Criterio de elegibilidad",
+      "description": "Si es menor de edad en su jurisdicción de residencia, puede usar los Servicios solo con el consentimiento o bajo la supervisión de sus padres o tutores legales. De acuerdo con los requisitos de la Ley de protección de la privacidad en línea de los niños (COPPA), si nos enteramos de que hemos recibido información directamente de un niño menor de 13 años sin recibir primero el consentimiento verificado de sus padres, usaremos esa información solo para responder directamente. a ese niño (o a su padre o tutor legal) para informarle que no puede usar el Sitio y, posteriormente, eliminaremos esa información."
+    },
+    "sensitiveInfo": {
+      "title": "Informacion delicada",
+      "description": "Parte de la información que nos proporciona puede constituir información confidencial tal como se define en el RGPD (también denominadas categorías especiales de datos personales), incluida la identificación de su raza o etnia en los documentos de identificación emitidos por el gobierno."
+    },
+    "legalBases": {
+      "title": "Bases legales para el procesamiento",
+      "description": "Solo usamos su información personal según lo permitido por la ley. Estamos obligados a informarle sobre las bases legales de nuestro procesamiento de su información personal, que se describen en la tabla a continuación. Si tiene preguntas sobre las bases legales bajo las cuales procesamos su información personal, contáctenos en ",
+      "table": {
+        "header": {
+          "purpose": "Finalidad del tratamiento",
+          "legalBase": "Base legal"
+        },
+        "rows": {
+          "first": {
+            "purpose": "Para brindar nuestro servicio",
+            "legalBase": "Nuestro procesamiento de su información personal es necesario para ejecutar el contrato que rige nuestra prestación de los Servicios o para tomar las medidas que solicita antes de suscribirse al Servicio."
+          },
+          "second": {
+            "purpose": {
+              "first": "Para comunicarnos con usted",
+              "second": "Para optimizar nuestra plataforma",
+              "third": "Para el cumplimiento, la prevención del fraude y la seguridad",
+              "fourth": "Para brindar nuestro servicio"
+            },
+            "legalBase": "Estas actividades de procesamiento constituyen nuestros intereses legítimos. Nos aseguramos de considerar y equilibrar cualquier impacto potencial sobre usted (tanto positivo como negativo) y sus derechos antes de procesar su información personal para nuestros intereses legítimos. No utilizamos su información personal para actividades en las que nuestros intereses se ven anulados por cualquier impacto adverso en usted (a menos que tengamos su consentimiento o la ley lo exija o lo permita)."
+          },
+          "third": {
+            "purpose": "Para cumplir con la ley",
+            "legalBase": "Usamos su información personal para cumplir con las leyes aplicables y nuestras obligaciones legales, incluidas las leyes contra el lavado de dinero (AML) y los requisitos de conocer a su cliente (KYC)."
+          },
+          "fourth": {
+            "purpose": "Con su consentimiento",
+            "legalBase": "Cuando nuestro uso de su información personal se base en su consentimiento, tiene derecho a retirarlo en cualquier momento de la manera indicada en el Servicio o poniéndose en contacto con nosotros en "
+          }
+        }
+      }
+    },
+    "newPurposes": {
+      "title": "Uso para nuevos propósitos",
+      "description": "Podemos utilizar su información personal por motivos no descritos en esta Política de privacidad, cuando la ley nos lo permita y cuando el motivo sea compatible con el propósito para el que la recopilamos. Si necesitamos usar su información personal para un propósito no relacionado, se lo notificaremos y le explicaremos la base legal aplicable para ese uso. Si nos hemos basado en su consentimiento para un uso particular de su información personal, buscaremos su consentimiento para cualquier propósito no relacionado."
+    },
+    "rights": {
+      "title": "Sus derechos",
+      "description": {
+        "first": "Se le hace saber que usted tiene ciertos derechos con respecto a su información personal, conforme se detalla a continuación:",
+        "second": "Puede enviar estas solicitudes por correo electrónico a ",
+        "third": "Podemos solicitarle información específica para ayudarnos a confirmar su identidad y procesar su solicitud. La ley aplicable puede exigirnos o permitirnos rechazar su solicitud. Si rechazamos su solicitud, le informaremos por qué, sujeto a restricciones legales. Si desea presentar una queja sobre nuestro uso de su información personal o una respuesta a sus solicitudes con respecto a su información personal, puede comunicarse con nosotros en ",
+        "fourth": "o presentar una queja ante el regulador de protección de datos de su jurisdicción."
+      },
+      "bulletList": {
+        "a": "a) Derecho de acceso: derecho a solicitar y obtener información sobre qué datos personales son procesados y almacenados por la Compañía.",
+        "b": "b) Derecho a la limitación del tratamiento: usted podrá oponerse al tratamiento de sus datos personales o a solicitar que no sean utilizados para determinadas finalidades.",
+        "c": "c) Derecho de rectificación: derecho a solicitar a la Compañía que actualice o rectifique los datos personales cuando sean inexactos o estén desactualizados.",
+        "d": "d) Derecho de supresión: en caso de que  desee cerrar su cuenta también tendrá derecho a que los datos proporcionados sean eliminados y hacer ejercicio del “derecho a ser olvidado”."
+      }
+    }
+  },
+  "firstListBullets": {
+    "first": "Información de identidad, como su nombre, apellido, o identificador similar, título, fecha de nacimiento y sexo;",
+    "second": "Información de contacto, como su dirección postal, dirección de correo electrónico y número de teléfono;",
+    "third": "Información de uso, como información sobre cómo usa el Servicio e interactúa con nosotros;",
+    "fourth": "Información de marketing, como sus preferencias para recibir comunicaciones de marketing y detalles sobre cómo interactúa con ellas;"
+  },
+  "infoCollectedAutomatically": "Información recopilada automáticamente. Podemos registrar automáticamente cierta información sobre cómo usa nuestro Sitio (nos referimos a esta información como \"Datos de registro\"). Los datos de registro pueden incluir información como la dirección del Protocolo de Internet (IP) de un usuario, el dispositivo y el tipo de navegador, el sistema operativo, las páginas o funciones de nuestro Sitio a las que navegó un usuario y el tiempo que pasó en esas páginas o funciones, la frecuencia con la que el Sitio son utilizados por un usuario, los términos de búsqueda, los enlaces en nuestro Sitio en los que un usuario hizo clic o usó, y otras estadísticas. Usamos esta información para administrar el Servicio y analizamos (y podemos contratar a terceros para que analicen) esta información para mejorar y mejorar el Servicio ampliando sus características y funcionalidad y adaptándolo a las necesidades y preferencias de nuestros usuarios.",
+  "weMayUseCookies": {
+    "first": "Podemos usar cookies, almacenamiento local o tecnologías similares para analizar tendencias, administrar el Sitio, rastrear los movimientos de los usuarios en el Sitio y recopilar información demográfica sobre nuestra base de usuarios en general. Los usuarios pueden controlar el uso de cookies y el almacenamiento local a nivel de navegador individual.",
+    "second": "También podemos utilizar Google Analytics para ayudarnos a ofrecerle una experiencia de usuario optimizada. Puede encontrar más información sobre el uso que hace Google Analytics de sus datos personales aquí: "
+  },
+  "secondListBullets": {
+    "first": "A los fines de notificarlo acerca de cambios en nuestros Servicios o cuestiones relevantes el mismo; o cuando sea requerido por una exigencia de la normativa vigente.",
+    "second": "Para contactarlo con fines de campañas de marketing, newsletters, y o cualquier otro tipo de prestación relevante para su operación. Puede optar por no recibir todas estas comunicaciones tanto al momento de haber creado su cuenta como una vez creada, haciendo click en el enlace que permite la cancelación de la suscripción;",
+    "third": "Para asesorarlo en cuanto a la solicitud de una demo de la plataforma desarrollada por la Compañía;",
+    "fourth": "Para cumplir con exigencias legales o requerimientos de entidades gubernamentales competentes;",
+    "fifth": "Para optimizar su experiencia de usuario, podemos usar su información personal para operar, mantener y mejorar nuestros Servicios. También podemos usar su información para responder a sus comentarios y preguntas con respecto a los Servicios, y para brindarle a usted y a otros usuarios un servicio general de atención al cliente;",
+    "sixth": "Podemos utilizar su información personal para proteger, investigar y disuadir de actividades fraudulentas, no autorizadas o ilegales.",
+    "seventh": "Asimismo, con su consentimiento podemos usar o compartir su información personal con su consentimiento, por ejemplo, cuando nos permite publicar sus testimonios o avales en nuestro Sitio, nos indica que tomemos una acción específica con respecto a su información personal o opta por la participación de terceros. comunicaciones de marketing."
+  },
+  "thirdListBullets": {
+    "first": "Podemos divulgar su información personal a nuestras subsidiarias y afiliadas corporativas (por ejemplo, nuestro grupo corporativo de empresas que están relacionadas por propiedad común o control corporativo) para fines consistentes con esta Política de privacidad.",
+    "second": "Transferencias Comerciales. Podemos compartir información personal cuando hacemos un trato comercial, o negociamos un trato comercial, que involucre la venta o transferencia de todo o parte de nuestro negocio o activos. Estos acuerdos pueden incluir cualquier transacción o procedimiento de fusión, financiación, adquisición o quiebra.",
+    "third": {
+      "title": "Cumplimiento de las Leyes y Cumplimiento de la Ley; Protección y Seguridad. Podemos compartir información personal con fines legales, de protección y de seguridad.",
+      "subElements": {
+        "first": "Podemos compartir información para cumplir con las leyes, incluidos los requisitos de KYC y AML.",
+        "second": "Podemos compartir información para responder a solicitudes legales y procesos legales.",
+        "third": "Podemos compartir información para proteger los derechos y la propiedad de la Compañía, nuestros agentes, clientes y otros. Esto incluye hacer cumplir nuestros acuerdos y políticas.",
+        "fourth": "Podemos compartir información en una emergencia. Esto incluye proteger la seguridad de nuestros empleados y agentes, nuestros clientes o cualquier persona."
+      }
+    },
+    "fourth": "Asesores profesionales y proveedores de servicios. Podemos compartir información con aquellos que la necesitan para trabajar para nosotros. Estos destinatarios pueden incluir empresas de terceros y personas que administren y proporcionen el Servicio en nuestro nombre (como procesamiento de pagos de facturas y tarjetas de crédito, atención al cliente, alojamiento, entrega de correo electrónico y servicios de administración de bases de datos), así como abogados, banqueros, auditores, y aseguradoras.",
+    "fifth": "Otro. Puede permitirnos compartir su información personal con otras empresas o entidades de su elección. Dichos usos estarán sujetos a las políticas de privacidad de la entidad o entidades receptoras."
+  },
+  "modificationsPolicies": "MODIFICACIONES A ESTA POLÍTICA DE PRIVACIDAD. Podemos cambiar esta política de privacidad en cualquier momento. Le recomendamos que revise periódicamente esta página para obtener la información más reciente sobre nuestras prácticas de privacidad. Si hacemos algún cambio, cambiaremos la fecha de la última actualización anterior.",
+  "contactInformation": "INFORMACIÓN DEL CONTACTO. Agradecemos sus comentarios o preguntas sobre esta Política, y puede comunicarse con nosotros a: "
+}

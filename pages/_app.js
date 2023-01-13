@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "../components/layouts/main";
 import AdminLayout from "../components/layouts/admin/main";
 import "../styles/globals.css";
-// import "../styles/admin.globals.css";
 
 function MyApp({ Component, pageProps }) {
 
@@ -14,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     );
   };
 
-  if (Component.pageLayout == 'admin') {
+  if (Component.pageLayout === 'admin') {
 
     return (
       <AdminLayout>
