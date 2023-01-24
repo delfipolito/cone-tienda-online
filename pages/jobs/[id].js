@@ -4,17 +4,23 @@ import Link from "next/link";
 import { BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import JobPostulationForm from 'components/JobPostulationForm';
 import { jobService } from 'services';
+import {useRouter} from 'next/router';
+import { AiOutlineLeft } from 'react-icons/ai';
 
-export default function JobDetail({ id }) {
 
+export default function JobDetail() {
+  const router = useRouter();
   const [width, setWidth] = useState(null);
   const [job, setJob] = useState(null);
   const isMobile = width <= 768;
 
   useEffect(() => {
 
-    jobService.getByIdPublic(id)
-      .then(x => setJob(x))
+    const id = router.query?.id;
+    if(id) {
+      jobService.getByIdPublic(id.toString())
+          .then(x => setJob(x))
+    }
 
     if (window !== undefined) {
       setWidth(window.innerWidth);
@@ -25,7 +31,7 @@ export default function JobDetail({ id }) {
       window.removeEventListener('resize', handleWindowSizeChange);
     }
 
-  }, [id]);
+  }, [router.query]);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -35,7 +41,17 @@ export default function JobDetail({ id }) {
     <>
       {job && <div>
         <section className="container-fluid h-100 d-flex flex-column align-items-center justify-content-center mt-5 text-white">
-          <Row className='container mt-5 pt-5'>
+          <Row className='container mt-3 pt-4'>
+            <div>
+              <Link href="/jobs">
+                <a className="rounded-pill mt-3 fs-8 btn-go-back">
+                  <AiOutlineLeft size={14}/>
+                  <span>back</span>
+                </a>
+              </Link>
+            </div>
+          </Row>
+          <Row className='container mt-4 pt-3'>
             <Col xs={12} sm={12} md={6} lg={6}>
               <Row>
                 <h5 className='fw-bold mb-5'>{job.title}</h5>
@@ -78,7 +94,7 @@ export default function JobDetail({ id }) {
             </Col>
             {!isMobile && <Col lg={6} className="d-flex justify-content-end align-items-center section-full position-fixed-job">
               <div className='col align-self-start'>
-                <JobPostulationForm job_id={id} position={job.title}></JobPostulationForm>
+                <JobPostulationForm job_id={job.title} position={job.title}></JobPostulationForm>
               </div>
             </Col>}
           </Row>

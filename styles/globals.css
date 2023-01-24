@@ -13054,7 +13054,7 @@ input[type="file"] {
   top: 0px;
   width: 600px;
   padding: 100px;
-  padding-top: 10rem;
+  padding-top: 9rem;
 }
 
 /* ---------- PRODUCTS SECTIONS --------- */
@@ -13884,4 +13884,16 @@ input[type="file"] {
 
 .marquee-container {
   overflow-y: hidden;
+}
+
+a.btn-go-back {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+a.btn-go-back > span {
+  padding-left: 8px;
+  font-size: 12px;
 }
