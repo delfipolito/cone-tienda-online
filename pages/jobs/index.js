@@ -64,6 +64,22 @@ export default function JobList() {
                 key={21}
                 id={21}
               />
+              <JobItem
+                title={'Jr. Technical Support'}
+                description={
+                  'La posicion de Jr. Technical Support  proporcionará asistencia técnica a los clientes y colaboradores a problemas relacionados con el software. Diagnosticará y solucionará problemas técnicos, escalándolos según sea necesario con personal de Soporte Técnico Sr.'
+                }
+                key={22}
+                id={22}
+              />
+              <JobItem
+                title={'UI Designer Jr'}
+                description={
+                  'El equipo de Product Design es el responsable de prototipar los productos que resuelven los problemas de los clientes. A través de brainstormings, sketching, documentación de flujos, prototipos interactivos,  y trabajo con desarrolladores para realizar los diseños. Desde la idea inicial hasta los wireframes en alta del producto final.'
+                }
+                key={23}
+                id={23}
+              />
             </Row>
           </Col>
           <Col
