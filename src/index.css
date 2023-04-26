@@ -5,9 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  background: black;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.skeleton {
+  background-color: black;
+  background-size: 200px 100%;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+  animation: skeleton 500ms ease-in-out infinite;
+
+  @keyframes skeleton {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
+}
+
+section {
+  text-rendering: optimizeLegibility;
 }
