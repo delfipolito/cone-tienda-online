@@ -74,7 +74,8 @@ export default function Crypto() {
                 Creation of own token or coin for transactions within the
                 ecosystem. The token is backed by the issuer's liabilities,
                 replicating the scheme of loyalty programs, allowing the payment
-                commitment to circulate within it...
+                commitment to circulate within system and implementation of the entire
+                core to manage aggregator...
               </h6>
               <Button>Learn more</Button>
             </Item>
@@ -87,8 +88,7 @@ export default function Crypto() {
                 We provide the complete framework for virtual wallets and
                 neobanks. Collection licenses by country, Apified connection to
                 the interbank payment system and implementation of the entire
-                core to manage aggregator, collector, derivative and sub-account
-                accounts.
+                core to manage aggregator...
               </h6>
               <Button>Learn more</Button>
             </Item>
@@ -169,9 +169,9 @@ const BenefitsContainer = styled.div`
 const Item = styled.div`
   background: #272727;
   border-radius: 25px;
-  width: 300px;
-  padding: 40px 30px;
-  margin: 0 20px;
+  width: 310px;
+  padding: 40px 20px;
+  margin: 0 10px;
 
   h5 {
     font-family: 'Poppins';

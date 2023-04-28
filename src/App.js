@@ -25,7 +25,6 @@ import CryptoCheckout from './Crypto-checkout'
 import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
 
-
 function App() {
   return (
     <Router>
@@ -45,25 +44,23 @@ const Home = () => {
 
   const [openModal, setOpenModal] = useState(false)
 
-const closing = () => {
-  setOpenModal(false)
-  document.body.style.overflow = "auto";
-}
+  const closing = () => {
+    setOpenModal(false)
+    document.body.style.overflow = 'auto'
+  }
 
-const opening = () => {
-  setOpenModal(true)
-  document.body.style.overflow = "hidden";
-
-}
+  const opening = () => {
+    setOpenModal(true)
+    document.body.style.overflow = 'hidden'
+  }
 
   return (
     <AppDiv className="App">
-      <Navbar/>
-      <Button onClick={() => opening() }><p>Get in Touch</p></Button>
-      <Modal open={openModal} 
-      onClose={() => closing()}
-      
-      />
+      <Navbar />
+      <Button onClick={() => opening()}>
+        <p>Get in Touch</p>
+      </Button>
+      <Modal open={openModal} onClose={() => closing()} />
       <Cubo>
         <Controller>
           <Scene duration="70%" triggerHook="onLeave" pin>
@@ -82,7 +79,7 @@ const opening = () => {
       <Solutions />
       <Press />
       <Investors />
- 
+
       <Footer />
     </AppDiv>
   )
@@ -103,24 +100,23 @@ const Cubo = styled.div`
 `
 
 const Button = styled.button`
-position:fixed;
-top:100px;
-right: 40px;
-background-color: black;
-border: 1.5px solid #FF5000;
-height: 40px;
-width: 150px;
-border-radius: 20px;
-z-index:100;
+  position: fixed;
+  top: 100px;
+  right: 80px;
+  background-color: black;
+  border: 1.5px solid #ff5000;
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  z-index: 100;
 
-p{
-  color:#FFFFFF;
-  font-size:18px;
-  margin:auto;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-}
-
+  p {
+    color: #ffffff;
+    font-size: 14px;
+    margin: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+  }
 `
 export default App

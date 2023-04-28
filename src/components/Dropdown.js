@@ -44,12 +44,12 @@ const Dropdown = () => {
 const SelectSection = styled.div`
   .dropbtn {
     height: 40px;
-    width: 120px;
+    width: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     text-decoration: none;
-    padding: 0 32px;
+    padding: 0px;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 14px;

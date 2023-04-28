@@ -8,12 +8,14 @@ const Hero = () => {
       <HeroContainer>
         <AnimatedText>
           <HeroTitle>
-            Blockchain Payment Rails
+            REINVENTING THE BANKING INFRASTRUCTURE
             <span>.</span>
           </HeroTitle>
           <HeroSubtitle>
-            Koibanx is the leading{' '}
-            <b>tokenization & blockchain payments platform</b> in Latam.
+            The Koibanx platform integrates<br/>
+            <b>Blockchain and web3 to the financial system, </b> allowing banks
+            to connect with the
+            <b> financial technology of the future. </b>
           </HeroSubtitle>
         </AnimatedText>
       </HeroContainer>
@@ -78,7 +80,7 @@ const HeroSubtitle = styled.h1`
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.02em;
-  max-width: 408px;
+  max-width: 582px;
   color: #ffffff;
   b {
     font-weight: 700;

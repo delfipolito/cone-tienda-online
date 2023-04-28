@@ -1,59 +1,59 @@
-import React, {useState } from "react";
-import styled from "styled-components";
-import emailjs from "emailjs-com";
-import close from "../assets/modal/close.png";
-import Navbar from "../Navbar";
-import check from "../assets/modal/check.png";
-import { Ring } from "@uiball/loaders";
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import emailjs from 'emailjs-com'
+import close from '../assets/modal/close.png'
+import Navbar from '../Navbar'
+import check from '../assets/modal/tick.svg'
+import { Ring } from '@uiball/loaders'
 
 const Modal = ({ open, onClose }) => {
-  const [contact, setContact] = useState("");
-  const [sending, setSending] = useState(false);
-  const [messageSent, setMessageSent] = useState(false);
+  const [contact, setContact] = useState('')
+  const [sending, setSending] = useState(false)
+  const [messageSent, setMessageSent] = useState(false)
 
-  if (!open) return null;
+  if (!open) return null
 
   const frmContact = {
-    nameLastname: ``,
-    email: ``,
-    phoneNumber: ``,
-    country: ``,
-    jopPosition: ``,
-    industry: ``,
-    comments: ``,
-  };
+    nameLastname: '',
+    email: '',
+    phoneNumber: '',
+    country: '',
+    jopPosition: '',
+    industry: '',
+    comments: '',
+  }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
-  };
+  const handleChange = e => {
+    const { name, value } = e.target
+    setContact({ ...contact, [name]: value })
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSending(true);
+  const handleSubmit = e => {
+    e.preventDefault()
+    setSending(true)
 
     emailjs
       .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
       .then(
-        (response) => {
-          console.log(`SUCCESS!`, response.status, response.text);
-          setContact(frmContact);
-          setSending(false);
-          setMessageSent(true);
+        response => {
+          console.log(`SUCCESS!`, response.status, response.text)
+          setContact(frmContact)
+          setSending(false)
+          setMessageSent(true)
         },
-        (err) => {
-          console.log(`FAILED...`, err);
+        err => {
+          console.log(`FAILED...`, err)
         }
-      );
-  };
+      )
+  }
 
   return (
     <>
       <Overlay onClick={onClose}>
         <Navbar />
         <ModalContainer
-          onClick={(e) => {
-            e.stopPropagation();
+          onClick={e => {
+            e.stopPropagation()
           }}
         >
           {messageSent ? (
@@ -72,8 +72,8 @@ const Modal = ({ open, onClose }) => {
               {sending ? (
                 <>
                   <RingContainer>
-                    {" "}
-                    <Ring color="#ff5000" size={35} />{" "}
+                    {' '}
+                    <Ring color="#ff5000" size={35} />{' '}
                   </RingContainer>
                 </>
               ) : (
@@ -85,13 +85,12 @@ const Modal = ({ open, onClose }) => {
                     <h2>Get in touch!</h2>
                     <p>We will contact you as soon as possible.</p>
                   </TitleContainer>
-
                   <Form
                     onSubmit={handleSubmit}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                   >
                     <Input
                       className="form-item"
@@ -172,8 +171,8 @@ const Modal = ({ open, onClose }) => {
         </ModalContainer>
       </Overlay>
     </>
-  );
-};
+  )
+}
 
 const Overlay = styled.div`
   position: fixed;
@@ -183,7 +182,7 @@ const Overlay = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
-`;
+`
 const ModalContainer = styled.div`
   height: 625px;
   width: 455px;
@@ -194,12 +193,14 @@ const ModalContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 75px;
+  margin-left: auto;
+  margin-right: 80px;
   z-index: 200;
 
   h2 {
     color: #ffffff;
     font-size: 18px;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
   }
@@ -207,26 +208,27 @@ const ModalContainer = styled.div`
   p {
     color: #ffffff;
     font-size: 13px;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     margin-top: -10px;
   }
-`;
+`
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 75px;
-`;
+  margin-left: 45px;
+`
 
 const Form = styled.form`
   list-style: none;
   text-decoration: none !important;
   font-size: 20px !important;
   text-align: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 35px;
   font-weight: 300;
   letter-spacing: 2px;
   vertical-align: middle !important;
@@ -246,47 +248,45 @@ const Form = styled.form`
       color: #ff5000;
       margin: auto;
       font-size: 14px;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
     }
   }
-`;
+`
 
 const Input = styled.input`
-  width: 70%;
+  width: 82%;
   height: 33px;
-  margin: 0.5rem;
+  margin: 7px 0;
   background-color: black;
   border-radius: 20px;
-  border: 0.763129px solid #ffffff;
-  margin-bottom: 12px;
+  border: 1px solid #ffffff;
   color: #ffffff;
   padding-left: 15px;
-`;
+`
 
 const InputText = styled.input`
-  width: 70%;
+  width: 82%;
   height: 80px;
-  margin: 0.5rem;
+  margin: 7px 0;
   background-color: black;
   border-radius: 20px;
-  border: 0.763129px solid #ffffff;
-  margin-bottom: 12px;
+  border: 1px solid #ffffff;
   padding-left: 15px;
-`;
+`
 
 const CloseButton = styled.p`
   position: relative;
-  top: 45px;
-  left: 400px;
+  top: 61px;
+  left: 391px;
   width: 30px;
 
   img {
     height: 30px;
     width: 30px;
   }
-`;
+`
 
 const Sent = styled.div`
   width: 80%;
@@ -304,7 +304,7 @@ const Sent = styled.div`
 
   h6 {
     font-size: 13px;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     width: 170px;
     color: #ffffff;
@@ -325,17 +325,17 @@ const Sent = styled.div`
       color: #ff5000;
       margin: auto;
       font-size: 14px;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
     }
   }
-`;
+`
 
 const RingContainer = styled.div`
-display: flex;
-flex-direction:column;
-justify-content: center;
-align-items: center;
-`;
-export default Modal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+export default Modal
