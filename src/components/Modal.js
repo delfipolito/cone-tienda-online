@@ -1,15 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
 import close from '../assets/modal/close.png'
 import Navbar from '../Navbar'
 import check from '../assets/modal/tick.svg'
 import { Ring } from '@uiball/loaders'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
+import {  motion } from 'framer-motion'
 
 const Modal = ({ open, onClose }) => {
   const [contact, setContact] = useState('')
   const [sending, setSending] = useState(false)
   const [messageSent, setMessageSent] = useState(false)
+  const controls = useAnimation()
+  const { ref, inView } = useInView()
+  useEffect(
+    () => {
+      if (inView || open) {
+        controls.start('visible')
+      }
+      if (!open) {
+        controls.start('hidden')
+      }
+    },
+    [controls, inView, open]
+  )
 
   if (!open) return null
 
@@ -51,124 +67,148 @@ const Modal = ({ open, onClose }) => {
     <>
       <Overlay onClick={onClose}>
         <Navbar />
-        <ModalContainer
-          onClick={e => {
-            e.stopPropagation()
-          }}
-        >
-          {messageSent ? (
-            <>
-              <Sent>
-                <img src={check} />
-                <h2>Thanks!</h2>
-                <h6>Your information was sent successfully.</h6>
-                <button onClick={onClose}>
-                  <p>Close</p>
-                </button>
-              </Sent>
-            </>
-          ) : (
-            <>
-              {sending ? (
+        <div ref={ref}>
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={{
+              visible: { width: '455px', height: '625px' },
+              hidden: { width: '0', height: '0' },
+            }}
+            transition={{ duration: 0.5 }}
+            style={{
+              backgroundColor: 'black',
+              border: '2px solid rgb(255, 80, 0)',
+              borderRadius: '44px',
+              position: 'absolute',
+              top: '0',
+              right: '0',
+              marginTop: '75px',
+              marginLeft: 'auto',
+              marginRight: '80px',
+              overflow: 'hidden'
+            }}>
+            <ModalContainer
+              onClick={e => {
+                e.stopPropagation()
+              }}
+            >
+              {messageSent ? (
                 <>
-                  <RingContainer>
-                    {' '}
-                    <Ring color="#ff5000" size={35} />{' '}
-                  </RingContainer>
+                  <Sent>
+                    <img src={check} />
+                    <h2>Thanks!</h2>
+                    <h6>Your information was sent successfully.</h6>
+                    <button onClick={onClose}>
+                      <p>Close</p>
+                    </button>
+                  </Sent>
                 </>
               ) : (
                 <>
-                  <CloseButton onClick={onClose}>
-                    <img src={close} alt="close" />
-                  </CloseButton>
-                  <TitleContainer>
-                    <h2>Get in touch!</h2>
-                    <p>We will contact you as soon as possible.</p>
-                  </TitleContainer>
-                  <Form
-                    onSubmit={handleSubmit}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeOut' }}
-                  >
-                    <Input
-                      className="form-item"
-                      placeholder="Name & Last Name"
-                      type="text"
-                      required
-                      value={contact.nameLastname}
-                      name="userName"
-                      onChange={handleChange}
-                    />
+                  {sending ? (
+                    <>
+                      <RingContainer>
+                        {' '}
+                        <Ring color="#ff5000" size={35} />{' '}
+                      </RingContainer>
+                    </>
+                  ) : (
+                    <>
+                      <CloseButton onClick={onClose}>
+                        <img src={close} alt="close" />
+                      </CloseButton>
+                      <TitleContainer>
+                        <h2>Get in touch!</h2>
+                        <p>We will contact you as soon as possible.</p>
+                      </TitleContainer>
+                      <Form
+                        onSubmit={handleSubmit}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                      >
+                        <Input
+                          className="form-item"
+                          placeholder="Name & Last Name"
+                          type="text"
+                          required
+                          value={contact.nameLastname}
+                          name="userName"
+                          onChange={handleChange}
+                        />
 
-                    <Input
-                      className="form-item"
-                      placeholder="E-Mail"
-                      value={contact.email}
-                      onChange={handleChange}
-                      name="userEmail"
-                      type="text"
-                      required
-                    />
+                        <Input
+                          className="form-item"
+                          placeholder="E-Mail"
+                          value={contact.email}
+                          onChange={handleChange}
+                          name="userEmail"
+                          type="text"
+                          required
+                        />
 
-                    <Input
-                      className="form-item"
-                      placeholder="Phone Number"
-                      value={contact.phoneNumber}
-                      onChange={handleChange}
-                      name="message"
-                      type="text"
-                      required
-                    />
+                        <Input
+                          className="form-item"
+                          placeholder="Phone Number"
+                          value={contact.phoneNumber}
+                          onChange={handleChange}
+                          name="message"
+                          type="text"
+                          required
+                        />
 
-                    <Input
-                      className="form-item"
-                      placeholder="Country"
-                      value={contact.country}
-                      onChange={handleChange}
-                      name="userEmail"
-                      type="text"
-                      required
-                    />
+                        <Input
+                          className="form-item"
+                          placeholder="Country"
+                          value={contact.country}
+                          onChange={handleChange}
+                          name="userEmail"
+                          type="text"
+                          required
+                        />
 
-                    <Input
-                      className="form-item"
-                      placeholder="Job Position"
-                      value={contact.jopPosition}
-                      onChange={handleChange}
-                      name="message"
-                      type="text"
-                      required
-                    />
-                    <Input
-                      className="form-item"
-                      placeholder="Industry"
-                      value={contact.industry}
-                      onChange={handleChange}
-                      name="message"
-                      type="text"
-                      required
-                    />
-                    <InputText
-                      className="form-item"
-                      placeholder="Comments"
-                      value={contact.comments}
-                      onChange={handleChange}
-                      name="message"
-                      type="text"
-                      required
-                    />
+                        <Input
+                          className="form-item"
+                          placeholder="Job Position"
+                          value={contact.jopPosition}
+                          onChange={handleChange}
+                          name="message"
+                          type="text"
+                          required
+                        />
+                        <Input
+                          className="form-item"
+                          placeholder="Industry"
+                          value={contact.industry}
+                          onChange={handleChange}
+                          name="message"
+                          type="text"
+                          required
+                        />
+                        <InputText
+                          className="form-item"
+                          placeholder="Comments"
+                          value={contact.comments}
+                          onChange={handleChange}
+                          name="message"
+                          type="text"
+                          required
+                        />
 
-                    <button type="submit" className="bottom-form">
-                      <p> Send</p>
-                    </button>
-                  </Form>
+                        <button type="submit" className="bottom-form">
+                          <p> Send</p>
+                        </button>
+                      </Form>
+                    </>
+                  )}
                 </>
               )}
-            </>
-          )}
-        </ModalContainer>
+            </ModalContainer>
+          </motion.div>
+        </div>
+
       </Overlay>
     </>
   )
@@ -184,17 +224,9 @@ const Overlay = styled.div`
   z-index: 100;
 `
 const ModalContainer = styled.div`
-  height: 625px;
-  width: 455px;
-  background-color: black;
-  border: 2px solid #ff5000;
-  border-radius: 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 75px;
-  margin-left: auto;
-  margin-right: 80px;
   z-index: 200;
 
   h2 {
