@@ -14,7 +14,7 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #FF6700;
+  background: black;
   height: 100vh;
   text-align: left;
   padding: 150px 100px 30px 30px;

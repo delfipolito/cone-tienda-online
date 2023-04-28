@@ -31,13 +31,6 @@ const Footer = props => {
             >
               Join our Team
             </Button>
-            <Button
-              href="mailto:info@koibanx.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Contact Us
-            </Button>
           </div>
           <Social>
             <a
@@ -72,7 +65,7 @@ const FooterSection = styled.section`
   height: auto;
   width: 100%;
   margin: auto;
-  background: #000;
+  background: #1B1B1B;
   padding: 30px 80px;
   box-sizing: border-box;
   @media only screen and (max-width: 850px) {

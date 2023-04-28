@@ -38,7 +38,7 @@ const InvestorsSection = styled.div`
   width: 100%;
   margin: auto;
   background: #000;
-  padding: 20px 80px;
+  padding: 150px 80px;
   box-sizing: border-box;
   text-align: left;
   @media only screen and (max-width: 850px) {
@@ -56,7 +56,7 @@ const InvestorsContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 73px;
+  gap: 100px;
   max-width: 833px;
   height: auto;
   text-align: center;
@@ -73,7 +73,7 @@ const InvestorsTitle = styled.h1`
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #ffff00;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
   @media only screen and (max-width: 850px) {
     font-size: 25px;
     margin-bottom: 30px;

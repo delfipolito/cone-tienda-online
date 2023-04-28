@@ -52,12 +52,12 @@ const SelectSection = styled.div`
     padding: 0 32px;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 11px;
-    line-height: 17px;
-    letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 21px;
     color: #fffbf2;
     text-transform: uppercase;
-    font-family: 'Poppins-Bold';
+    font-family: 'Poppins';
+    font-weight: 700;
     border: 0;
     background: transparent;
 
@@ -71,7 +71,7 @@ const SelectSection = styled.div`
   .dropdown-content {
     display: none;
     position: absolute;
-    background: #FF6700;
+    background: #131313;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -92,7 +92,8 @@ const FlagButton = styled.button`
   letter-spacing: 0.02em;
   color: #fffbf2;
   text-transform: uppercase;
-  font-family: 'Poppins-Bold';
+  font-family: 'Poppins';
+  font-weight: 700;
   padding: 12px 16px;
   display: block;
   border: 0;

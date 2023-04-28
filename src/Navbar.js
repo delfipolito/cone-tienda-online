@@ -38,10 +38,12 @@ const StyledLink = styled(Link)`
 const NavbarSection = styled.section`
   z-index: 100;
   background: transparent;
-  background: #FF6700;
+  background: black;
   position: fixed;
   top: 0;
   width: 100%;
+  box-sizing: border-box;
+  padding: 20px 80px;
   margin: auto;
   .hamburger-react {
     position: relative;
@@ -56,7 +58,7 @@ const NavbarSection = styled.section`
 `
 
 const NavbarContainer = styled.div`
-  padding: 24px 0;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   @media only screen and (max-width: 700px) {

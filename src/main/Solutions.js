@@ -13,15 +13,31 @@ const Solutions = () => {
         <SolutionsTitle>Our Solutions.</SolutionsTitle>
       </AnimatedText>
       <Box>
-        <AnimatedText>
+        <Item className="large">
+          <AnimatedText>
+            <div>
+              <h2>Transactional Core</h2>
+              <p>
+                Transactional software that connects to the banking core.
+                Apified and Blockchain based. It allows creating and managing
+                multiple types of assets (tokens), programming business logic on
+                them, compatible with cryptocurrencies and interconnected with
+                the services of the Financial Institution.
+              </p>
+            </div>
+            <a>Learn more</a>
+          </AnimatedText>
+        </Item>
+
+        <AnimatedText delay={500}>
           <Item>
             <div>
-              <h2>Wallet as a service</h2>
+              <h2>Cross border settlements</h2>
               <p>
-                We connect your mobile banking application, wallet or payment
-                channel to our platform, allowing you to manage, transfer,
-                exchange and collect any tokenized asset and/or crypto
-                currencies.
+                Instant transfers to +8 countries in LATAM. Collecting USD in
+                the USA via ACH transfers, credit, debit or prepaid cards and/or
+                cryptocurrencies and settling real time payments in local
+                currency at the final destination.
               </p>
             </div>
             <a>Learn more</a>
@@ -48,33 +64,6 @@ const Solutions = () => {
                 We enable banks and digital wallets to provide their own
                 customers the ability to buy, sell, receive, transfer and store
                 cryptocurrencies on their own platforms.
-              </p>
-            </div>
-            <a>Learn more</a>
-          </Item>
-        </AnimatedText>
-        <AnimatedText delay={500}>
-          <Item>
-            <div>
-              <h2>Cross border settlements</h2>
-              <p>
-                Instant transfers to +8 countries in LATAM. Collecting USD in
-                the USA via ACH transfers, credit, debit or prepaid cards and/or
-                cryptocurrencies and settling real time payments in local
-                currency at the final destination.
-              </p>
-            </div>
-            <a>Learn more</a>
-          </Item>
-        </AnimatedText>
-        <AnimatedText delay={1000}>
-          <Item>
-            <div>
-              <h2>Issuing platform</h2>
-              <p>
-                Implement your own platform to issue, trade and exchange digital
-                assets. Equity, utility and asset backed token minting series
-                with management and market features.
               </p>
             </div>
             <a>Learn more</a>
@@ -152,6 +141,13 @@ const Item = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  &.large {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    p {
+      max-width: 720px;
+    }
+  }
   h2 {
     font-family: 'Quicksand';
     font-style: normal;
