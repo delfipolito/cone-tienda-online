@@ -43,3 +43,20 @@ code {
 section {
   text-rendering: optimizeLegibility;
 }
+
+
+
+
+::placeholder {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: 'Poppins'
+}
+
+input:focus {
+  color: #ffffff;
+  outline: 0px solid #ffffff;
+
+} 
