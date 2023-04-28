@@ -20,6 +20,8 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import About from './About'
 import Jobs from './Jobs'
+import CryptoCheckout from './Crypto-checkout'
+import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/transactional-core" element={<TransactionalCore />} />
+        <Route path="/crypto-checkout" element={<CryptoCheckout />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>
