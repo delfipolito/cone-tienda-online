@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import AnimatedText from './AnimatedText.js'
 import background from '../assets/main/orange-gradient.mp4'
 
@@ -53,7 +54,7 @@ const Solutions = () => {
                 cryptocurrency, fiat and cards.
               </p>
             </div>
-            <a>Learn more</a>
+            <Link to='/crypto-checkout'>Learn more</Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={1000}>
