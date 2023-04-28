@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react'
+import React, { useRef, useEffect, useCallback, useState } from 'react'
 import styled from 'styled-components'
 import {
   BrowserRouter as Router,
@@ -20,7 +20,9 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import About from './About'
 import Jobs from './Jobs'
+import Modal from './components/Modal'
 import { animateScroll } from 'react-scroll'
+
 
 function App() {
   return (
@@ -37,9 +39,27 @@ function App() {
 const Home = () => {
   const ref = useRef()
 
+  const [openModal, setOpenModal] = useState(false)
+
+const closing = () => {
+  setOpenModal(false)
+  document.body.style.overflow = "auto";
+}
+
+const opening = () => {
+  setOpenModal(true)
+  document.body.style.overflow = "hidden";
+
+}
+
   return (
     <AppDiv className="App">
       <Navbar/>
+      <Button onClick={() => opening() }><p>Get in Touch</p></Button>
+      <Modal open={openModal} 
+      onClose={() => closing()}
+      
+      />
       <Cubo>
         <Controller>
           <Scene duration="70%" triggerHook="onLeave" pin>
@@ -58,6 +78,7 @@ const Home = () => {
       <Solutions />
       <Press />
       <Investors />
+ 
       <Footer />
     </AppDiv>
   )
@@ -75,5 +96,27 @@ const Cubo = styled.div`
   width: 100%;
   box-sizing: border-box;
   position: relative;
+`
+
+const Button = styled.button`
+position:fixed;
+top:100px;
+right: 40px;
+background-color: black;
+border: 1.5px solid #FF5000;
+height: 40px;
+width: 150px;
+border-radius: 20px;
+z-index:100;
+
+p{
+  color:#FFFFFF;
+  font-size:18px;
+  margin:auto;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+}
+
 `
 export default App
