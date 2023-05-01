@@ -24,6 +24,7 @@ import Modal from './components/Modal'
 import CryptoCheckout from './Crypto-checkout'
 import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
+import { FormattedMessage } from 'react-intl'
 
 function App() {
   return (
@@ -58,7 +59,7 @@ const Home = () => {
     <AppDiv className="App">
       <Navbar />
       <Button onClick={() => opening()}>
-        <p>Get in Touch</p>
+        <p> <FormattedMessage id="hero.button" /></p>
       </Button>
       <Modal open={openModal} onClose={() => closing()} />
       <Cubo>
@@ -101,7 +102,7 @@ const Cubo = styled.div`
 
 const Button = styled.button`
   position: fixed;
-  top: 100px;
+  top: 150px;
   right: 80px;
   background-color: black;
   border: 1.5px solid #ff5000;

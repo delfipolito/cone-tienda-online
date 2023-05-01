@@ -2,18 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import Dropdown from '../components/Dropdown'
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl'
 
 const Tabs = ({ mode }) => {
   return (
     <TabsBox mode={mode}>
       <a href="https://koibanx.com/#products" target="_blank" rel="noreferrer">
-        platform
+      <FormattedMessage id="navbar.platform" />
       </a>
       <a href="https://koibanx.com/" target="_blank" rel="noreferrer">
-        Solutions
+      <FormattedMessage id="navbar.solutions" />
       </a>
       <Link to={'about'}>
-        About us
+      <FormattedMessage id="navbar.about" />
       </Link>
       <Dropdown />
     </TabsBox>

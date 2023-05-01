@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import wallet from './assets/wallet.png'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import wallet from "./assets/wallet.png";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { FormattedMessage } from "react-intl";
 
 export default function Crypto() {
   return (
@@ -12,70 +13,79 @@ export default function Crypto() {
         <CryptoContainer>
           <div>
             <CryptoTitle>
-              <b>Crypto Checkout</b> allows your merchants, ecommerce,
-              collection provider, and gateways to receive payments in any
-              cryptocurrency.{' '}
+              <b>Crypto Checkout</b>{" "}
+              <FormattedMessage id="cryptocheckout.title" />
             </CryptoTitle>
             <Content>
-              All payments can be credited directly in cryptocurrencies or
-              automatically converted (in whole or in part) into fiat money, or
-              it can also be invested in other cryptocurrencies or stablecoins.
+              <FormattedMessage id="cryptocheckout.subtitle" />
             </Content>
-            <Button>Learn more</Button>
+            <Button>
+              {" "}
+              <FormattedMessage id="cryptocheckout.button" />
+            </Button>
             <br />
             <br />
           </div>
           <img src={wallet} alt="wallet" />
         </CryptoContainer>
         <CryptoContainer>
-          <Benefits>Main benefits.</Benefits>
+          <Benefits>
+            {" "}
+            <FormattedMessage id="cryptocheckout.features" />
+          </Benefits>
         </CryptoContainer>
         <BenefitsContainer>
           <div>
             <h5>
-              01
+              <FormattedMessage id="cryptocheckout.features.1.number" />
               <span>.</span>
             </h5>
             <h6>
-              Enables the commerce to accept payment in multiple
-              cryptocurrencies and/or custom assets.
+              <FormattedMessage id="cryptocheckout.features.1.text" />
             </h6>
           </div>
           <div>
             <h5>
-              02
-              <span>.</span>
-            </h5>
-            <h6>SaaS platform accessible from any device.</h6>
-          </div>
-          <div>
-            <h5>
-              03
-              <span>.</span>
-            </h5>
-            <h6>APIs are very intuitive and easy to integrate.</h6>
-          </div>
-          <div>
-            <h5>
-              04
-              <span>.</span>
-            </h5>
-            <h6>Reduces payment transaction costs in stores.</h6>
-          </div>
-          <div>
-            <h5>
-              05
+              <FormattedMessage id="cryptocheckout.features.2.number" />
               <span>.</span>
             </h5>
             <h6>
-              Automatic convertibility of cryptocurrencies to local currency.
+              {" "}
+              <FormattedMessage id="cryptocheckout.features.2.text" />
+            </h6>
+          </div>
+          <div>
+            <h5>
+              <FormattedMessage id="cryptocheckout.features.3.number" />
+              <span>.</span>
+            </h5>
+            <h6>
+              <FormattedMessage id="cryptocheckout.features.3.text" />
+            </h6>
+          </div>
+          <div>
+            <h5>
+              <FormattedMessage id="cryptocheckout.features.4.number" />
+              <span>.</span>
+            </h5>
+            <h6>
+              <FormattedMessage id="cryptocheckout.features.4.text" />
+            </h6>
+          </div>
+          <div>
+            <h5>
+              <FormattedMessage id="cryptocheckout.features.5.number" />
+              <span>.</span>
+            </h5>
+            <h6>
+              <FormattedMessage id="cryptocheckout.features.5.text" />
             </h6>
           </div>
         </BenefitsContainer>
       </CryptoSection>
       <Footer />
     </>
-  )
+  );
 }
 
 const CryptoSection = styled.section`
@@ -89,7 +99,7 @@ const CryptoSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`
+`;
 
 const BenefitsContainer = styled.div`
   display: flex;
@@ -104,7 +114,7 @@ const BenefitsContainer = styled.div`
     flex-direction: column;
   }
   h5 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -116,7 +126,7 @@ const BenefitsContainer = styled.div`
     }
   }
   h6 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -125,7 +135,7 @@ const BenefitsContainer = styled.div`
     color: #ffffff;
     max-width: 200px;
   }
-`
+`;
 
 const Benefits = styled.h4`
   font-style: normal;
@@ -134,25 +144,25 @@ const Benefits = styled.h4`
   line-height: 28px;
 
   color: #ff5000;
-`
+`;
 
 const CryptoContainer = styled(BenefitsContainer)`
   max-width: 1140px;
   align-items: center;
-`
+`;
 
 const CryptoTitle = styled.h1`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 38px;
   line-height: 44px;
   color: #ffffff;
   width: 700px;
-`
+`;
 
 const Content = styled.p`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -160,10 +170,10 @@ const Content = styled.p`
   max-width: 540px;
   margin-left: 0;
   color: #ffffff;
-`
+`;
 
 const Button = styled.a`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -183,4 +193,4 @@ const Button = styled.a`
     letter-spacing: 0.02em;
     padding: 6px 23px;
   }
-`
+`;

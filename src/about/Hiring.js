@@ -1,7 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import Loop from '../main/Loop'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Loop from "../main/Loop";
+import { FormattedMessage } from "react-intl";
 
 const Hiring = ({ about }) => {
   return (
@@ -23,19 +24,18 @@ const Hiring = ({ about }) => {
 
       <HiringContainer>
         <p>
-          We are constantly looking for people who want <b>to transform, to
-          transcend,</b> to be a part of our dream. We embrace talented people who
-          also want to create a good atmosphere, based in <b>companionship,</b> who
-          share our values and our <b>ambition for professional and personal
-          growth.</b>
+          <FormattedMessage
+            id="about.hiring.text"
+            values={{ b: (word) => <b>{word}</b> }}
+          />
         </p>
         <Button href="/jobs" passHref>
-          Ready to join our team
+          <FormattedMessage id="about.hiring.button" />
         </Button>
       </HiringContainer>
     </HiringSection>
-  )
-}
+  );
+};
 
 const Title = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ const Title = styled.div`
   margin-top: 20px;
 
   h1 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
     font-size: 95px;
@@ -57,9 +57,9 @@ const Title = styled.div`
       outline-offset: -1px;
     }
   }
-`
+`;
 
-const Image = styled.img``
+const Image = styled.img``;
 
 const HiringSection = styled.section`
   min-height: 630px;
@@ -72,18 +72,18 @@ const HiringSection = styled.section`
     padding: 50px 30px;
   }
   p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
-    color: #FFFFFF;
+    color: #ffffff;
     max-width: 650px;
     b {
       font-weight: 700;
     }
   }
-`
+`;
 
 const HiringContainer = styled.div`
   box-sizing: border-box;
@@ -91,7 +91,7 @@ const HiringContainer = styled.div`
   height: auto;
   text-align: left;
   h2 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -101,10 +101,10 @@ const HiringContainer = styled.div`
     max-width: 488px;
     text-align: left;
   }
-`
+`;
 
 const Button = styled.a`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -124,6 +124,6 @@ const Button = styled.a`
     letter-spacing: 0.02em;
     padding: 6px 23px;
   }
-`
+`;
 
-export default Hiring
+export default Hiring;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Loop from './main/Loop'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import { FormattedMessage } from 'react-intl'
 
 export default function JobList() {
   return (
@@ -28,22 +29,22 @@ export default function JobList() {
           <Box>
             <JobItem
               title="Sr. Sales Specialist"
-              description="Nos encontramos en búsqueda de un/a Sr. Sales Specialist para incorporar a nuestro equipo. Será responsable de identificar y las oportunidades los retos, desafíos y objetivos comerciales de un cliente, utilizando conceptos profesionales y objetivos de la compañía, ayudando a desarrollar propuestas de valor comercial en torno a los productos y soluciones de Koibanx y cerrando negociaciones con los potenciales clientes."
+              description={<FormattedMessage id="jobs.1.text" />}
               id="01"
             />
             <JobItem
               title="Backend Developer"
-              description="Sumandote a Koibanx como Backend Developer vas a ser protagonista de una compañía que está creando historia construyendo los rieles transaccionales sobre blockchain para generar un sistema financiero más accesible, seguro y eficiente, siendo los habilitadores entre el mundo financiero tradicional y el mundo cripto."
+              description={<FormattedMessage id="jobs.2.text" />}
               id="02"
             />
             <JobItem
               title="Jr. Technical Support"
-              description="La posicion de Jr. Technical Support proporcionará asistencia técnica a los clientes y colaboradores a problemas relacionados con el software. Diagnosticará y solucionará problemas técnicos, escalándolos según sea necesario con personal de Soporte Técnico Sr."
+              description={<FormattedMessage id="jobs.3.text" />}
               id="03"
             />
             <JobItem
               title="UI Designer Jr"
-              description="El equipo de Product Design es el responsable de prototipar los productos que resuelven los problemas de los clientes. A través de brainstormings, sketching, documentación de flujos, prototipos interactivos, y trabajo con desarrolladores para realizar los diseños. Desde la idea inicial hasta los wireframes en alta del producto final."
+              description={<FormattedMessage id="jobs.4.text" />}
               id="04"
             />
           </Box>
@@ -59,7 +60,7 @@ const JobItem = ({ id, title, description }) => {
     <Item>
       <h3>{title}</h3>
       <p>{description}</p>
-      <Link to={`/jobs/${id}`}>Ver más</Link>
+      <Link to={`/jobs/${id}`}><FormattedMessage id="jobs.button" /></Link>
     </Item>
   )
 }

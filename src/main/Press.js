@@ -2,18 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import Carousel from './Carousel.js'
 import AnimatedText from './AnimatedText.js'
+import { FormattedMessage } from 'react-intl'
 
 const Press = () => {
   return (
     <PressSection>
       <AnimatedText>
-        <PressTitle>Press.</PressTitle>
+        <PressTitle>    <FormattedMessage id="press.title" /></PressTitle>
       </AnimatedText>
       <PressContainer>
         <div>
           <Carousel />
           <Button href="https://koibanx.medium.com/" target="_blank">
-            News blog
+          <FormattedMessage id="newsblog.title" />
           </Button>
         </div>
       </PressContainer>

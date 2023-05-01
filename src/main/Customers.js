@@ -6,6 +6,7 @@ import bancoDeValores from '../assets/clients-koi/banco-de-valores.svg'
 import macro from '../assets/clients-koi/macro.svg'
 import abank from '../assets/clients-koi/abank.svg'
 import rus from '../assets/clients-koi/rus.svg'
+import { FormattedMessage } from 'react-intl'
 
 function useDeviceSize() {
   const [width, setWidth] = useState(0)
@@ -34,7 +35,7 @@ const Customers = () => {
   return (
     <CustomersSection>
       <CustomersContainer>
-        {width >= medium && <CustomersTitle>Our Main Customers</CustomersTitle>}
+        {width >= medium && <CustomersTitle>  <FormattedMessage id="customers.text" /></CustomersTitle>}
         <Loop
           reverse={true}
           content={

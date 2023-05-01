@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import background from '../assets/main/orange-gradient.mp4'
+import React from "react";
+import styled from "styled-components";
+import background from "../assets/main/orange-gradient.mp4";
+import { FormattedMessage } from "react-intl";
 
 const General = ({ about }) => {
   return (
@@ -10,19 +11,26 @@ const General = ({ about }) => {
       </BackgroundVideo>
       <GeneralContainer>
         <Box>
-          <p>Regional presence.</p>
-          <p>+ 5 on | off ramps in Latam.</p>
-          <p>API driven connections</p>
+          <p>
+            {" "}
+            <FormattedMessage id="about.1" />
+          </p>
+          <p>
+            {" "}
+            <FormattedMessage id="about.2" />
+          </p>
+          <p>
+            {" "}
+            <FormattedMessage id="about.3" />
+          </p>
         </Box>
         <h2>
-          Koibanx is redefining Latam´s financial infrastructure by allowing
-          instant issuing, exchanging, trading and conversion of digital assets
-          into fiat from within TradFi institutions
+        <FormattedMessage id="about.text" />
         </h2>
       </GeneralContainer>
     </GeneralSection>
-  )
-}
+  );
+};
 
 const BackgroundVideo = styled.video`
   position: absolute;
@@ -32,7 +40,7 @@ const BackgroundVideo = styled.video`
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-`
+`;
 
 const GeneralSection = styled.section`
   min-height: 700px;
@@ -47,14 +55,14 @@ const GeneralSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`
+`;
 
 const GeneralContainer = styled.div`
   padding-top: 30px;
   height: auto;
   text-align: center;
   h2 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -68,7 +76,7 @@ const GeneralContainer = styled.div`
       margin-right: 60px;
     }
   }
-`
+`;
 const Box = styled.div`
   display: flex;
   align-items: center;
@@ -76,7 +84,7 @@ const Box = styled.div`
   gap: 40px;
   width: 100%;
   p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -102,10 +110,10 @@ const Box = styled.div`
       text-align: center;
     }
   }
-`
+`;
 
 const GeneralTitle = styled.h1`
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -117,5 +125,5 @@ const GeneralTitle = styled.h1`
     font-size: 25px;
     margin-bottom: 30px;
   }
-`
-export default General
+`;
+export default General;

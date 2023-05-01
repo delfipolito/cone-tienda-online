@@ -1,0 +1,158 @@
+{
+  "navbar.platform": "PLATFORMA",
+  "navbar.solutions": "SOLUCIONES",
+  "navbar.about": "SOBRE NOSOTROS",
+
+  "hero.title": "REINVENTANDO LA INFRAESTRUCTURA BANCARIA",
+  "hero.text": "La plataforma Koibanx integra {brTag} <b> Blockchain y web3 al sistema financiero,</b> permitiendo a los bancos conectarse con la <b>tecnología financiera del futuro.</b>",
+  "hero.button": "Contactanos",
+
+  "customers.text": "Principales clientes",
+
+  "platform.title": "Platforma",
+  "platform.text": "Koibanx disponibiliza la infraestructura necesaria para que el sistema financiero pueda transformarse con Web3.",
+  "platform.button": "Ver más",
+
+  "solution.title": "Soluciones",
+
+  "solution.1.title": "Core Transaccional",
+  "solution.1.text": "Software transaccional que se conecta al core bancario. Apificado y de base Blockchain. Permite crear y gestionar múltiples tipos de activos (tokens), programar lógica de negocio sobre los mismos, compatible con criptomonedas e interconectado con los servicios de la Institución Financiera.",
+  "solution.1.button": "Ver más",
+
+  "solution.2.title": "Crypto check out",
+  "solution.2.text": "Permite que comerciantes, plataformas de comercio electrónico, adquirentes y gateways reciban pagos en cualquier criptomoneda.",
+  "solution.2.button": "Ver más",
+
+  "solution.3.title": "Crypto as a service",
+  "solution.3.text": "Permitimos que bancos y billeteras digitales brinden a sus propios clientes la capacidad de comprar, vender, recibir, enviar y almacenar criptomonedas en sus plataformas.",
+  "solution.3.button": "Ver más",
+
+  "solution.4.title": "Cross Border Settlements",
+  "solution.4.text": "Transferencias instantáneas en 9 países de LATAM desde EE.UU. recibiendo USD a través de tarjetas, criptomonedas o transferencias.",
+  "solution.4.button": "Ver más",
+
+  "press.title": "Prensa",
+
+  "press.button": "Ver más",
+
+  "press.forbes.text": "Se utilizará la tecnología Blockchain en relación con la Ley de Propiedad Intelectual. Los artistas nigerianos de diversas áreas podrán comercializar sus creaciones a nivel internacional y ganar regalías a través de un token estable que será igual a una naira, la moneda nigeriana.",
+  "press.forbes.link": "https://www.forbesargentina.com/innovacion/una-empresa-argentina-ayudara-exportar-creaciones-artistas-tecnologia-blockchain-n16390",
+
+  "press.eltiempo.text": "Colombia ha sido el primer país de América Latina en contar con una plataforma blockchain que permite el registro y validación de los certificados de vacunación de los ciudadanos, convirtiéndose en un modelo a seguir para la región.",
+  "press.eltiempo.link": "https://www.eltiempo.com/contenido-comercial/el-exito-e-impacto-de-mi-vacuna-en-alianza-con-la-plataforma-koibanx-675784",
+
+  "press.cointelegraph.text": "En el marco de la última edición de Labitconf, en Argentina, se reunieron en Argentina el director del Banco Central de la Argentina, el Gerente General de Banco Macro y el fundador de Algorand, entre otros representantes de organismos financieros y líderes del ecosistema cripto. una cumbre organizada por Koibanx para discutir los desafíos y oportunidades en la integración del gobierno y el sistema financiero con la web 3.0.",
+  "press.cointelegraph.link": "https://es.cointelegraph.com/news/officials-entrepreneurs-and-crypto-ecosystem-leaders-met-at-a-summit-hosted-by-koibanx-in-argentina",
+
+  "press.infobae.text": "Un nuevo formato de financiación de proyectos inmobiliarios lo encontramos en la tokenización de inmuebles en Argentina, que se posiciona como una alternativa interesante tanto para pequeños inversores como para desarrolladores o constructoras.",
+  "press.infobae.link": "https://www.infobae.com/opinion/2022/09/01/el-negocio-de-la-tokenizacion-de-commodities-e-inmuebles-puede-desarrollarse-legalmente-en-argentina/",
+
+  "newsblog.title": "News blog",
+  "newsblog.link": "https://koibanx.medium.com/",
+
+  "investors.title": "Principales Inversores",
+
+  "footer.policies.title": "Políticas de privacidad ",
+  "footer.policies.link": "https://privacy.koibanx.com/",
+
+  "footer.terms.title": "Términos y Condiciones El Salvador",
+  "footer.terms.link": "https://koibanx-webpage-terminos.s3.amazonaws.com/T%C3%A9rminos+de+Uso+-+Koibanx+El+Salvador+2022.pdf",
+
+  "footer.join": "Únete a nuestro equipo",
+
+  "about.1": "Presencia regional",
+  "about.2": "+5 rampas de entrada/salida en Latam",
+  "about.3": "Conexiones impulsadas por API",
+  "about.text": "Koibanx es la plataforma de tokenización y pagos blockchain líder en Latam, operando en varios países de la región y con más de 7 años de trayectoria. Permite interconectar el mundo financiero tradicional con el mundo crypto, permitiendo la transacción de cualquier tipo de activo con licencias regulatorias vigentes.",
+
+  "about.team": "Equipo",
+
+  "about.team.1.name": "Leo Elduayen",
+  "about.team.1.position": "CEO & CoFounder Koibanx. ",
+  "about.team.1.description": "VP Bitcoin Argentina ONG. Crypto Pioneer. Abogado. Coder. Trabajó previamente en MercadoLibre (Nasdaq: Meli) y Philip Morris International.",
+
+  "about.team.2.name": "Lety Lopez Tiznado",
+  "about.team.2.position": "Chief Operation Officer",
+  "about.team.2.description": "Economista y Especialista en Políticas Públicas. +9 años de experiencia profesional en todo el sector público y privado.",
+
+  "about.team.3.name": "Francisco Mayora",
+  "about.team.3.position": "Chief Financial Officer",
+  "about.team.3.description": "Economista, Magíster en Finanzas, CFA. +10 años de experiencia en mercados financieros, especializándome en pricing y estructuración financiera.",
+
+  "about.team.4.name": "Cata Gutierrez",
+  "about.team.4.position": "Chief of Staff",
+  "about.team.4.description": "+12 años de experiencia en fintech, SaaS & en ecosistema de capital de riesgo e innovación en Latam. Profesional de la Maestría en Administración de Empresas. Anteriormente trabajó en Ruta N, NXTP, Designit y Yaydoo.",
+
+  "about.team.5.name": "Mar Fernández",
+  "about.team.5.position": "Head of Marketing",
+  "about.team.5.description": "Publicista y Arte. + 10 años de experiencia en diseño, construcción y crecimiento de Marca. Miembro de mujeres en cripto y mujeres en fintech.",
+
+  "about.team.6.name": "Nico Viola",
+  "about.team.6.position": "Head of Deployment",
+  "about.team.6.description": "+10 años de experiencia trabajando en Desarrollo, Mantenimiento y Soporte Técnico/Software. Anteriormente trabajó en empresas de gobierno y tecnología de las comunicaciones.",
+
+  "about.team.button": "Conocé al resto del equipo",
+
+  "about.hiring.text": "Buscamos sumar a nuestro equipo personas que busquen crear un buen ambiente laboral con <b>compañerismo,</b> que compartan nuestros valores y nuestra <b>ambición de crecimiento profesional y empresarial.</b>",
+  "about.hiring.button": "¡Únete a nuestro equipo!",
+
+  "transactionalcore.title": "<b>Software transaccional</b> que se conecta al core bancario. Apificado y basado en Blockchain.",
+
+  "transactionalcore.subtitle": "Permite crear y administrar múltiples tipos de activos (tokens), programando lógicamente negocios sobre ellos, compatibles con criptomonedas e interconectados con los servicios de la Entidad Financiera.",
+
+  "transactionalcore.aplications": "Principales aplicaciones",
+
+  "transactionalcore.aplications.button": "Ver más",
+
+  "transactionalcore.aplications.1.title": "Billetera virtual",
+  "transactionalcore.aplications.1.text": "Proveemos el framework completo para billeteras virtuales y neobancos. Licencias de captación por país, conexión apificada al sistema de pagos interbancarios e implementación de todo el core para gestionar cuentas agregadoras, recaudadoras, derivadas y sub-cuentas. Ya sea para dinero fiduciario, activos tokenizados, criptomonedas o la combinación de todos.",
+
+  "transactionalcore.aplications.2.title": "Cashless Collections",
+  "transactionalcore.aplications.2.text": "Implementación del core para gestionar cobranzas de múltiples fuentes en tiempo real. Ideal para distribuidores, redes de comercialización y cadenas. Los distintos puntos de cobranzas registran todas las transacciones sobre la Blockchain...",
+
+  "transactionalcore.aplications.3.title": "Private Issuing (Loyalty 3.0)",
+  "transactionalcore.aplications.3.text": "Creación de token o coin propia para transacciones dentro del ecosistema. El token es respaldado por el pasivo del emisor, replicando el esquema de los programas de fidelidad, permitiendo que el compromiso de pago circule dentro del mismo.",
+
+  "transactionalcore.aplications.4.title": "Subsidios & Consumo Dirigido",
+  "transactionalcore.aplications.4.text": "Creación masiva de cuentas virtuales para gestionar saldos con destinación específica. Depositando y asegurando el dinero en una única cuenta bancaria, desagregamos los saldos en la Blockchain, conectando el saldo virtual a distintas redes de adquirencia. Reglas de aprobación y consumo configurables dinámicamente del lado del cliente.",
+
+  "transactionalcore.aplications.5.title": "Subrogación de seguros",
+  "transactionalcore.aplications.5.text": "Conectando los procesos de reclamo y pagos cruzados entre aseguradoras, las mismas pueden optimizar y eficientar los cruces de información y cantidad de pagos a realizar entre las mismas.",
+
+  "cryptocheckout.title": "permite que comerciantes, plataformas de comercio electrónico, adquirentes y gateway reciban pagos en cualquier criptomoneda.",
+
+  "cryptocheckout.subtitle": " Los pagos pueden acreditarse directamente en criptomonedas, convertirse de manera automática (total o parcialmente) en dinero fiduciario o invertirse en otras criptomonedas o monedas estables.",
+
+  "cryptocheckout.button": "Ver más",
+  "cryptocheckout.features": "Beneficios",
+
+  "cryptocheckout.features.1.number": "01",
+  "cryptocheckout.features.1.text": "Permite aceptar el pago en múltiples criptomonedas y/o activos personalizados.",
+
+  "cryptocheckout.features.2.number": "02",
+  "cryptocheckout.features.2.text": "Plataforma SaaS accesible desde cualquier dispositivo.",
+
+  "cryptocheckout.features.3.number": "03",
+  "cryptocheckout.features.3.text": "APIs muy intuitivas y fáciles de integrar.",
+
+  "cryptocheckout.features.4.number": "04",
+  "cryptocheckout.features.4.text": "Reduce los costos de transacción de pago en comercios.",
+
+  "cryptocheckout.features.5.number": "05",
+  "cryptocheckout.features.5.text": "Convertibilidad automática de las criptomonedas a moneda local.",
+
+  "jobs.title": "Jobs",
+  "jobs.button": "Ver más",
+
+  "jobs.1.title": "Sr. Sales Specialist",
+  "jobs.1.text": "Nos encontramos en búsqueda de un/a Sr. Sales Specialist para incorporar a nuestro equipo. Será responsable de identificar y las oportunidades los retos, desafíos y objetivos comerciales de un cliente, utilizando conceptos profesionales y objetivos de la compañía, ayudando a desarrollar propuestas de valor comercial en torno a los productos y soluciones de Koibanx y cerrando negociaciones con los potenciales clientes.",
+
+  "jobs.2.title": "Backend Developer",
+  "jobs.2.text": "Sumandote a Koibanx como Backend Developer vas a ser protagonista de una compañía que está creando historia construyendo los rieles transaccionales sobre blockchain para generar un sistema financiero más accesible, seguro y eficiente, siendo los habilitadores entre el mundo financiero tradicional y el mundo cripto.",
+
+  "jobs.3.title": "Jr. Technical Support",
+  "jobs.3.text": "La posicion de Jr. Technical Support proporcionará asistencia técnica a los clientes y colaboradores a problemas relacionados con el software. Diagnosticará y solucionará problemas técnicos, escalándolos según sea necesario con personal de Soporte Técnico Sr.",
+
+  "jobs.4.title": "UI Designer Jr",
+  "jobs.4.text": "El equipo de Product Design es el responsable de prototipar los productos que resuelven los problemas de los clientes. A través de brainstormings, sketching, documentación de flujos, prototipos interactivos, y trabajo con desarrolladores para realizar los diseños. Desde la idea inicial hasta los wireframes en alta del producto final."
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs'
+import { FormattedMessage } from 'react-intl'
 
 const Footer = props => {
   return (
@@ -13,14 +14,14 @@ const Footer = props => {
               rel="noreferrer"
               target="_blank"
             >
-              Privacy Policies
+                   <FormattedMessage id="footer.policies.title" />
             </Link>
             <Link
               href="https://koibanx-webpage-terminos.s3.amazonaws.com/T%C3%A9rminos+de+Uso+-+Koibanx+El+Salvador+2022.pdf"
               target="_blank"
               rel="noreferrer"
             >
-              Terms & Conditions: El Salvador
+               <FormattedMessage id="footer.terms.title" />
             </Link>
           </div>
           <div>
@@ -29,7 +30,7 @@ const Footer = props => {
               rel="noreferrer"
               target="_blank"
             >
-              Join our Team
+             <FormattedMessage id="footer.join" />
             </Button>
           </div>
           <Social>

@@ -42,6 +42,7 @@ const Dropdown = () => {
 }
 
 const SelectSection = styled.div`
+
   .dropbtn {
     height: 40px;
     width: 60px;
@@ -65,6 +66,7 @@ const SelectSection = styled.div`
 
   .dropdown {
     position: relative;
+
     display: inline-block;
   }
 
@@ -76,6 +78,7 @@ const SelectSection = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
+    left:20px;  
   }
 
   .dropdown:hover .dropdown-content {
@@ -99,6 +102,7 @@ const FlagButton = styled.button`
   border: 0;
   background: transparent;
   cursor: pointer;
+
 `
 
 export default Dropdown

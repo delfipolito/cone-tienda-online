@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import wallet from './assets/wallet.png'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import Carousel from 'react-elastic-carousel'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import wallet from "./assets/wallet.png";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import Carousel from "react-elastic-carousel";
+import { FormattedMessage } from "react-intl";
 
 export default function Crypto() {
   return (
@@ -13,13 +14,13 @@ export default function Crypto() {
         <CryptoContainer>
           <div>
             <CryptoTitle>
-              <b>Transactional software</b> that connects to the banking core.
-              Apified and Blockchain based.
+              <FormattedMessage
+                id="transactionalcore.title"
+                values={{ b: (word) => <b>{word}</b> }}
+              />
             </CryptoTitle>
             <Content>
-              It allows creating and managing multiple types of assets (tokens),
-              logically programming business on them, compatible with crypto and
-              interconnected with the services of the Financial Institution.
+              <FormattedMessage id="transactionalcore.subtitle" />
             </Content>
             <br />
             <br />
@@ -27,7 +28,10 @@ export default function Crypto() {
           <img src={wallet} alt="wallet" />
         </CryptoContainer>
         <CryptoContainer>
-          <Benefits>Main Core Aplications.</Benefits>
+          <Benefits>
+            {" "}
+            <FormattedMessage id="transactionalcore.aplications" />
+          </Benefits>
         </CryptoContainer>
         <BenefitsContainer>
           <Carousel
@@ -40,78 +44,60 @@ export default function Crypto() {
           >
             <Item>
               <h5>
-                Virtual Wallet
+              <FormattedMessage id="transactionalcore.aplications.1.title" />
                 <span>.</span>
               </h5>
               <h6>
-                We provide the complete framework for virtual wallets and
-                neobanks. Collection licenses by country, Apified connection to
-                the interbank payment system and implementation of the entire
-                core to manage aggregator, collector, derivative and sub-account
-                accounts.
+              <FormattedMessage id="transactionalcore.aplications.1.text" />
               </h6>
-              <Button>Learn more</Button>
+              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
             </Item>
             <Item>
               <h5>
-                Cashless Collections
+              <FormattedMessage id="transactionalcore.aplications.2.title" />
                 <span>.</span>
               </h5>
               <h6>
-                Implementation of the core to manage collections from multiple
-                sources in real time. Ideal for distributors, marketing networks
-                and chains. The different collection points record all
-                transactions on the Blockchain...
+              <FormattedMessage id="transactionalcore.aplications.2.text" />
               </h6>
-              <Button>Learn more</Button>
+              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
             </Item>
             <Item>
               <h5>
-                Private Issuing
+              <FormattedMessage id="transactionalcore.aplications.3.title" />
                 <span>.</span>
               </h5>
               <h6>
-                Creation of own token or coin for transactions within the
-                ecosystem. The token is backed by the issuer's liabilities,
-                replicating the scheme of loyalty programs, allowing the payment
-                commitment to circulate within system and implementation of the entire
-                core to manage aggregator...
+              <FormattedMessage id="transactionalcore.aplications.3.text" />
               </h6>
-              <Button>Learn more</Button>
+              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
             </Item>
             <Item>
               <h5>
-                Subsidies & Directed Consumption
+              <FormattedMessage id="transactionalcore.aplications.4.title" />
                 <span>.</span>
               </h5>
               <h6>
-                We provide the complete framework for virtual wallets and
-                neobanks. Collection licenses by country, Apified connection to
-                the interbank payment system and implementation of the entire
-                core to manage aggregator...
+              <FormattedMessage id="transactionalcore.aplications.4.text" />
               </h6>
-              <Button>Learn more</Button>
+              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
             </Item>
             <Item>
               <h5>
-                Otra
+              <FormattedMessage id="transactionalcore.aplications.5.title" />
                 <span>.</span>
               </h5>
               <h6>
-                We provide the complete framework for virtual wallets and
-                neobanks. Collection licenses by country, Apified connection to
-                the interbank payment system and implementation of the entire
-                core to manage aggregator, collector, derivative and sub-account
-                accounts.
+              <FormattedMessage id="transactionalcore.aplications.5.text" />
               </h6>
-              <Button>Learn more</Button>
+              <Button>  <FormattedMessage id="transactionalcore.aplications.button" /></Button>
             </Item>
           </Carousel>
         </BenefitsContainer>
       </CryptoSection>
       <Footer />
     </>
-  )
+  );
 }
 
 const CryptoSection = styled.section`
@@ -125,7 +111,7 @@ const CryptoSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`
+`;
 
 const BenefitsContainer = styled.div`
   display: flex;
@@ -164,7 +150,7 @@ const BenefitsContainer = styled.div`
     color: #ffffff;
     box-shadow: none;
   }
-`
+`;
 
 const Item = styled.div`
   background: #272727;
@@ -174,7 +160,7 @@ const Item = styled.div`
   margin: 0 10px;
 
   h5 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 27px;
@@ -187,14 +173,14 @@ const Item = styled.div`
     }
   }
   h6 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
   }
-`
+`;
 
 const Benefits = styled.h4`
   font-style: normal;
@@ -203,7 +189,7 @@ const Benefits = styled.h4`
   line-height: 28px;
 
   color: #ff5000;
-`
+`;
 
 const CryptoContainer = styled.div`
   max-width: 1140px;
@@ -216,20 +202,20 @@ const CryptoContainer = styled.div`
   box-sizing: border-box;
   height: auto;
   text-align: left;
-`
+`;
 
 const CryptoTitle = styled.h1`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 38px;
   line-height: 44px;
   color: #ffffff;
   width: 700px;
-`
+`;
 
 const Content = styled.p`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -237,10 +223,10 @@ const Content = styled.p`
   max-width: 540px;
   margin-left: 0;
   color: #ffffff;
-`
+`;
 
 const Button = styled.a`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -260,4 +246,4 @@ const Button = styled.a`
     letter-spacing: 0.02em;
     padding: 6px 23px;
   }
-`
+`;
