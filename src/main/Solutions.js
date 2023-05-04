@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import AnimatedText from './AnimatedText.js'
 import background from '../assets/main/orange-gradient.mp4'
+import { FormattedMessage } from 'react-intl'
 
 const Solutions = () => {
   return (
@@ -11,63 +12,52 @@ const Solutions = () => {
         <source src={background} type="video/mp4" />
       </BackgroundVideo>
       <AnimatedText>
-        <SolutionsTitle>Our Solutions.</SolutionsTitle>
+        <SolutionsTitle>  <FormattedMessage id="solution.title" /></SolutionsTitle>
       </AnimatedText>
       <Box>
         <Item className="large">
           <AnimatedText>
             <div>
-              <h2>Transactional Core</h2>
+              <h2><FormattedMessage id="solution.1.title" /></h2>
               <p>
-                Transactional software that connects to the banking core.
-                Apified and Blockchain based. It allows creating and managing
-                multiple types of assets (tokens), programming business logic on
-                them, compatible with cryptocurrencies and interconnected with
-                the services of the Financial Institution.
+              <FormattedMessage id="solution.1.text" />
               </p>
             </div>
-            <a>Learn more</a>
+            <a ><FormattedMessage id="solution.1.button" /></a>
           </AnimatedText>
         </Item>
 
         <AnimatedText delay={500}>
           <Item>
             <div>
-              <h2>Cross border settlements</h2>
+              <h2><FormattedMessage id="solution.2.title" /></h2>
               <p>
-                Instant transfers to +8 countries in LATAM. Collecting USD in
-                the USA via ACH transfers, credit, debit or prepaid cards and/or
-                cryptocurrencies and settling real time payments in local
-                currency at the final destination.
+              <FormattedMessage id="solution.2.text" />
               </p>
             </div>
-            <a>Learn more</a>
+            <a><FormattedMessage id="solution.2.button" /></a>
           </Item>
         </AnimatedText>
         <AnimatedText delay={500}>
           <Item>
             <div>
-              <h2>Crypto check out</h2>
+              <h2><FormattedMessage id="solution.3.title" /></h2>
               <p>
-                It allows your merchants, e-Commerce platforms, collecting
-                providers and gateways to receive payments in any
-                cryptocurrency, fiat and cards.
+              <FormattedMessage id="solution.3.text" />
               </p>
             </div>
-            <Link to='/crypto-checkout'>Learn more</Link>
+            <Link to='/crypto-checkout'><FormattedMessage id="solution.3.button" /></Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={1000}>
           <Item>
             <div>
-              <h2>Crypto as a Service</h2>
+              <h2><FormattedMessage id="solution.4.title" /></h2>
               <p>
-                We enable banks and digital wallets to provide their own
-                customers the ability to buy, sell, receive, transfer and store
-                cryptocurrencies on their own platforms.
+              <FormattedMessage id="solution.4.text" />
               </p>
             </div>
-            <a>Learn more</a>
+            <a><FormattedMessage id="solution.4.button" /></a>
           </Item>
         </AnimatedText>
       </Box>

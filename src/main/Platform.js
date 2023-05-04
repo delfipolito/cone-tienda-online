@@ -1,7 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import background from '../assets/main/orange-gradient.mp4'
-import AnimatedText from './AnimatedText.js'
+import React from "react";
+import styled from "styled-components";
+import background from "../assets/main/orange-gradient.mp4";
+import AnimatedText from "./AnimatedText.js";
+import { FormattedMessage } from "react-intl";
 
 const Platform = ({ about }) => {
   return (
@@ -9,14 +10,16 @@ const Platform = ({ about }) => {
       <PlatformContainer>
         <AnimatedText>
           <h2>
-            Our platform integrates <b>Blockchain & Web3</b> to the financial
-            system, to develop the banking of the future.
+            <FormattedMessage
+              id="platform.text"
+              values={{ b: (word) => <b>{word}</b> }}
+            />
           </h2>
         </AnimatedText>
       </PlatformContainer>
     </PlatformSection>
-  )
-}
+  );
+};
 
 const PlatformSection = styled.section`
   min-height: 700px;
@@ -31,14 +34,14 @@ const PlatformSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`
+`;
 
 const PlatformContainer = styled.div`
   padding-top: 30px;
   height: auto;
   text-align: center;
   h2 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 38px;
@@ -50,6 +53,6 @@ const PlatformContainer = styled.div`
       font-weight: 700;
     }
   }
-`
+`;
 
-export default Platform
+export default Platform;

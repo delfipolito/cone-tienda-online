@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
 import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 
 const CarouselSection = () => {
   return (
@@ -50,46 +51,33 @@ const CarouselSection = () => {
           <Quote>
             <span>“</span>
             <br />
-            The forms of intellectual property reached by the agreement include
-            trademarks, patents and all kinds of copyright: such as songs,
-            lyrics, videos, shows, conferences, podcasts and all forms of
-            content that can be transmitted.
+            <FormattedMessage id="press.forbes.text" />
           </Quote>
-          <a>Read more</a>
+          <a>    <FormattedMessage id="press.button" /></a>
         </Item>
         <Item>
           <Quote>
             <span>“</span>
             <br />
-            Mi Vacuna provides exact statistics on the penetration rate of the
-            COVID-19 vaccination program. This application connects with the
-            Koibanx platform, where a blockchain identity is created for each
-            citizen with the records or information of each care and/or
-            interaction with the Colombian health system.
+            <FormattedMessage id="press.eltiempo.text" />
           </Quote>
-          <a>Read more</a>
+          <a> <FormattedMessage id="press.button" /></a>
         </Item>
         <Item>
           <Quote>
             <span>“</span>
             <br />
-            It is necessary to resolve, in advance, important technological and
-            regulatory aspects to achieve an orderly massification of
-            tokenization and, especially, to advance in a legal framework on the
-            scope of smart contracts.
+            <FormattedMessage id="press.infobae.text" />
           </Quote>
-          <a>Read more</a>
+          <a> <FormattedMessage id="press.button" /></a>
         </Item>
         <Item>
           <Quote>
             <span>“</span>
             <br />
-            In the 2022 edition of the Green Awards festival, Algorand and
-            Koibanx were invited to provide an explanatory workshop on
-            blockchain technology and the different use cases. Thus, they listed
-            the benefits of the Algorand blockchain in sustainable projects.
+            <FormattedMessage id="press.cointelegraph.text" />
           </Quote>
-          <a>Read more</a>
+          <a><FormattedMessage id="press.button" /></a>
         </Item>
       </Carousel>
     </Container>

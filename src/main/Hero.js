@@ -1,27 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
-import AnimatedText from './AnimatedText.js'
+import React from "react";
+import styled from "styled-components";
+import AnimatedText from "./AnimatedText.js";
+import { FormattedMessage } from "react-intl";
+
 
 const Hero = () => {
+
   return (
     <HeroSection>
       <HeroContainer>
         <AnimatedText>
           <HeroTitle>
-            REINVENTING THE BANKING INFRASTRUCTURE
+            <FormattedMessage id="hero.title" />
             <span>.</span>
           </HeroTitle>
           <HeroSubtitle>
-            The Koibanx platform integrates<br/>
+            {/* The Koibanx platform integrates<br/>
             <b>Blockchain and web3 to the financial system, </b> allowing banks
             to connect with the
-            <b> financial technology of the future. </b>
+            <b> financial technology of the future. </b> */}
+
+            <FormattedMessage
+              id="hero.text"
+              values={{ b: (word) => <b>{word}</b>, brTag: () => <br /> }}
+            />
           </HeroSubtitle>
         </AnimatedText>
       </HeroContainer>
     </HeroSection>
-  )
-}
+  );
+};
 
 const HeroSection = styled.div`
   min-height: calc(100vh - 90px);
@@ -44,7 +52,7 @@ const HeroSection = styled.div`
     transform: translate(-50%, 0);
     top: -25px;
   }
-`
+`;
 
 const HeroContainer = styled.div`
   flex-wrap: wrap;
@@ -54,10 +62,10 @@ const HeroContainer = styled.div`
     position: relative;
     z-index: 1;
   }
-`
+`;
 
 const HeroTitle = styled.h1`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 123px;
@@ -71,10 +79,10 @@ const HeroTitle = styled.h1`
   span {
     color: #ff5900;
   }
-`
+`;
 
 const HeroSubtitle = styled.h1`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -85,6 +93,6 @@ const HeroSubtitle = styled.h1`
   b {
     font-weight: 700;
   }
-`
+`;
 
-export default Hero
+export default Hero;

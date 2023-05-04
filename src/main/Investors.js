@@ -7,12 +7,13 @@ import innogen from '../assets/investors/logo_innogen.png'
 import advisors from '../assets/investors/logo_advisors.png'
 import finnovista from '../assets/investors/logo_finnovista.svg'
 import AnimatedText from './AnimatedText.js'
+import { FormattedMessage } from 'react-intl'
 
 const Investors = () => {
   return (
     <InvestorsSection>
       <AnimatedText>
-        <InvestorsTitle>Our Main Investors.</InvestorsTitle>
+        <InvestorsTitle> <FormattedMessage id="investors.title" /></InvestorsTitle>
       </AnimatedText>
       <AnimatedText>
         <InvestorsContainer>
