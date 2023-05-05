@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import checkout from "./assets/checkout.mp4";
+import service from "./assets/service.mp4";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { FormattedMessage } from "react-intl";
@@ -11,75 +11,74 @@ export default function Crypto() {
       <Navbar />
       <CryptoSection>
         <CryptoContainer>
-          <div>
-            <CryptoTitle>
-              <b>Crypto Checkout</b>{' '}
-              <FormattedMessage id="cryptocheckout.title" />
+          <div style={{minWidth: '50%'}}>
+            <CryptoTitle style={{maxWidth: '315px'}}>
+              <FormattedMessage id="cryptoservice.title" />
             </CryptoTitle>
             <Content>
-              <FormattedMessage id="cryptocheckout.subtitle" />
+              <FormattedMessage id="cryptoservice.subtitle" />
             </Content>
             <Button>
-              <FormattedMessage id="cryptocheckout.button" />
+              <FormattedMessage id="cryptoservice.button" />
             </Button>
             <br />
             <br />
           </div>
-          <video autoPlay muted loop>
-            <source src={checkout} type="video/mp4" />
+          <video autoPlay muted loop style={{maxWidth: '90%'}}>
+            <source src={service} type="video/mp4" />
           </video>
         </CryptoContainer>
         <CryptoContainer>
           <Benefits>
             {" "}
-            <FormattedMessage id="cryptocheckout.features" />
+            <FormattedMessage id="cryptoservice.features" />
           </Benefits>
         </CryptoContainer>
         <BenefitsContainer>
           <div>
             <h5>
-              <FormattedMessage id="cryptocheckout.features.1.number" />
+              <FormattedMessage id="cryptoservice.features.1.number" />
               <span>.</span>
             </h5>
             <h6>
-              <FormattedMessage id="cryptocheckout.features.1.text" />
+              <FormattedMessage id="cryptoservice.features.1.text" />
             </h6>
           </div>
           <div>
             <h5>
-              <FormattedMessage id="cryptocheckout.features.2.number" />
+              <FormattedMessage id="cryptoservice.features.2.number" />
               <span>.</span>
             </h5>
             <h6>
               {" "}
-              <FormattedMessage id="cryptocheckout.features.2.text" />
+              <FormattedMessage id="cryptoservice.features.2.text" />
             </h6>
           </div>
           <div>
             <h5>
-              <FormattedMessage id="cryptocheckout.features.3.number" />
+              <FormattedMessage id="cryptoservice.features.3.number" />
               <span>.</span>
             </h5>
             <h6>
-              <FormattedMessage id="cryptocheckout.features.3.text" />
+              <FormattedMessage id="cryptoservice.features.3.text" />
             </h6>
           </div>
           <div>
             <h5>
-              <FormattedMessage id="cryptocheckout.features.4.number" />
+              <FormattedMessage id="cryptoservice.features.4.number" />
               <span>.</span>
             </h5>
             <h6>
-              <FormattedMessage id="cryptocheckout.features.4.text" />
+              <FormattedMessage id="cryptoservice.features.4.text" />
             </h6>
           </div>
           <div>
             <h5>
-              <FormattedMessage id="cryptocheckout.features.5.number" />
+              <FormattedMessage id="cryptoservice.features.5.number" />
               <span>.</span>
             </h5>
             <h6>
-              <FormattedMessage id="cryptocheckout.features.5.text" />
+              <FormattedMessage id="cryptoservice.features.5.text" />
             </h6>
           </div>
         </BenefitsContainer>

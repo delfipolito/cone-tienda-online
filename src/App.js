@@ -22,6 +22,7 @@ import About from './About'
 import Jobs from './Jobs'
 import Modal from './components/Modal'
 import CryptoCheckout from './Crypto-checkout'
+import CryptoService from './Crypto-service'
 import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
 import { FormattedMessage } from 'react-intl'
@@ -34,6 +35,7 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/transactional-core" element={<TransactionalCore />} />
         <Route path="/crypto-checkout" element={<CryptoCheckout />} />
+        <Route path="/crypto-service" element={<CryptoService />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>

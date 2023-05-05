@@ -149,6 +149,28 @@
 "cryptocheckout.features.5.text":"Automatic convertibility of cryptocurrencies to local currency.",
 
 
+"cryptoservice.title": "Cryptocurrency infrastructure for your channels.",
+"cryptoservice.subtitle": "We offer a “plug and play” solution. We enable banks and digital wallets to provide their own customers the ability to buy, sell, receive, transfer and store cryptocurrencies on their own platforms.",
+
+"cryptoservice.button": "Learn more",
+"cryptoservice.features": "Main features",
+
+"cryptoservice.features.1.number": "01",
+"cryptoservice.features.1.text": "Allows the purchase, holding and sale of cryptocurrencies.",
+
+"cryptoservice.features.2.number": "02",
+"cryptoservice.features.2.text": "Easy integration with wallets or banking systems.",
+
+"cryptoservice.features.3.number": "03",
+"cryptoservice.features.3.text": "Total traceability and monitoring of transactions in real time.",
+
+"cryptoservice.features.4.number": "04",
+"cryptoservice.features.4.text": "Ability to keep records of sub-accounts.",
+
+"cryptoservice.features.5.number": "05",
+"cryptoservice.features.5.text": "We have the best security and technology practices to ensure the best custody management.",
+
+
 "jobs.title":"Jobs",
 "jobs.button":"Read more",
 
@@ -166,4 +188,3 @@
 "jobs.4.text":"The Product Design team is responsible for prototyping products that solve customer problems. Through brainstorming, sketching, flow documentation, interactive prototypes, and working with developers to make the designs. From the initial idea to the wireframes for the final product."
 
 }
-  

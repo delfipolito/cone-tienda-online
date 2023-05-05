@@ -69,7 +69,7 @@ const GeneralContainer = styled.div`
     line-height: 115%;
     color: #ffffff;
     max-width: 823px;
-    margin: 100px auto;
+    margin: 100px 42px 100px auto;
     text-align: left;
 
     @media only screen and (max-width: 1000px) {

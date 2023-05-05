@@ -141,6 +141,27 @@
   "cryptocheckout.features.5.number": "05",
   "cryptocheckout.features.5.text": "Convertibilidad automática de las criptomonedas a moneda local.",
 
+  "cryptoservice.title": "Infraestructura de criptomonedas para tus canales.",
+  "cryptoservice.subtitle": "Permitimos que bancos y billeteras digitales brinden a sus propios clientes la capacidad de comprar, vender, recibir, enviar y almacenar criptomonedas en sus plataformas.",
+
+  "cryptoservice.button": "Ver más",
+  "cryptoservice.features": "Beneficios",
+
+  "cryptoservice.features.1.number": "01",
+  "cryptoservice.features.1.text": "Permite la compra, holdeo y venta de criptomonedas.",
+
+  "cryptoservice.features.2.number": "02",
+  "cryptoservice.features.2.text": "Fácil integración con wallets o sistemas bancarios.",
+
+  "cryptoservice.features.3.number": "03",
+  "cryptoservice.features.3.text": "Trazabilidad total y monitoreo de transacciones en tiempo real.",
+
+  "cryptoservice.features.4.number": "04",
+  "cryptoservice.features.4.text": " APIs muy intuitivas y fáciles de integrar.",
+
+  "cryptoservice.features.5.number": "05",
+  "cryptoservice.features.5.text": "Contamos con las mejores prácticas de seguridad y tecnología para garantizar el mejor manejo de la custodia.",
+
   "jobs.title": "Jobs",
   "jobs.button": "Ver más",
 
