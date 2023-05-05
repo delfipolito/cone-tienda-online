@@ -102,7 +102,7 @@ const Cubo = styled.div`
 
 const Button = styled.button`
   position: fixed;
-  top: 150px;
+  top: 100px;
   right: 80px;
   background-color: black;
   border: 1.5px solid #ff5000;

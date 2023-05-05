@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
 `
 
 const NavbarSection = styled.section`
-  z-index: 100;
+  z-index: 200;
   background: transparent;
   background: black;
   position: fixed;

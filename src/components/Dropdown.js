@@ -76,9 +76,9 @@ const SelectSection = styled.div`
     background: #131313;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 150;
     right: 0;
-    left:20px;  
+    left:20px;
   }
 
   .dropdown:hover .dropdown-content {
