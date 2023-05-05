@@ -162,6 +162,27 @@
   "cryptoservice.features.5.number": "05",
   "cryptoservice.features.5.text": "Contamos con las mejores prácticas de seguridad y tecnología para garantizar el mejor manejo de la custodia.",
 
+  "crossborder.title": "Habilitación de transferencias instantáneas desde EE.UU. a 9 países de LATAM",
+  "crossborder.subtitle": "mediante la captura de USD localmente en los EE. UU. (regulado por FinCen) a través de ACH,  tarjetas, criptomonedas o transferencias. Convertimos dinero fiat a USDC y lo liquidamos localmente.",
+
+  "crossborder.button": "Ver más",
+  "crossborder.features": "Beneficios",
+
+  "crossborder.features.1.number": "01",
+  "crossborder.features.1.text": "Permite realizar pagos, cobros y remesas personales o corporativas.",
+
+  "crossborder.features.2.number": "02",
+  "crossborder.features.2.text": "Platforma SaaS.",
+
+  "crossborder.features.3.number": "03",
+  "crossborder.features.3.text": "AAPIs muy intuitivas y fáciles de integrar",
+
+  "crossborder.features.4.number": "04",
+  "crossborder.features.4.text": "KYC & AML integrado.",
+
+  "crossborder.features.5.number": "05",
+  "crossborder.features.5.text": "Mejores precios y ahorro de tiempo utilizando crypto tras bambalinas.",
+
   "jobs.title": "Jobs",
   "jobs.button": "Ver más",
 
