@@ -15,11 +15,6 @@ const Hero = () => {
             <span>.</span>
           </HeroTitle>
           <HeroSubtitle>
-            {/* The Koibanx platform integrates<br/>
-            <b>Blockchain and web3 to the financial system, </b> allowing banks
-            to connect with the
-            <b> financial technology of the future. </b> */}
-
             <FormattedMessage
               id="hero.text"
               values={{ b: (word) => <b>{word}</b>, brTag: () => <br /> }}
