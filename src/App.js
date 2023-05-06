@@ -25,6 +25,7 @@ import CryptoCheckout from './Crypto-checkout'
 import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
 import { FormattedMessage } from 'react-intl'
+import HeroMobile from './Mobile/HeroMobile'
 
 function App() {
   return (
@@ -55,6 +56,13 @@ const Home = () => {
     document.body.style.overflow = 'hidden'
   }
 
+  const [width, setWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+  }, [])
+
+  const medium = 700
+
   return (
     <AppDiv className="App">
       <Navbar />
@@ -62,7 +70,9 @@ const Home = () => {
         <p> <FormattedMessage id="hero.button" /></p>
       </Button>
       <Modal open={openModal} onClose={() => closing()} />
-      <Cubo>
+
+      {width >= medium ? (<>
+        <Cubo>
         <Controller>
           <Scene duration="70%" triggerHook="onLeave" pin>
             {progress => (
@@ -76,10 +86,18 @@ const Home = () => {
         </Controller>
       </Cubo>
       <Customers />
+      
+      </>) : (<>
+      <HeroMobile/>
+      
+      </>)}
+     
+ 
       <Platform />
       <Solutions />
       <Press />
       <Investors />
+
 
       <Footer />
     </AppDiv>

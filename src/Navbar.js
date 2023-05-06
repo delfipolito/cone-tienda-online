@@ -45,6 +45,9 @@ const NavbarSection = styled.section`
   box-sizing: border-box;
   padding: 20px 80px;
   margin: auto;
+  @media only screen and (max-width: 700px) {
+     
+    }
   .hamburger-react {
     position: relative;
     z-index: 3;

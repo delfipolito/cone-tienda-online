@@ -32,14 +32,19 @@ const PlatformSection = styled.section`
   position: relative;
   box-sizing: border-box;
   @media only screen and (max-width: 850px) {
-    padding: 50px 30px;
+    padding: 50px 50px;
+    min-height: 400px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 50px 20px;
   }
 `;
 
 const PlatformContainer = styled.div`
   padding-top: 30px;
   height: auto;
-  text-align: center;
+  /* text-align: center; */
   h2 {
     font-family: "Poppins";
     font-style: normal;
@@ -52,6 +57,28 @@ const PlatformContainer = styled.div`
     b {
       font-weight: 700;
     }
+  }
+
+  @media only screen and (max-width: 850px) {
+    h2 {
+
+    font-size: 28px;
+    line-height: 38px;
+    max-width: 435px;
+    text-align: left;
+
+  }
+  }
+
+  @media only screen and (max-width: 700px) {
+    h2 {
+
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 335px;
+    text-align: left;
+
+  }
   }
 `;
 

@@ -1,7 +1,7 @@
-import React from 'react'
-import Carousel from 'react-elastic-carousel'
-import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import React from "react";
+import Carousel from "react-elastic-carousel";
+import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
 
 const CarouselSection = () => {
   return (
@@ -13,26 +13,26 @@ const CarouselSection = () => {
         renderPagination={({ pages, activePage, onClick }) => {
           return (
             <Box>
-              {pages.map(page => {
-                const isActivePage = activePage === page
+              {pages.map((page) => {
+                const isActivePage = activePage === page;
                 return (
                   <div
                     key={page}
                     onClick={() => onClick(page)}
                     active={isActivePage.toString()}
                   >
-                  <img
-                    src={`./assets/${page}.svg`}
-                    alt="Press"
-                    width="100"
-                    height="50"
-                    className={isActivePage ? 'active' : 'notActive'}
-                  />
+                    <img
+                      src={`./assets/${page}.svg`}
+                      alt="Press"
+                      width="100"
+                      height="50"
+                      className={isActivePage ? "active" : "notActive"}
+                    />
                   </div>
-                )
+                );
               })}
             </Box>
-          )
+          );
         }}
       >
         <Item>
@@ -53,7 +53,10 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.forbes.text" />
           </Quote>
-          <a>    <FormattedMessage id="press.button" /></a>
+          <a>
+            {" "}
+            <FormattedMessage id="press.button" />
+          </a>
         </Item>
         <Item>
           <Quote>
@@ -61,7 +64,10 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.eltiempo.text" />
           </Quote>
-          <a> <FormattedMessage id="press.button" /></a>
+          <a>
+            {" "}
+            <FormattedMessage id="press.button" />
+          </a>
         </Item>
         <Item>
           <Quote>
@@ -69,7 +75,10 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.infobae.text" />
           </Quote>
-          <a> <FormattedMessage id="press.button" /></a>
+          <a>
+            {" "}
+            <FormattedMessage id="press.button" />
+          </a>
         </Item>
         <Item>
           <Quote>
@@ -77,12 +86,14 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.cointelegraph.text" />
           </Quote>
-          <a><FormattedMessage id="press.button" /></a>
+          <a>
+            <FormattedMessage id="press.button" />
+          </a>
         </Item>
       </Carousel>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
   color: white;
@@ -90,7 +101,7 @@ const Container = styled.div`
   .rec-carousel {
     width: 1050px;
     min-height: 300px;
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1050px) {
       width: 90vw;
     }
   }
@@ -104,12 +115,12 @@ const Container = styled.div`
   }
   .rec-arrow:hover,
   .rec-arrow:active,
-  .rec-arrow:focus{
+  .rec-arrow:focus {
     background-color: transparent;
     color: #ffffff;
     box-shadow: none;
   }
-`
+`;
 
 const Box = styled.div`
   display: flex;
@@ -129,7 +140,7 @@ const Box = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 
 const Item = styled.div`
   display: flex;
@@ -138,14 +149,14 @@ const Item = styled.div`
   gap: 100px;
   margin: 0 100px;
 
-  @media only screen and (max-width: 700px) {
-      margin: 0 4px;
-      flex-direction: column;
-      gap: 50px;
+  @media only screen and (max-width: 1050px) {
+    margin: 0 4px;
+    flex-direction: column;
+    gap: 50px;
   }
 
   a {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -157,17 +168,19 @@ const Item = styled.div`
     color: #ffffff;
     display: inline-block;
 
+
     @media only screen and (max-width: 850px) {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      padding: 6px 23px;
+      padding: 5px 23px;
+
     }
   }
-`
+`;
 
 const Quote = styled.p`
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -179,7 +192,13 @@ const Quote = styled.p`
     line-height: 82px;
     letter-spacing: 0.02em;
   }
-`
+  @media only screen and (max-width: 850px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  span {
+    font-size: 57px;
+  }
+`;
 
-
-export default CarouselSection
+export default CarouselSection;

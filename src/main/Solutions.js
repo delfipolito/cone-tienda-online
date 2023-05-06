@@ -88,15 +88,24 @@ const Box = styled.div`
   column-gap: 70px;
   row-gap: 40px;
 
+
   @media only screen and (min-width: 751px) and (max-width: 1170px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    max-width: 790px;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto auto !important;
+    row-gap: 20px;
+    column-gap: 30px;
+ 
   }
   @media only screen and (max-width: 750px) {
+    /* grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    max-width: 90%; */
+
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-    max-width: 90%;
+    row-gap: 20px;
+    column-gap: 0px;
+
   }
 `
 
@@ -132,12 +141,31 @@ const Item = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
   &.large {
     grid-column-start: 1;
     grid-column-end: 4;
     p {
       max-width: 720px;
     }
+  }
+
+  @media only screen and (min-width: 751px) and (max-width: 1170px) {
+    &.large {
+      grid-column-start: 1;
+    grid-column-end: 1 !important;
+    p {
+      max-width: 720px;
+    }
+  }
+}
+
+  @media only screen and (max-width: 750px) {
+    &.large {
+      grid-column-start: 1 !important;
+    grid-column-end: 1 !important;
+
+  }
   }
   h2 {
     font-family: 'Quicksand';

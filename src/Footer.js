@@ -8,7 +8,7 @@ const Footer = props => {
     <FooterSection>
       <FContainer>
         <FooterContainer>
-          <div>
+        <div>
             <Link
               href="https://linktr.ee/koibanxpolicy"
               rel="noreferrer"
@@ -55,7 +55,9 @@ const Footer = props => {
             >
               <BsYoutube />
             </a>
+            
           </Social>
+         
         </FooterContainer>
       </FContainer>
     </FooterSection>
@@ -97,7 +99,7 @@ const FooterContainer = styled.div`
     flex-direction: column;
     div {
       padding: 20px 0;
-      text-align: justify;
+      text-align: center;
       width: 367px;
       margin: auto;
       justify-content: space-around;
