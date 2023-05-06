@@ -23,6 +23,7 @@ import Jobs from './Jobs'
 import Modal from './components/Modal'
 import CryptoCheckout from './Crypto-checkout'
 import CryptoService from './Crypto-service'
+import Job20 from './jobs/Job20'
 import CrossBorder from './CrossBorder'
 import TransactionalCore from './Transactional-core'
 import { animateScroll } from 'react-scroll'
@@ -33,6 +34,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/sales" element={<Job20 />} />
+        <Route path="/jobs/01" element={<Job20 />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/transactional-core" element={<TransactionalCore />} />
         <Route path="/crypto-checkout" element={<CryptoCheckout />} />
