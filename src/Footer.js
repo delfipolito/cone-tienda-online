@@ -2,35 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 import { BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs'
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
 
 const Footer = props => {
   return (
     <FooterSection>
       <FContainer>
         <FooterContainer>
-        <div>
-            <Link
+          <div>
+            <ELink
               href="https://linktr.ee/koibanxpolicy"
               rel="noreferrer"
               target="_blank"
             >
-                   <FormattedMessage id="footer.policies.title" />
-            </Link>
-            <Link
+              <FormattedMessage id="footer.policies.title" />
+            </ELink>
+            <ELink
               href="https://koibanx-webpage-terminos.s3.amazonaws.com/T%C3%A9rminos+de+Uso+-+Koibanx+El+Salvador+2022.pdf"
               target="_blank"
               rel="noreferrer"
             >
-               <FormattedMessage id="footer.terms.title" />
-            </Link>
+              <FormattedMessage id="footer.terms.title" />
+            </ELink>
           </div>
           <div>
-            <Button
-              href="www.koibanx.com/jobs"
-              rel="noreferrer"
-              target="_blank"
-            >
-             <FormattedMessage id="footer.join" />
+            <Button to="/jobs">
+              <FormattedMessage id="footer.join" />
             </Button>
           </div>
           <Social>
@@ -55,9 +52,7 @@ const Footer = props => {
             >
               <BsYoutube />
             </a>
-            
           </Social>
-         
         </FooterContainer>
       </FContainer>
     </FooterSection>
@@ -68,7 +63,7 @@ const FooterSection = styled.section`
   height: auto;
   width: 100%;
   margin: auto;
-  background: #1B1B1B;
+  background: #1b1b1b;
   padding: 30px 80px;
   box-sizing: border-box;
   @media only screen and (max-width: 850px) {
@@ -107,7 +102,7 @@ const FooterContainer = styled.div`
   }
 `
 
-const Link = styled.a`
+const ELink = styled.a`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
@@ -122,7 +117,7 @@ const Link = styled.a`
   }
 `
 
-const Button = styled.a`
+const Button = styled(Link)`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;

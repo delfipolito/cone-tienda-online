@@ -23,7 +23,7 @@ const Solutions = () => {
               <FormattedMessage id="solution.1.text" />
               </p>
             </div>
-            <a ><FormattedMessage id="solution.1.button" /></a>
+            <Link to='/transactional-core'><FormattedMessage id="solution.1.button" /></Link>
           </AnimatedText>
         </Item>
 
@@ -35,7 +35,7 @@ const Solutions = () => {
               <FormattedMessage id="solution.2.text" />
               </p>
             </div>
-            <a><FormattedMessage id="solution.2.button" /></a>
+            <Link to='/crypto-checkout'><FormattedMessage id="solution.2.button" /></Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={500}>
@@ -46,7 +46,7 @@ const Solutions = () => {
               <FormattedMessage id="solution.3.text" />
               </p>
             </div>
-            <Link to='/crypto-checkout'><FormattedMessage id="solution.3.button" /></Link>
+            <Link to='/crypto-service'><FormattedMessage id="solution.3.button" /></Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={1000}>
@@ -57,7 +57,7 @@ const Solutions = () => {
               <FormattedMessage id="solution.4.text" />
               </p>
             </div>
-            <a><FormattedMessage id="solution.4.button" /></a>
+            <Link to='/cross-border-settlement'><FormattedMessage id="solution.4.button" /></Link>
           </Item>
         </AnimatedText>
       </Box>
@@ -94,7 +94,7 @@ const Box = styled.div`
     grid-template-rows: auto auto auto !important;
     row-gap: 20px;
     column-gap: 30px;
- 
+
   }
   @media only screen and (max-width: 750px) {
     /* grid-template-columns: 1fr;

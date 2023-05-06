@@ -13,7 +13,7 @@ const Tabs = ({ mode }) => {
       <a href="https://koibanx.com/" target="_blank" rel="noreferrer">
       <FormattedMessage id="navbar.solutions" />
       </a>
-      <Link to={'about'}>
+      <Link to='/about'>
       <FormattedMessage id="navbar.about" />
       </Link>
       <Dropdown />
