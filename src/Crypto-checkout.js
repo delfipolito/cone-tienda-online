@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import checkout from "./assets/checkout.mp4";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import { FormattedMessage } from "react-intl";
+import styled from 'styled-components'
+import checkout from './assets/checkout.mp4'
+import Footer from './Footer'
+import Navbar from './Navbar'
+import { FormattedMessage } from 'react-intl'
 
 export default function Crypto() {
   return (
@@ -31,7 +30,7 @@ export default function Crypto() {
         </CryptoContainer>
         <CryptoContainer>
           <Benefits>
-            {" "}
+            {' '}
             <FormattedMessage id="cryptocheckout.features" />
           </Benefits>
         </CryptoContainer>
@@ -51,7 +50,7 @@ export default function Crypto() {
               <span>.</span>
             </h5>
             <h6>
-              {" "}
+              {' '}
               <FormattedMessage id="cryptocheckout.features.2.text" />
             </h6>
           </div>
@@ -86,7 +85,7 @@ export default function Crypto() {
       </CryptoSection>
       <Footer />
     </>
-  );
+  )
 }
 
 const CryptoSection = styled.section`
@@ -100,7 +99,7 @@ const CryptoSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`;
+`
 
 const BenefitsContainer = styled.div`
   display: flex;
@@ -115,7 +114,7 @@ const BenefitsContainer = styled.div`
     flex-direction: column;
   }
   h5 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -127,7 +126,7 @@ const BenefitsContainer = styled.div`
     }
   }
   h6 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -136,7 +135,7 @@ const BenefitsContainer = styled.div`
     color: #ffffff;
     max-width: 200px;
   }
-`;
+`
 
 const Benefits = styled.h4`
   font-style: normal;
@@ -145,25 +144,25 @@ const Benefits = styled.h4`
   line-height: 28px;
 
   color: #ff5000;
-`;
+`
 
 const CryptoContainer = styled(BenefitsContainer)`
   max-width: 1140px;
   align-items: center;
-`;
+`
 
 const CryptoTitle = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 38px;
   line-height: 44px;
   color: #ffffff;
   width: 700px;
-`;
+`
 
 const Content = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -171,10 +170,10 @@ const Content = styled.p`
   max-width: 540px;
   margin-left: 0;
   color: #ffffff;
-`;
+`
 
 const Button = styled.a`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -194,4 +193,4 @@ const Button = styled.a`
     letter-spacing: 0.02em;
     padding: 6px 23px;
   }
-`;
+`

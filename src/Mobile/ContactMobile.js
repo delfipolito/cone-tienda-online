@@ -1,51 +1,48 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import emailjs from "emailjs-com";
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import emailjs from 'emailjs-com'
 
-import Navbar from "../Navbar";
-import { useAnimation } from "framer-motion";
-
+import Navbar from '../Navbar'
 
 const ContactMobile = () => {
-  const [contact, setContact] = useState("");
-  const [sending, setSending] = useState(false);
-  const [messageSent, setMessageSent] = useState(false);
-  const controls = useAnimation();
+  const [contact, setContact] = useState('')
+  const [sending, setSending] = useState(false)
+  const [messageSent, setMessageSent] = useState(false)
 
 
   const frmContact = {
-    nameLastname: "",
-    email: "",
-    phoneNumber: "",
-    country: "",
-    jopPosition: "",
-    industry: "",
-    comments: "",
-  };
+    nameLastname: '',
+    email: '',
+    phoneNumber: '',
+    country: '',
+    jopPosition: '',
+    industry: '',
+    comments: '',
+  }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
-  };
+  const handleChange = e => {
+    const { name, value } = e.target
+    setContact({ ...contact, [name]: value })
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSending(true);
+  const handleSubmit = e => {
+    e.preventDefault()
+    setSending(true)
 
     emailjs
       .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
       .then(
-        (response) => {
-          console.log(`SUCCESS!`, response.status, response.text);
-          setContact(frmContact);
-          setSending(false);
-          setMessageSent(true);
+        response => {
+          console.log(`SUCCESS!`, response.status, response.text)
+          setContact(frmContact)
+          setSending(false)
+          setMessageSent(true)
         },
-        (err) => {
-          console.log(`FAILED...`, err);
+        err => {
+          console.log(`FAILED...`, err)
         }
-      );
-  };
+      )
+  }
 
   return (
     <>
@@ -62,7 +59,7 @@ const ContactMobile = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <Input
               className="form-item"
@@ -101,14 +98,13 @@ const ContactMobile = () => {
         </ContactContainer>
       </ContactSection>
     </>
-  );
-};
+  )
+}
 
 const ContactSection = styled.div`
   width: 100%;
   height: 100vh;
-
-`;
+`
 const ContactContainer = styled.div`
   width: 90%;
   display: flex;
@@ -116,7 +112,7 @@ const ContactContainer = styled.div`
   margin: 0 auto;
   padding-top: 150px;
   justify-content: center !important;
-`;
+`
 
 const TitleContainer = styled.div`
   display: flex;
@@ -124,21 +120,21 @@ const TitleContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 45px;
-  color:white;
+  color: white;
 
-  h1{
+  h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
-  h2{
+  h2 {
     font-size: 18px;
   }
-  p{
+  p {
     font-size: 11px;
     margin-top: -10px;
     margin-bottom: 40px;
   }
-`;
+`
 
 const Form = styled.form`
   list-style: none;
@@ -166,12 +162,12 @@ const Form = styled.form`
       color: #ff5000;
       margin: auto;
       font-size: 14px;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
     }
   }
-`;
+`
 
 const Input = styled.input`
   width: 82%;
@@ -182,7 +178,7 @@ const Input = styled.input`
   border: 1px solid #ffffff;
   color: #ffffff;
   padding-left: 15px;
-`;
+`
 
 const InputText = styled.input`
   width: 82%;
@@ -192,10 +188,6 @@ const InputText = styled.input`
   border-radius: 20px;
   border: 1px solid #ffffff;
   padding-left: 15px;
-`;
+`
 
-
-
-
-
-export default ContactMobile;
+export default ContactMobile

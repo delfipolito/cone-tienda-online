@@ -4,60 +4,82 @@ import { Link } from 'react-router-dom'
 import AnimatedText from './AnimatedText.js'
 import background from '../assets/main/orange-gradient.mp4'
 import { FormattedMessage } from 'react-intl'
+import { Element } from 'react-scroll'
 
 const Solutions = () => {
   return (
-    <SolutionsSection id="prooducts">
+    <SolutionsSection>
       <BackgroundVideo autoPlay muted loop>
         <source src={background} type="video/mp4" />
       </BackgroundVideo>
-      <AnimatedText>
-        <SolutionsTitle>  <FormattedMessage id="solution.title" /></SolutionsTitle>
-      </AnimatedText>
+      <Element name="solutions">
+        <AnimatedText>
+          <SolutionsTitle id="solutions">
+            {' '}
+            <FormattedMessage id="solution.title" />
+          </SolutionsTitle>
+        </AnimatedText>
+      </Element>
       <Box>
         <Item className="large">
           <AnimatedText>
             <div>
-              <h2><FormattedMessage id="solution.1.title" /></h2>
+              <h2>
+                <FormattedMessage id="solution.1.title" />
+              </h2>
               <p>
-              <FormattedMessage id="solution.1.text" />
+                <FormattedMessage id="solution.1.text" />
               </p>
             </div>
-            <Link to='/transactional-core'><FormattedMessage id="solution.1.button" /></Link>
+            <Link to="/transactional-core">
+              <FormattedMessage id="solution.1.button" />
+            </Link>
           </AnimatedText>
         </Item>
 
         <AnimatedText delay={500}>
           <Item>
             <div>
-              <h2><FormattedMessage id="solution.2.title" /></h2>
+              <h2>
+                <FormattedMessage id="solution.2.title" />
+              </h2>
               <p>
-              <FormattedMessage id="solution.2.text" />
+                <FormattedMessage id="solution.2.text" />
               </p>
             </div>
-            <Link to='/crypto-checkout'><FormattedMessage id="solution.2.button" /></Link>
+            <Link to="/crypto-checkout">
+              <FormattedMessage id="solution.2.button" />
+            </Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={500}>
           <Item>
             <div>
-              <h2><FormattedMessage id="solution.3.title" /></h2>
+              <h2>
+                <FormattedMessage id="solution.3.title" />
+              </h2>
               <p>
-              <FormattedMessage id="solution.3.text" />
+                <FormattedMessage id="solution.3.text" />
               </p>
             </div>
-            <Link to='/crypto-service'><FormattedMessage id="solution.3.button" /></Link>
+            <Link to="/crypto-service">
+              <FormattedMessage id="solution.3.button" />
+            </Link>
           </Item>
         </AnimatedText>
         <AnimatedText delay={1000}>
           <Item>
             <div>
-              <h2><FormattedMessage id="solution.4.title" /></h2>
+              <h2>
+                <FormattedMessage id="solution.4.title" />
+              </h2>
               <p>
-              <FormattedMessage id="solution.4.text" />
+                <FormattedMessage id="solution.4.text" />
               </p>
             </div>
-            <Link to='/cross-border-settlement'><FormattedMessage id="solution.4.button" /></Link>
+            <Link to="/cross-border-settlement">
+              <FormattedMessage id="solution.4.button" />
+            </Link>
           </Item>
         </AnimatedText>
       </Box>
@@ -88,13 +110,11 @@ const Box = styled.div`
   column-gap: 70px;
   row-gap: 40px;
 
-
   @media only screen and (min-width: 751px) and (max-width: 1170px) {
     grid-template-columns: 1fr 1fr !important;
     grid-template-rows: auto auto auto !important;
     row-gap: 20px;
     column-gap: 30px;
-
   }
   @media only screen and (max-width: 750px) {
     /* grid-template-columns: 1fr;
@@ -105,7 +125,6 @@ const Box = styled.div`
     grid-template-rows: auto auto auto auto;
     row-gap: 20px;
     column-gap: 0px;
-
   }
 `
 
@@ -153,19 +172,18 @@ const Item = styled.div`
   @media only screen and (min-width: 751px) and (max-width: 1170px) {
     &.large {
       grid-column-start: 1;
-    grid-column-end: 1 !important;
-    p {
-      max-width: 720px;
+      grid-column-end: 1 !important;
+      p {
+        max-width: 720px;
+      }
     }
   }
-}
 
   @media only screen and (max-width: 750px) {
     &.large {
       grid-column-start: 1 !important;
-    grid-column-end: 1 !important;
-
-  }
+      grid-column-end: 1 !important;
+    }
   }
   h2 {
     font-family: 'Quicksand';

@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedMessage } from "react-intl";
-import cube from "../assets/mobilehero/image 1.png";
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import cube from '../assets/mobilehero/image 1.png'
 
 const HeroMobile = () => {
   return (
     <>
       <HeroMobileSection>
         <HeroMobileContainer>
-          <img src={cube} />
+          <img src={cube} alt="cube"/>
           <HeroTitle>
             <FormattedMessage id="hero.title" />
             <span>.</span>
@@ -16,27 +16,25 @@ const HeroMobile = () => {
           <h3>
             <FormattedMessage
               id="hero.text"
-              values={{ b: (word) => <b>{word}</b>, brTag: () => <br /> }}
+              values={{ b: word => <b>{word}</b>, brTag: () => <br /> }}
             />
           </h3>
         </HeroMobileContainer>
       </HeroMobileSection>
     </>
-  );
-};
+  )
+}
 
 const HeroMobileSection = styled.div`
   width: 100%;
-  margin: auto;
+  margin: 40px auto auto auto;
   background: transparent;
   text-align: left;
   text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
-  min-height: 600px;
-  height: 100vh;
-  justify-content: center;
-`;
+  justify-content: flex-start;
+`
 
 const HeroMobileContainer = styled.div`
   display: flex;
@@ -46,7 +44,7 @@ const HeroMobileContainer = styled.div`
   padding-top: 80px;
 
   h3 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -95,10 +93,10 @@ const HeroMobileContainer = styled.div`
       left: 0px;
     }
   }
-`;
+`
 
 const HeroTitle = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 58px;
@@ -135,6 +133,6 @@ const HeroTitle = styled.h1`
     font-size: 35px;
     line-height: 45px;
   }
-`;
+`
 
-export default HeroMobile;
+export default HeroMobile

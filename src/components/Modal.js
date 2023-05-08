@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
 import close from '../assets/modal/close.png'
@@ -7,7 +7,7 @@ import check from '../assets/modal/tick.svg'
 import { Ring } from '@uiball/loaders'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Modal = ({ open, onClose }) => {
   const [contact, setContact] = useState('')
@@ -86,8 +86,9 @@ const Modal = ({ open, onClose }) => {
               marginTop: '75px',
               marginLeft: 'auto',
               marginRight: '80px',
-              overflow: 'hidden'
-            }}>
+              overflow: 'hidden',
+            }}
+          >
             <ModalContainer
               onClick={e => {
                 e.stopPropagation()
@@ -96,7 +97,7 @@ const Modal = ({ open, onClose }) => {
               {messageSent ? (
                 <>
                   <Sent>
-                    <img src={check} />
+                    <img src={check} alt="check"/>
                     <h2>Thanks!</h2>
                     <h6>Your information was sent successfully.</h6>
                     <button onClick={onClose}>
@@ -208,7 +209,6 @@ const Modal = ({ open, onClose }) => {
             </ModalContainer>
           </motion.div>
         </div>
-
       </Overlay>
     </>
   )

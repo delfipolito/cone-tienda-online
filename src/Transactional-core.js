@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import wallet from "./assets/wallet.png";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Carousel from "react-elastic-carousel";
-import { FormattedMessage } from "react-intl";
+import styled from 'styled-components'
+import wallet from './assets/wallet.png'
+import Footer from './Footer'
+import Navbar from './Navbar'
+import Carousel from 'react-elastic-carousel'
+import { FormattedMessage } from 'react-intl'
 
 export default function Crypto() {
   return (
@@ -16,7 +15,7 @@ export default function Crypto() {
             <CryptoTitle>
               <FormattedMessage
                 id="transactionalcore.title"
-                values={{ b: (word) => <b>{word}</b> }}
+                values={{ b: word => <b>{word}</b> }}
               />
             </CryptoTitle>
             <Content>
@@ -29,7 +28,7 @@ export default function Crypto() {
         </CryptoContainer>
         <CryptoContainer>
           <Benefits>
-            {" "}
+            {' '}
             <FormattedMessage id="transactionalcore.aplications" />
           </Benefits>
         </CryptoContainer>
@@ -44,60 +43,71 @@ export default function Crypto() {
           >
             <Item>
               <h5>
-              <FormattedMessage id="transactionalcore.aplications.1.title" />
+                <FormattedMessage id="transactionalcore.aplications.1.title" />
                 <span>.</span>
               </h5>
               <h6>
-              <FormattedMessage id="transactionalcore.aplications.1.text" />
+                <FormattedMessage id="transactionalcore.aplications.1.text" />
               </h6>
-              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
+              <Button>
+                <FormattedMessage id="transactionalcore.aplications.button" />
+              </Button>
             </Item>
             <Item>
               <h5>
-              <FormattedMessage id="transactionalcore.aplications.2.title" />
+                <FormattedMessage id="transactionalcore.aplications.2.title" />
                 <span>.</span>
               </h5>
               <h6>
-              <FormattedMessage id="transactionalcore.aplications.2.text" />
+                <FormattedMessage id="transactionalcore.aplications.2.text" />
               </h6>
-              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
+              <Button>
+                <FormattedMessage id="transactionalcore.aplications.button" />
+              </Button>
             </Item>
             <Item>
               <h5>
-              <FormattedMessage id="transactionalcore.aplications.3.title" />
+                <FormattedMessage id="transactionalcore.aplications.3.title" />
                 <span>.</span>
               </h5>
               <h6>
-              <FormattedMessage id="transactionalcore.aplications.3.text" />
+                <FormattedMessage id="transactionalcore.aplications.3.text" />
               </h6>
-              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
+              <Button>
+                <FormattedMessage id="transactionalcore.aplications.button" />
+              </Button>
             </Item>
             <Item>
               <h5>
-              <FormattedMessage id="transactionalcore.aplications.4.title" />
+                <FormattedMessage id="transactionalcore.aplications.4.title" />
                 <span>.</span>
               </h5>
               <h6>
-              <FormattedMessage id="transactionalcore.aplications.4.text" />
+                <FormattedMessage id="transactionalcore.aplications.4.text" />
               </h6>
-              <Button><FormattedMessage id="transactionalcore.aplications.button" /></Button>
+              <Button>
+                <FormattedMessage id="transactionalcore.aplications.button" />
+              </Button>
             </Item>
             <Item>
               <h5>
-              <FormattedMessage id="transactionalcore.aplications.5.title" />
+                <FormattedMessage id="transactionalcore.aplications.5.title" />
                 <span>.</span>
               </h5>
               <h6>
-              <FormattedMessage id="transactionalcore.aplications.5.text" />
+                <FormattedMessage id="transactionalcore.aplications.5.text" />
               </h6>
-              <Button>  <FormattedMessage id="transactionalcore.aplications.button" /></Button>
+              <Button>
+                {' '}
+                <FormattedMessage id="transactionalcore.aplications.button" />
+              </Button>
             </Item>
           </Carousel>
         </BenefitsContainer>
       </CryptoSection>
       <Footer />
     </>
-  );
+  )
 }
 
 const CryptoSection = styled.section`
@@ -111,7 +121,7 @@ const CryptoSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`;
+`
 
 const BenefitsContainer = styled.div`
   display: flex;
@@ -150,7 +160,7 @@ const BenefitsContainer = styled.div`
     color: #ffffff;
     box-shadow: none;
   }
-`;
+`
 
 const Item = styled.div`
   background: #272727;
@@ -160,7 +170,7 @@ const Item = styled.div`
   margin: 0 10px;
 
   h5 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 27px;
@@ -173,14 +183,14 @@ const Item = styled.div`
     }
   }
   h6 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
   }
-`;
+`
 
 const Benefits = styled.h4`
   font-style: normal;
@@ -189,7 +199,7 @@ const Benefits = styled.h4`
   line-height: 28px;
 
   color: #ff5000;
-`;
+`
 
 const CryptoContainer = styled.div`
   max-width: 1140px;
@@ -202,20 +212,20 @@ const CryptoContainer = styled.div`
   box-sizing: border-box;
   height: auto;
   text-align: left;
-`;
+`
 
 const CryptoTitle = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 38px;
   line-height: 44px;
   color: #ffffff;
   width: 700px;
-`;
+`
 
 const Content = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -223,10 +233,10 @@ const Content = styled.p`
   max-width: 540px;
   margin-left: 0;
   color: #ffffff;
-`;
+`
 
 const Button = styled.a`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -246,4 +256,4 @@ const Button = styled.a`
     letter-spacing: 0.02em;
     padding: 6px 23px;
   }
-`;
+`

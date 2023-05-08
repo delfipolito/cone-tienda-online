@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import AnimatedText from "./AnimatedText.js";
-import { FormattedMessage } from "react-intl";
+import React from 'react'
+import styled from 'styled-components'
+import AnimatedText from './AnimatedText.js'
+import { FormattedMessage } from 'react-intl'
 
 const Hero = () => {
   return (
@@ -15,14 +15,14 @@ const Hero = () => {
           <HeroSubtitle>
             <FormattedMessage
               id="hero.text"
-              values={{ b: (word) => <b>{word}</b>, brTag: () => <br /> }}
+              values={{ b: word => <b>{word}</b>, brTag: () => <br /> }}
             />
           </HeroSubtitle>
         </AnimatedText>
       </HeroContainer>
     </HeroSection>
-  );
-};
+  )
+}
 
 const HeroSection = styled.div`
   min-height: calc(100vh - 90px);
@@ -45,8 +45,7 @@ const HeroSection = styled.div`
   }
 
   @media only screen and (max-width: 849px) {
-    padding: 170px 80px 30px 50px;
-
+    padding: 70px 80px 30px 50px;
   }
 
   video {
@@ -56,7 +55,7 @@ const HeroSection = styled.div`
     transform: translate(-50%, 0);
     top: -25px;
   }
-`;
+`
 
 const HeroContainer = styled.div`
   flex-wrap: wrap;
@@ -66,19 +65,20 @@ const HeroContainer = styled.div`
     position: relative;
     z-index: 1;
   }
-`;
+`
 
 const HeroTitle = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 123px;
-  line-height: 123px;
+  font-size: 103px;
+  line-height: 110px;
   letter-spacing: 0.01em;
   color: #ffffff;
   text-transform: uppercase;
   max-width: 920px;
   margin-bottom: 10px;
+  margin-top: 120px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   span {
     color: #ff5900;
@@ -98,10 +98,10 @@ const HeroTitle = styled.h1`
     font-size: 73px;
     line-height: 80px;
   }
-`;
+`
 
 const HeroSubtitle = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -126,6 +126,6 @@ const HeroSubtitle = styled.h1`
     font-size: 19px;
     padding-top: 30px;
   }
-`;
+`
 
-export default Hero;
+export default Hero

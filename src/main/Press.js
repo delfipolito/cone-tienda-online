@@ -8,13 +8,16 @@ const Press = () => {
   return (
     <PressSection>
       <AnimatedText>
-        <PressTitle>    <FormattedMessage id="press.title" /></PressTitle>
+        <PressTitle>
+          {' '}
+          <FormattedMessage id="press.title" />
+        </PressTitle>
       </AnimatedText>
       <PressContainer>
         <div>
           <Carousel />
           <Button href="https://koibanx.medium.com/" target="_blank">
-          <FormattedMessage id="newsblog.title" />
+            <FormattedMessage id="newsblog.title" />
           </Button>
         </div>
       </PressContainer>

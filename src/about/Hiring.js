@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import Loop from "../main/Loop";
-import { FormattedMessage } from "react-intl";
+import React from 'react'
+import styled from 'styled-components'
+import Loop from '../main/Loop'
+import { FormattedMessage } from 'react-intl'
 
 const Hiring = ({ about }) => {
   return (
@@ -26,7 +25,7 @@ const Hiring = ({ about }) => {
         <p>
           <FormattedMessage
             id="about.hiring.text"
-            values={{ b: (word) => <b>{word}</b> }}
+            values={{ b: word => <b>{word}</b> }}
           />
         </p>
         <Button href="/jobs" passHref>
@@ -34,8 +33,8 @@ const Hiring = ({ about }) => {
         </Button>
       </HiringContainer>
     </HiringSection>
-  );
-};
+  )
+}
 
 const Title = styled.div`
   display: flex;
@@ -43,7 +42,7 @@ const Title = styled.div`
   margin-top: 20px;
 
   h1 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 95px;
@@ -57,9 +56,7 @@ const Title = styled.div`
       outline-offset: -1px;
     }
   }
-`;
-
-const Image = styled.img``;
+`
 
 const HiringSection = styled.section`
   min-height: 630px;
@@ -73,7 +70,7 @@ const HiringSection = styled.section`
     /* padding: 50px 30px; */
   }
   p {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -92,7 +89,7 @@ const HiringSection = styled.section`
       font-weight: 700;
     }
   }
-`;
+`
 
 const HiringContainer = styled.div`
   box-sizing: border-box;
@@ -105,7 +102,7 @@ const HiringContainer = styled.div`
   }
 
   h2 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -115,10 +112,10 @@ const HiringContainer = styled.div`
     max-width: 488px;
     text-align: left;
   }
-`;
+`
 
 const Button = styled.a`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -154,6 +151,6 @@ const Button = styled.a`
     margin-top: 40px;
     margin-bottom: 40px;
   }
-`;
+`
 
-export default Hiring;
+export default Hiring

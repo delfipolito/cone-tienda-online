@@ -1,20 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import Dropdown from '../components/Dropdown'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 import { FormattedMessage } from 'react-intl'
 
 const Tabs = ({ mode }) => {
   return (
     <TabsBox mode={mode}>
-      <a href="https://koibanx.com/#products" target="_blank" rel="noreferrer">
-      <FormattedMessage id="navbar.platform" />
-      </a>
-      <a href="https://koibanx.com/" target="_blank" rel="noreferrer">
-      <FormattedMessage id="navbar.solutions" />
-      </a>
-      <Link to='/about'>
-      <FormattedMessage id="navbar.about" />
+      <ScrollLink to="platform" smooth={true} duration={1000}>
+        <FormattedMessage id="navbar.platform" />
+      </ScrollLink>
+      <ScrollLink to="solutions" smooth={true} duration={1000}>
+        <FormattedMessage id="navbar.solutions" />
+      </ScrollLink>
+      <Link to="/about">
+        <FormattedMessage id="navbar.about" />
       </Link>
       <Dropdown />
     </TabsBox>
@@ -37,6 +38,7 @@ const TabsBox = styled.div`
     color: #fffbf2;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
     &.language {
       font-family: Poppins;
       font-weight: 700;

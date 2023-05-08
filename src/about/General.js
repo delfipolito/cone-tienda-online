@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import background from "../assets/main/orange-gradient.mp4";
-import { FormattedMessage } from "react-intl";
+import React from 'react'
+import styled from 'styled-components'
+import background from '../assets/main/orange-gradient.mp4'
+import { FormattedMessage } from 'react-intl'
 
 const General = ({ about }) => {
   return (
@@ -12,15 +12,15 @@ const General = ({ about }) => {
       <GeneralContainer>
         <Box>
           <p>
-            {" "}
+            {' '}
             <FormattedMessage id="about.1" />
           </p>
           <p>
-            {" "}
+            {' '}
             <FormattedMessage id="about.2" />
           </p>
           <p>
-            {" "}
+            {' '}
             <FormattedMessage id="about.3" />
           </p>
         </Box>
@@ -29,8 +29,8 @@ const General = ({ about }) => {
         </h2>
       </GeneralContainer>
     </GeneralSection>
-  );
-};
+  )
+}
 
 const BackgroundVideo = styled.video`
   position: absolute;
@@ -40,7 +40,7 @@ const BackgroundVideo = styled.video`
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-`;
+`
 
 const GeneralSection = styled.section`
   min-height: 700px;
@@ -55,14 +55,14 @@ const GeneralSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 30px;
   }
-`;
+`
 
 const GeneralContainer = styled.div`
   padding-top: 30px;
   height: auto;
   text-align: center;
   h2 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -74,10 +74,8 @@ const GeneralContainer = styled.div`
     padding-top: 100px;
     text-align: left;
 
-
     @media only screen and (max-width: 1050px) {
       font-size: 25px;
-
     }
 
     @media only screen and (max-width: 1000px) {
@@ -88,21 +86,19 @@ const GeneralContainer = styled.div`
       font-size: 20px;
       padding-left: 30px;
       padding-top: 50px;
-
     }
 
     @media only screen and (max-width: 600px) {
       font-size: 18px;
       padding-left: 15px;
       line-height: 20px;
-
     }
 
     @media only screen and (max-width: 500px) {
       font-size: 15px;
     }
   }
-`;
+`
 const Box = styled.div`
   display: flex;
   align-items: center;
@@ -110,7 +106,7 @@ const Box = styled.div`
   gap: 40px;
   width: 100%;
   p {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -157,20 +153,6 @@ const Box = styled.div`
       font-size: 22px;
     }
   }
-`;
+`
 
-const GeneralTitle = styled.h1`
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 28px;
-  letter-spacing: 0.02em;
-  color: white;
-  margin-bottom: 50px;
-  @media only screen and (max-width: 850px) {
-    font-size: 25px;
-    margin-bottom: 30px;
-  }
-`;
-export default General;
+export default General

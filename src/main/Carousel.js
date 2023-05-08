@@ -1,7 +1,7 @@
-import React from "react";
-import Carousel from "react-elastic-carousel";
-import styled from "styled-components";
-import { FormattedMessage } from "react-intl";
+import React from 'react'
+import Carousel from 'react-elastic-carousel'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 
 const CarouselSection = () => {
   return (
@@ -13,8 +13,8 @@ const CarouselSection = () => {
         renderPagination={({ pages, activePage, onClick }) => {
           return (
             <Box>
-              {pages.map((page) => {
-                const isActivePage = activePage === page;
+              {pages.map(page => {
+                const isActivePage = activePage === page
                 return (
                   <div
                     key={page}
@@ -26,35 +26,26 @@ const CarouselSection = () => {
                       alt="Press"
                       width="100"
                       height="50"
-                      className={isActivePage ? "active" : "notActive"}
+                      className={isActivePage ? 'active' : 'notActive'}
                     />
                   </div>
-                );
+                )
               })}
             </Box>
-          );
+          )
         }}
       >
         <Item>
           <Quote>
             <span>“</span>
             <br />
-            We want to remain at the forefront of redefining Latin America's
-            financial system. A blockchain-based financial system inevitably
-            results in faster, scalable and programmable financial products that
-            will grant access to a broader segment of the population that is
-            currently underserved.
-          </Quote>
-          <a>Read more</a>
-        </Item>
-        <Item>
-          <Quote>
-            <span>“</span>
-            <br />
             <FormattedMessage id="press.forbes.text" />
           </Quote>
-          <a>
-            {" "}
+          <a
+            target="_blank"
+            href="https://www.forbesargentina.com/innovacion/una-empresa-argentina-ayudara-exportar-creaciones-artistas-tecnologia-blockchain-n16390 "
+          >
+            {' '}
             <FormattedMessage id="press.button" />
           </a>
         </Item>
@@ -64,19 +55,11 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.eltiempo.text" />
           </Quote>
-          <a>
-            {" "}
-            <FormattedMessage id="press.button" />
-          </a>
-        </Item>
-        <Item>
-          <Quote>
-            <span>“</span>
-            <br />
-            <FormattedMessage id="press.infobae.text" />
-          </Quote>
-          <a>
-            {" "}
+          <a
+            target="_blank"
+            href="https://www.eltiempo.com/contenido-comercial/el-exito-e-impacto-de-mi-vacuna-en-alianza-con-la-plataforma-koibanx-675784"
+          >
+            {' '}
             <FormattedMessage id="press.button" />
           </a>
         </Item>
@@ -86,14 +69,26 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.cointelegraph.text" />
           </Quote>
-          <a>
+          <a target="_blank" href="https://es.cointelegraph.com/news/officials-entrepreneurs-and-crypto-ecosystem-leaders-met-at-a-summit-hosted-by-koibanx-in-argentina">
             <FormattedMessage id="press.button" />
           </a>
         </Item>
+        <Item>
+          <Quote>
+            <span>“</span>
+            <br />
+            <FormattedMessage id="press.infobae.text" />
+          </Quote>
+          <a target="_blank" href="https://www.infobae.com/opinion/2022/09/01/el-negocio-de-la-tokenizacion-de-commodities-e-inmuebles-puede-desarrollarse-legalmente-en-argentina/ ">
+            {' '}
+            <FormattedMessage id="press.button" />
+          </a>
+        </Item>
+
       </Carousel>
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
   color: white;
@@ -120,7 +115,12 @@ const Container = styled.div`
     color: #ffffff;
     box-shadow: none;
   }
-`;
+
+  rec-carousel-item {
+    display: flex;
+    align-items: centerM
+  }
+`
 
 const Box = styled.div`
   display: flex;
@@ -140,7 +140,7 @@ const Box = styled.div`
       opacity: 1;
     }
   }
-`;
+`
 
 const Item = styled.div`
   display: flex;
@@ -156,7 +156,7 @@ const Item = styled.div`
   }
 
   a {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -167,20 +167,20 @@ const Item = styled.div`
     border-radius: 26px;
     color: #ffffff;
     display: inline-block;
-
+    text-decoration: none;
+    margin-top: 75px;
 
     @media only screen and (max-width: 850px) {
       font-size: 13px;
       line-height: 28px;
       letter-spacing: 0.02em;
       padding: 5px 23px;
-
     }
   }
-`;
+`
 
 const Quote = styled.p`
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -199,6 +199,6 @@ const Quote = styled.p`
   span {
     font-size: 57px;
   }
-`;
+`
 
-export default CarouselSection;
+export default CarouselSection
