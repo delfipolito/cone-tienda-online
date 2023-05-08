@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import border from '../assets/border.mp4'
-import Footer from '../Footer'
-import Navbar from '../Navbar'
-import { FormattedMessage } from 'react-intl'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import border from "../assets/border.mp4";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import { FormattedMessage } from "react-intl";
 
 export default function CrossBorder() {
   return (
@@ -30,6 +30,7 @@ export default function CrossBorder() {
               <Description>Fulltime</Description>
             </div>
           </Tags>
+
           <br />
           <br />
           <Description>
@@ -102,7 +103,7 @@ export default function CrossBorder() {
               <Description>
                 Participación junto con el equipo de marketing en pitches
                 comerciales, eventos y presentaciones de producto y de la
-                compañía.{' '}
+                compañía.{" "}
               </Description>
             </li>
             <li>
@@ -149,17 +150,17 @@ export default function CrossBorder() {
             </li>
             <li>
               <Description>
-                Experiencia en ventas B2B o en consultoras.{' '}
+                Experiencia en ventas B2B o en consultoras.{" "}
               </Description>
             </li>
             <li>
               <Description>
-                Conocimiento sobre sistemas financieros.{' '}
+                Conocimiento sobre sistemas financieros.{" "}
               </Description>
             </li>
             <li>
               <Description>
-                Experiencia trabajando por medio de objetivos{' '}
+                Experiencia trabajando por medio de objetivos{" "}
               </Description>
             </li>
             <li>
@@ -170,7 +171,7 @@ export default function CrossBorder() {
             </li>
             <li>
               <Description>
-                Se valora la experiencia en ventas de tecnología{' '}
+                Se valora la experiencia en ventas de tecnología{" "}
               </Description>
             </li>
             <li>
@@ -235,7 +236,7 @@ export default function CrossBorder() {
       </Section>
       <Footer />
     </>
-  )
+  );
 }
 
 const Section = styled.section`
@@ -251,28 +252,48 @@ const Section = styled.section`
   box-sizing: border-box;
   li {
     list-style: disc;
-    color: #FF5900;
+    color: #ff5900;
   }
-`
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px 30px;
+  }
+`;
 
 const DescriptionBox = styled.div`
   width: 50%;
-`
+  @media only screen and (max-width: 1200px) {
+    width: 90%;
 
-const Tags = styled.div``
+  }
+`;
+
+const Tags = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+`;
 
 const Title = styled.h1`
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 31px;
   letter-spacing: 0.02em;
   color: #ffffff;
-`
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
+  }
+`;
 
 const Label = styled.h2`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -280,14 +301,21 @@ const Label = styled.h2`
   letter-spacing: 0.02em;
 
   color: #ffffff;
-`
+  @media only screen and (max-width: 600px) {
+font-size: 15px;
+}
+`;
 
 const Description = styled.p`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #ffffff;
-`
+
+  @media only screen and (max-width: 600px) {
+font-size: 14px;
+}
+`;

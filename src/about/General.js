@@ -25,7 +25,7 @@ const General = ({ about }) => {
           </p>
         </Box>
         <h2>
-        <FormattedMessage id="about.text" />
+          <FormattedMessage id="about.text" />
         </h2>
       </GeneralContainer>
     </GeneralSection>
@@ -66,14 +66,40 @@ const GeneralContainer = styled.div`
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
-    line-height: 115%;
+    line-height: 25px;
     color: #ffffff;
     max-width: 823px;
-    margin: 100px 42px 100px auto;
+    /* margin: 100px 42px 100px auto; */
+    padding-left: 50px;
+    padding-top: 100px;
     text-align: left;
+
+
+    @media only screen and (max-width: 1050px) {
+      font-size: 25px;
+
+    }
 
     @media only screen and (max-width: 1000px) {
       margin-right: 60px;
+    }
+
+    @media only screen and (max-width: 850px) {
+      font-size: 20px;
+      padding-left: 30px;
+      padding-top: 50px;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 18px;
+      padding-left: 15px;
+      line-height: 20px;
+
+    }
+
+    @media only screen and (max-width: 500px) {
+      font-size: 15px;
     }
   }
 `;
@@ -89,7 +115,7 @@ const Box = styled.div`
     font-weight: 500;
     font-size: 40px;
     line-height: 114.5%;
-    letåter-spacing: 0.02em;
+    letter-spacing: 0.02em;
     color: #ff5900;
     text-align: left;
     width: auto;
@@ -103,11 +129,32 @@ const Box = styled.div`
       max-width: 290px;
     }
   }
+
+  @media only screen and (max-width: 1050px) {
+    p {
+      font-size: 30px;
+    }
+  }
+
   @media only screen and (max-width: 850px) {
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
+    gap: 1px;
+    padding-left: 30px;
+
     p {
-      text-align: center;
+      text-align: left;
+      color: white;
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 15px;
+
+    p {
+      text-align: left;
+      font-size: 22px;
     }
   }
 `;
