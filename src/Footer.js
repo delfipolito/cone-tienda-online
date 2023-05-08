@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs'
 import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
 
 const Footer = props => {
+
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
+  const medium = 700;
+
   return (
     <FooterSection>
       <FContainer>
@@ -26,9 +34,18 @@ const Footer = props => {
             </ELink>
           </div>
           <div>
+      
             <Button to="/jobs">
               <FormattedMessage id="footer.join" />
             </Button>
+            {width >= medium ? (<>
+          
+          </>) : (<>
+            <Button to="/contact">
+
+            <FormattedMessage id="footer.contact" />
+            </Button>
+          </>)}
           </div>
           <Social>
             <a
@@ -138,6 +155,19 @@ const Button = styled(Link)`
     line-height: 28px;
     letter-spacing: 0.02em;
     padding: 6px 23px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    font-size: 11px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    padding: 6px 23px;
+  }
+  @media only screen and (max-width: 366px) {
+    font-size: 10px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    padding: 1px 10px;
   }
 `
 

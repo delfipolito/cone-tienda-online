@@ -68,8 +68,9 @@ const HiringSection = styled.section`
   margin: auto;
   background: #000;
   overflow-x: hidden;
+
   @media only screen and (max-width: 850px) {
-    padding: 50px 30px;
+    /* padding: 50px 30px; */
   }
   p {
     font-family: "Poppins";
@@ -79,6 +80,14 @@ const HiringSection = styled.section`
     line-height: 26px;
     color: #ffffff;
     max-width: 650px;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      font-size: 15px;
+    }
     b {
       font-weight: 700;
     }
@@ -90,6 +99,11 @@ const HiringContainer = styled.div`
   padding: 0 80px 20px 80px;
   height: auto;
   text-align: left;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 80px 0px 40px;
+  }
+
   h2 {
     font-family: "Poppins";
     font-style: normal;
@@ -123,6 +137,22 @@ const Button = styled.a`
     line-height: 28px;
     letter-spacing: 0.02em;
     padding: 6px 23px;
+    margin-top: 70px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    padding: 6px 23px;
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    padding: 6px 13px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 `;
 

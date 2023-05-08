@@ -3,9 +3,7 @@ import styled from "styled-components";
 import AnimatedText from "./AnimatedText.js";
 import { FormattedMessage } from "react-intl";
 
-
 const Hero = () => {
-
   return (
     <HeroSection>
       <HeroContainer>
@@ -37,9 +35,20 @@ const HeroSection = styled.div`
   text-rendering: optimizeLegibility;
   padding: 60px 80px 30px 80px;
   position: relative;
-  @media only screen and (max-width: 850px) {
-    padding: 50px 30px;
+
+  @media only screen and (min-width: 990px) and (max-width: 1200px) {
+    padding: 130px 80px 30px 80px;
   }
+
+  @media only screen and (min-width: 850px) and (max-width: 990px) {
+    padding: 150px 80px 30px 80px;
+  }
+
+  @media only screen and (max-width: 849px) {
+    padding: 170px 80px 30px 50px;
+
+  }
+
   video {
     position: absolute;
     z-index: 0;
@@ -74,6 +83,21 @@ const HeroTitle = styled.h1`
   span {
     color: #ff5900;
   }
+
+  @media only screen and (min-width: 990px) and (max-width: 1200px) {
+    font-size: 100px;
+    line-height: 95px;
+  }
+
+  @media only screen and (min-width: 850px) and (max-width: 990px) {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  @media only screen and (max-width: 849px) {
+    font-size: 73px;
+    line-height: 80px;
+  }
 `;
 
 const HeroSubtitle = styled.h1`
@@ -87,6 +111,20 @@ const HeroSubtitle = styled.h1`
   color: #ffffff;
   b {
     font-weight: 700;
+  }
+
+  @media only screen and (min-width: 990px) and (max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (min-width: 850px) and (max-width: 990px) {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+
+  @media only screen and (max-width: 849px) {
+    font-size: 19px;
+    padding-top: 30px;
   }
 `;
 
