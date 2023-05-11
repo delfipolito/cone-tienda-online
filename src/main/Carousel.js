@@ -24,8 +24,7 @@ const CarouselSection = () => {
                     <img
                       src={`./assets/${page}.svg`}
                       alt="Press"
-                      width="100"
-                      height="50"
+                      width={page !== 2 ? '100' : '140'}
                       className={isActivePage ? 'active' : 'notActive'}
                     />
                   </div>

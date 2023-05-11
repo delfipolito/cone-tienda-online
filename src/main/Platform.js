@@ -1,21 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import AnimatedText from './AnimatedText.js'
 import { FormattedMessage } from 'react-intl'
+import background from '../assets/main/platform.mp4'
+import backgroundMobile from '../assets/main/platform-mobile.mp4'
 
 const Platform = ({ about }) => {
+  const [width, setWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+  }, [])
+  const medium = 800
+
   return (
     <PlatformSection id="platform">
-      <PlatformContainer>
-        <AnimatedText>
-          <h2>
-            <FormattedMessage
-              id="platform.text"
-              values={{ b: word => <b>{word}</b> }}
-            />
-          </h2>
-        </AnimatedText>
-      </PlatformContainer>
+      <BackgroundVideo autoPlay muted loop>
+        <source
+          src={width > medium ? background : backgroundMobile}
+          type="video/mp4"
+        />
+      </BackgroundVideo>
+      {width > medium && (
+        <PlatformContainer>
+          <AnimatedText>
+            <h2>
+              <FormattedMessage
+                id="platform.text"
+                values={{ b: word => <b>{word}</b> }}
+              />
+            </h2>
+          </AnimatedText>
+        </PlatformContainer>
+      )}
     </PlatformSection>
   )
 }
@@ -33,16 +49,34 @@ const PlatformSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 50px;
     min-height: 400px;
+
   }
 
-  @media only screen and (max-width: 700px) {
-    padding: 50px 20px;
+  @media only screen and (max-width: 800px) {
+    padding: 0 20px 50px 20px;
+    height: auto;
+  }
+`
+const BackgroundVideo = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  z-index: -1;
+  @media only screen and (max-width: 800px) {
+    top: 90px;
+    position: relative;
+    z-index: 40;
   }
 `
 
 const PlatformContainer = styled.div`
   padding-top: 30px;
   height: auto;
+
   /* text-align: center; */
   h2 {
     font-family: 'Poppins';
