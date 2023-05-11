@@ -14,12 +14,16 @@ const Platform = ({ about }) => {
 
   return (
     <PlatformSection id="platform">
-      <BackgroundVideo autoPlay muted loop>
-        <source
-          src={width > medium ? background : backgroundMobile}
-          type="video/mp4"
-        />
-      </BackgroundVideo>
+      {width > medium && (
+        <BackgroundVideo autoPlay muted loop>
+          <source src={background} type="video/mp4" />
+        </BackgroundVideo>
+      )}
+      {width <= medium && (
+        <BackgroundVideo autoPlay muted loop>
+          <source src={backgroundMobile} type="video/mp4" />
+        </BackgroundVideo>
+      )}
       {width > medium && (
         <PlatformContainer>
           <AnimatedText>
@@ -49,7 +53,6 @@ const PlatformSection = styled.section`
   @media only screen and (max-width: 850px) {
     padding: 50px 50px;
     min-height: 400px;
-
   }
 
   @media only screen and (max-width: 800px) {
@@ -63,13 +66,13 @@ const BackgroundVideo = styled.video`
   left: 0;
   width: 100%;
   height: 100%;
-  max-width: 400px;
   object-fit: cover;
   z-index: -1;
   @media only screen and (max-width: 800px) {
     top: 90px;
     position: relative;
     z-index: 40;
+    max-width: 400px;
   }
 `
 
