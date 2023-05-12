@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import wallet from './assets/wallet.png'
 import Footer from './Footer'
@@ -6,6 +7,14 @@ import Carousel from 'react-elastic-carousel'
 import { FormattedMessage } from 'react-intl'
 
 export default function Crypto() {
+  const [width, setWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+  }, [])
+  const medium = 700
+  const large = 1050
+  const xlarge = 1200
+
   return (
     <>
       <Navbar />
@@ -34,12 +43,12 @@ export default function Crypto() {
         </CryptoContainer>
         <BenefitsContainer>
           <Carousel
-            itemsToShow={3}
+            itemsToShow={width < medium ? 1 : width < large ? 2 : 3}
             enableTilt={true}
             enableAutoPlay={true}
             autoPlaySpeed={3000}
             pagination={false}
-            outerSpacing={100}
+            outerSpacing={width < xlarge ? 0 : 100}
           >
             <Item>
               <h5>
@@ -137,6 +146,9 @@ const BenefitsContainer = styled.div`
   @media only screen and (max-width: 850px) {
     flex-direction: column;
   }
+  .rec-item-wrapper {
+    height: 100%;
+  }
 
   .rec-carousel {
     width: calc(100% + 90px);
@@ -168,6 +180,11 @@ const Item = styled.div`
   width: 310px;
   padding: 40px 20px;
   margin: 0 10px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
   h5 {
     font-family: 'Poppins';
@@ -246,9 +263,9 @@ const Button = styled.a`
   border: solid 1.5px #ff5000;
   border-radius: 26px;
   color: #ff5000;
-  margin-top: 30px;
   display: inline-block;
   text-decoration: none;
+  width: 83px;
 
   @media only screen and (max-width: 850px) {
     font-size: 14px;

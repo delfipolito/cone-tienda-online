@@ -24,8 +24,7 @@ const CarouselSection = () => {
                     <img
                       src={`./assets/${page}.svg`}
                       alt="Press"
-                      width="100"
-                      height="50"
+                      width={page !== 2 ? '100' : '140'}
                       className={isActivePage ? 'active' : 'notActive'}
                     />
                   </div>
@@ -43,6 +42,7 @@ const CarouselSection = () => {
           </Quote>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.forbesargentina.com/innovacion/una-empresa-argentina-ayudara-exportar-creaciones-artistas-tecnologia-blockchain-n16390 "
           >
             {' '}
@@ -57,6 +57,7 @@ const CarouselSection = () => {
           </Quote>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.eltiempo.com/contenido-comercial/el-exito-e-impacto-de-mi-vacuna-en-alianza-con-la-plataforma-koibanx-675784"
           >
             {' '}
@@ -69,7 +70,11 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.cointelegraph.text" />
           </Quote>
-          <a target="_blank" href="https://es.cointelegraph.com/news/officials-entrepreneurs-and-crypto-ecosystem-leaders-met-at-a-summit-hosted-by-koibanx-in-argentina">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://es.cointelegraph.com/news/officials-entrepreneurs-and-crypto-ecosystem-leaders-met-at-a-summit-hosted-by-koibanx-in-argentina"
+          >
             <FormattedMessage id="press.button" />
           </a>
         </Item>
@@ -79,12 +84,15 @@ const CarouselSection = () => {
             <br />
             <FormattedMessage id="press.infobae.text" />
           </Quote>
-          <a target="_blank" href="https://www.infobae.com/opinion/2022/09/01/el-negocio-de-la-tokenizacion-de-commodities-e-inmuebles-puede-desarrollarse-legalmente-en-argentina/ ">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.infobae.com/opinion/2022/09/01/el-negocio-de-la-tokenizacion-de-commodities-e-inmuebles-puede-desarrollarse-legalmente-en-argentina/ "
+          >
             {' '}
             <FormattedMessage id="press.button" />
           </a>
         </Item>
-
       </Carousel>
     </Container>
   )
@@ -118,7 +126,7 @@ const Container = styled.div`
 
   rec-carousel-item {
     display: flex;
-    align-items: centerM
+    align-items: centerM;
   }
 `
 

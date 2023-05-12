@@ -113,12 +113,10 @@ const Home = () => {
           <HeroMobile />
         </>
       )}
-
       <Platform />
       <Solutions />
       <Press />
       <Investors />
-
       <Footer />
     </AppDiv>
   )

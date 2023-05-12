@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
-import cube from '../assets/mobilehero/image 1.png'
+import cubo from '../assets/cube.mp4'
 
 const HeroMobile = () => {
   return (
     <>
       <HeroMobileSection>
         <HeroMobileContainer>
-          <img src={cube} alt="cube"/>
+          <video autoPlay muted loop>
+            <source src={cubo} type="video/mp4" />
+          </video>
           <HeroTitle>
             <FormattedMessage id="hero.title" />
             <span>.</span>
@@ -65,32 +67,22 @@ const HeroMobileContainer = styled.div`
     }
   }
 
-  img {
+  video {
     position: absolute;
-    width: 550px;
-    height: 550px;
+    width: 70%;
+    height: auto;
     top: -10px;
-    left: 60px;
 
     @media only screen and (max-width: 610px) {
-      width: 450px;
-      height: 450px;
       top: 30px;
-      left: 30px;
     }
 
     @media only screen and (max-width: 502px) {
-      width: 300px;
-      height: 300px;
       top: 150px;
-      left: 50px;
     }
 
     @media only screen and (max-width: 422px) {
-      width: 300px;
-      height: 300px;
       top: 150px;
-      left: 0px;
     }
   }
 `
