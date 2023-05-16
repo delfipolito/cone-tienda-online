@@ -369,7 +369,10 @@ const TeamTitle = styled.h1`
   @media only screen and (max-width: 850px) {
     font-size: 25px;
     margin-bottom: 30px;
-    padding-left: 50px;
+    padding-left: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-left: 0px;
   }
 `
 
