@@ -43,17 +43,21 @@ const BackgroundVideo = styled.video`
 `
 
 const GeneralSection = styled.section`
-  min-height: 700px;
-  height: 100vh;
+  /* min-height: 700px; */
+  /* height: 100vh; */
   width: 100%;
-  margin: auto;
+  /* margin: auto; */
   background: transparent;
   overflow: hidden;
   padding: 100px 80px;
   position: relative;
   box-sizing: border-box;
+
+
+
   @media only screen and (max-width: 850px) {
-    padding: 50px 30px;
+    padding: 10px 10px;
+
   }
 `
 
@@ -61,6 +65,7 @@ const GeneralContainer = styled.div`
   padding-top: 30px;
   height: auto;
   text-align: center;
+
   h2 {
     font-family: 'Poppins';
     font-style: normal;

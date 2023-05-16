@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import Footer from '../Footer'
 import Navbar from '../Navbar'
+import JobsForm from '../components/JobsForm'
 
 export default function CrossBorder() {
   return (
     <>
       <Navbar />
+      <JobsForm/>
       <Section>
         <DescriptionBox>
           <Title>Backend Developer</Title>

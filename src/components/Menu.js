@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Tabs from './Tabs'
 
-const Menu = ({ open }) => {
+const Menu = ({ open, location }) => {
   return (
     <StyledMenu open={open}>
-      <Tabs mode="small"/>
+      <Tabs mode="small" location={location}/>
     </StyledMenu>
   )
 }

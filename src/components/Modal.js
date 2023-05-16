@@ -1,67 +1,97 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import emailjs from 'emailjs-com'
-import close from '../assets/modal/close.png'
-import Navbar from '../Navbar'
-import check from '../assets/modal/tick.svg'
-import { Ring } from '@uiball/loaders'
-import { useInView } from 'react-intersection-observer'
-import { useAnimation } from 'framer-motion'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import emailjs from "emailjs-com";
+import close from "../assets/modal/close.png";
+import Navbar from "../Navbar";
+import check from "../assets/modal/tick.svg";
+import { Ring } from "@uiball/loaders";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { FormattedMessage } from "react-intl";
 
 const Modal = ({ open, onClose }) => {
-  const [contact, setContact] = useState('')
-  const [sending, setSending] = useState(false)
-  const [messageSent, setMessageSent] = useState(false)
-  const controls = useAnimation()
-  const { ref, inView } = useInView()
-  useEffect(
-    () => {
-      if (inView || open) {
-        controls.start('visible')
-      }
-      if (!open) {
-        controls.start('hidden')
-      }
-    },
-    [controls, inView, open]
-  )
+  const [contact, setContact] = useState("");
+  const [sending, setSending] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [refresh, setRefresh] = useState(false);
+  const [language, setLanguage] = useState("")
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+  useEffect(() => {
+    setLanguage(localStorage.getItem("locale"))
+    if (inView || open) {
+      controls.start("visible");
+    }
+    if (!open) {
+      controls.start("hidden");
+    }
+  }, [controls, inView, open]);
 
-  if (!open) return null
+  if (!open) return null;
+
+
+  const handleRefresh = () => {
+    setRefresh(true);
+  };
+
+  if (refresh) {
+    window.location.reload();
+  }
 
   const frmContact = {
-    nameLastname: '',
-    email: '',
-    phoneNumber: '',
-    country: '',
-    jopPosition: '',
-    industry: '',
-    comments: '',
-  }
+    nameLastname: "",
+    email: "",
+    phoneNumber: "",
+    country: "",
+    jopPosition: "",
+    industry: "",
+    comments: "",
+  };
 
-  const handleChange = e => {
-    const { name, value } = e.target
-    setContact({ ...contact, [name]: value })
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContact({ ...contact, [name]: value });
+  };
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    setSending(true)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
 
-    emailjs
-      .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
-      .then(
-        response => {
-          console.log(`SUCCESS!`, response.status, response.text)
-          setContact(frmContact)
-          setSending(false)
-          setMessageSent(true)
-        },
-        err => {
-          console.log(`FAILED...`, err)
-        }
-      )
-  }
+   try {
+ 
+      emailjs
+        .send(
+          `service_lsilwkf`,
+          `template_zefnjzw`,
+          contact,
+          `F-wmz4d9VI_6zEds5`
+        )
+        .then(
+          //200
+          (response) => {
+            console.log(`SUCCESS!`, response.status, response.text);
+            setContact(frmContact);
+            setSending(false);
+            setMessageSent(true);
+          },
+          (err) => {
+            //404?
+            console.log(`FAILED...`, err);
+            setSending(false);
+            setMessageError(true);
+          }
+        );
+    } catch {
+      //bad request
+      setSending(false);
+      setMessageError(true);
+    }
+  };
+
+  const enPlaceholder = ["Name & Last Name", "E-mail", "Phone Number", "Country", "Job Position", "Industry", "Comments"]
+  const esPlaceholder = ["Nombre & Apellido", "E-mail", "Teléfono", "País", "Posición de trabajo", "Industria", "Comentarios"]
 
   return (
     <>
@@ -72,47 +102,76 @@ const Modal = ({ open, onClose }) => {
             animate={controls}
             initial="hidden"
             variants={{
-              visible: { width: '455px', height: '625px' },
-              hidden: { width: '0', height: '0' },
+              visible: { width: "455px", height: "625px" },
+              hidden: { width: "0", height: "0" },
             }}
             transition={{ duration: 0.5 }}
             style={{
-              backgroundColor: 'black',
-              border: '2px solid rgb(255, 80, 0)',
-              borderRadius: '44px',
-              position: 'absolute',
-              top: '0',
-              right: '0',
-              marginTop: '75px',
-              marginLeft: 'auto',
-              marginRight: '80px',
-              overflow: 'hidden',
+              backgroundColor: "black",
+              border: "2px solid rgb(255, 80, 0)",
+              borderRadius: "44px",
+              position: "absolute",
+              top: "0",
+              right: "0",
+              marginTop: "75px",
+              marginLeft: "auto",
+              marginRight: "80px",
+              overflow: "hidden",
             }}
           >
             <ModalContainer
-              onClick={e => {
-                e.stopPropagation()
+              onClick={(e) => {
+                e.stopPropagation();
               }}
             >
               {messageSent ? (
                 <>
-                  <Sent>
-                    <img src={check} alt="check"/>
-                    <h2>Thanks!</h2>
-                    <h6>Your information was sent successfully.</h6>
-                    <button onClick={onClose}>
-                      <p>Close</p>
-                    </button>
-                  </Sent>
+                  <MessageContainer>
+                    <Message>
+                      <img src={check} alt="check" />
+                      <h2>
+                        <FormattedMessage id="getintouch.thanks.title" />
+                      </h2>
+                      <h6>
+                        <FormattedMessage id="getintouch.thanks.subtitle" />
+                      </h6>
+                      <button onClick={onClose} className="sent">
+                        <p>
+                          <FormattedMessage id="getintouch.close.button" />
+                        </p>
+                      </button>
+                    </Message>
+                  </MessageContainer>
+                </>
+              ) : messageError ? (
+                <>
+                  <MessageContainer>
+                    <Message>
+                      <img src={check} alt="check" />
+                      <h2>
+                        <FormattedMessage id="getintouch.wrong.title" />
+                      </h2>
+                      <h6>
+                        <FormattedMessage id="getintouch.wrong.subtitle" />
+                      </h6>
+                      <button className="error" onClick={() => handleRefresh()}>
+                        <p>
+                          <FormattedMessage id="getintouch.refresh.button" />
+                        </p>
+                      </button>
+                    </Message>
+                  </MessageContainer>
                 </>
               ) : (
                 <>
                   {sending ? (
                     <>
-                      <RingContainer>
-                        {' '}
-                        <Ring color="#ff5000" size={35} />{' '}
-                      </RingContainer>
+                      <MessageContainer>
+                        <RingContainer>
+                          {" "}
+                          <Ring color="#ff5000" size={35} />{" "}
+                        </RingContainer>
+                      </MessageContainer>
                     </>
                   ) : (
                     <>
@@ -120,19 +179,24 @@ const Modal = ({ open, onClose }) => {
                         <img src={close} alt="close" />
                       </CloseButton>
                       <TitleContainer>
-                        <h2>Get in touch!</h2>
-                        <p>We will contact you as soon as possible.</p>
+                        <h2>
+                          {" "}
+                          <FormattedMessage id="getintouch.title" />
+                        </h2>
+                        <p>
+                          <FormattedMessage id="getintouch.subtitle" />{" "}
+                        </p>
                       </TitleContainer>
                       <Form
                         onSubmit={handleSubmit}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                       >
                         <Input
                           className="form-item"
-                          placeholder="Name & Last Name"
+                          placeholder={language === "es" ? esPlaceholder[0] : enPlaceholder[0]}
                           type="text"
                           required
                           value={contact.nameLastname}
@@ -142,7 +206,7 @@ const Modal = ({ open, onClose }) => {
 
                         <Input
                           className="form-item"
-                          placeholder="E-Mail"
+                          placeholder={language === "es" ? esPlaceholder[1] : enPlaceholder[1]}
                           value={contact.email}
                           onChange={handleChange}
                           name="userEmail"
@@ -152,7 +216,7 @@ const Modal = ({ open, onClose }) => {
 
                         <Input
                           className="form-item"
-                          placeholder="Phone Number"
+                          placeholder={language === "es" ? esPlaceholder[2] : enPlaceholder[2]}
                           value={contact.phoneNumber}
                           onChange={handleChange}
                           name="message"
@@ -162,7 +226,7 @@ const Modal = ({ open, onClose }) => {
 
                         <Input
                           className="form-item"
-                          placeholder="Country"
+                          placeholder={language === "es" ? esPlaceholder[3] : enPlaceholder[3]}
                           value={contact.country}
                           onChange={handleChange}
                           name="userEmail"
@@ -172,7 +236,7 @@ const Modal = ({ open, onClose }) => {
 
                         <Input
                           className="form-item"
-                          placeholder="Job Position"
+                          placeholder={language === "es" ? esPlaceholder[4] : enPlaceholder[4]}
                           value={contact.jopPosition}
                           onChange={handleChange}
                           name="message"
@@ -181,7 +245,7 @@ const Modal = ({ open, onClose }) => {
                         />
                         <Input
                           className="form-item"
-                          placeholder="Industry"
+                          placeholder={language === "es" ? esPlaceholder[5] : enPlaceholder[5]}
                           value={contact.industry}
                           onChange={handleChange}
                           name="message"
@@ -190,7 +254,7 @@ const Modal = ({ open, onClose }) => {
                         />
                         <InputText
                           className="form-item"
-                          placeholder="Comments"
+                          placeholder={language === "es" ? esPlaceholder[6] : enPlaceholder[6]}
                           value={contact.comments}
                           onChange={handleChange}
                           name="message"
@@ -199,7 +263,10 @@ const Modal = ({ open, onClose }) => {
                         />
 
                         <button type="submit" className="bottom-form">
-                          <p> Send</p>
+                          <p>
+                            {" "}
+                            <FormattedMessage id="getintouch.button" />
+                          </p>
                         </button>
                       </Form>
                     </>
@@ -211,8 +278,8 @@ const Modal = ({ open, onClose }) => {
         </div>
       </Overlay>
     </>
-  )
-}
+  );
+};
 
 const Overlay = styled.div`
   position: fixed;
@@ -222,17 +289,17 @@ const Overlay = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
-`
+`;
 const ModalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center !important;
   z-index: 200;
 
   h2 {
     color: #ffffff;
     font-size: 18px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
   }
@@ -240,19 +307,19 @@ const ModalContainer = styled.div`
   p {
     color: #ffffff;
     font-size: 13px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     margin-top: -10px;
   }
-`
+`;
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 45px;
-`
+`;
 
 const Form = styled.form`
   list-style: none;
@@ -280,12 +347,12 @@ const Form = styled.form`
       color: #ff5000;
       margin: auto;
       font-size: 14px;
-      font-family: 'Poppins';
+      font-family: "Poppins";
       font-style: normal;
       font-weight: 600;
     }
   }
-`
+`;
 
 const Input = styled.input`
   width: 82%;
@@ -296,7 +363,7 @@ const Input = styled.input`
   border: 1px solid #ffffff;
   color: #ffffff;
   padding-left: 15px;
-`
+`;
 
 const InputText = styled.input`
   width: 82%;
@@ -306,7 +373,7 @@ const InputText = styled.input`
   border-radius: 20px;
   border: 1px solid #ffffff;
   padding-left: 15px;
-`
+`;
 
 const CloseButton = styled.p`
   position: relative;
@@ -318,15 +385,13 @@ const CloseButton = styled.p`
     height: 30px;
     width: 30px;
   }
-`
+`;
 
-const Sent = styled.div`
-  width: 80%;
-  height: 80%;
+const Message = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   margin: auto;
 
   img {
@@ -336,7 +401,7 @@ const Sent = styled.div`
 
   h6 {
     font-size: 13px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     width: 170px;
     color: #ffffff;
@@ -344,7 +409,7 @@ const Sent = styled.div`
     margin-top: 10px;
   }
 
-  button {
+  .sent {
     margin-top: 15px;
     margin-bottom: 50px;
     width: 100px;
@@ -357,17 +422,45 @@ const Sent = styled.div`
       color: #ff5000;
       margin: auto;
       font-size: 14px;
-      font-family: 'Poppins';
+      font-family: "Poppins";
       font-style: normal;
       font-weight: 600;
     }
   }
-`
+
+  .error {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 150px;
+    height: 38px;
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid #ff5000;
+
+    p {
+      color: #ff5000;
+      margin: auto;
+      font-size: 14px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+`;
 
 const RingContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center !important;
+  margin-top: -80px;
+  /* align-items: center !important; */
+`;
+
+const MessageContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
   align-items: center;
-`
-export default Modal
+`;
+export default Modal;
