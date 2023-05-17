@@ -50,13 +50,14 @@ const PlatformSection = styled.section`
   padding: 100px 80px;
   position: relative;
   box-sizing: border-box;
+
   @media only screen and (max-width: 850px) {
     padding: 50px 50px;
     min-height: 400px;
   }
 
   @media only screen and (max-width: 800px) {
-    padding: 0 20px 50px 20px;
+    padding: 0px 20px 50px 20px;
     height: auto;
   }
 `

@@ -1,49 +1,55 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
-import Navbar from "../Navbar";
 import { FormattedMessage } from "react-intl";
 import { Ring } from "@uiball/loaders";
 import check from "../assets/modal/tick.svg";
 import close from "../assets/modal/close.png";
 
-
-const ContactMobile = () => {
+const JobsForm = () => {
   const [contact, setContact] = useState("");
+  // const [selectedFile, setSelectedFile] = useState(null);
   const [language, setLanguage] = useState("");
-  const [sending, setSending] = useState(false);
-
   const [messageError, setMessageError] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
-
-  useEffect(() => {
-    setLanguage(localStorage.getItem("locale"));
-  }, []);
+  const [sending, setSending] = useState(false);
 
   const frmContact = {
     nameLastname: "",
     email: "",
     phoneNumber: "",
-    country: "",
     jopPosition: "",
-    industry: "",
-    comments: "",
   };
+
+  useEffect(() => {
+    setLanguage(localStorage.getItem("locale"));
+  }, []);
+
+  // const handleFileSelect = (event) => {
+  //   setSelectedFile(event.target.files[0]);
+  //   console.log("selected file", selectedFile);
+  // };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact({ ...contact, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setSending(true);
+
+    // if (selectedFile) {
+    //   const fileData = new FormData();
+    //   fileData.append("file", selectedFile);
+    //   contact["file"] = fileData;
+    // }
 
     try {
       emailjs
         .send(
           `service_mgl9rwi`,
-          `template_h1xkft1`,
+          `template_9opjiwc`,
           contact,
           `unlrlZtJhRdSyvGxq`
         )
@@ -63,70 +69,68 @@ const ContactMobile = () => {
       setSending(false);
       setMessageError(true);
     }
+
+    event.target.reset();
   };
 
-  const enPlaceholder = ["Name & Last Name", "E-mail", "Comments"];
-  const esPlaceholder = ["Nombre & Apellido", "E-mail", "Comentarios"];
+  const enPlaceholder = [
+    "Name & Last Name",
+    "E-mail",
+    "Phone Number",
+    "Position",
+  ];
+  const esPlaceholder = [
+    "Nombre & Apellido",
+    "E-mail",
+    "Teléfono",
+    "Posición de trabajo",
+  ];
 
   return (
     <>
-      <Navbar />
-      <ContactSection>
-        <ContactContainer>
-          {messageSent ? (
-            <>
-              <MessageContainer>
-                <Message>
-                  <img src={check} alt="check" />
-                  <h2>
-                    <FormattedMessage id="getintouch.thanks.title" />
-                  </h2>
-                  <h6>
-                    <FormattedMessage id="getintouch.thanks.subtitle" />
-                  </h6>
-                </Message>
-              </MessageContainer>
-            </>
-          ) : messageError ? (
-            <>
-              <MessageContainer>
-                <Message>
-                  <img src={close} alt="check" />
-                  <h2>
-                    <FormattedMessage id="getintouch.wrong.title" />
-                  </h2>
-                  <h6>
-                    <FormattedMessage id="getintouch.wrong.subtitle" />
-                  </h6>
-                </Message>
-              </MessageContainer>
-            </>
-          ) : (
-            <>
-              {sending ? (
-                <>
-                  <MessageContainer>
-                    <RingContainer>
-                      {" "}
-                      <Ring color="#ff5000" size={35} />{" "}
-                    </RingContainer>
-                  </MessageContainer>
-                </>
-              ) : (
-                <>
-                  <TitleContainer>
-                    <h1>
-                      {" "}
-                      <FormattedMessage id="contactmobile.title" />
-                    </h1>
-                    <h2>
-                      {" "}
-                      <FormattedMessage id="contactmobile.subtitle1" />
-                    </h2>
-                    <p>
-                      <FormattedMessage id="contactmobile.subtitle2" />
-                    </p>
-                  </TitleContainer>
+      <JobsFormSection>
+        {messageSent ? (
+          <>
+            <MessageContainer>
+              <Message>
+                <img src={check} alt="check" />
+                <h2>
+                  <FormattedMessage id="getintouch.thanks.title" />
+                </h2>
+                <h6>
+                  <FormattedMessage id="getintouch.thanks.subtitle" />
+                </h6>
+              </Message>
+            </MessageContainer>
+          </>
+        ) : messageError ? (
+          <>
+            <MessageContainer>
+              <Message>
+                <img src={close} alt="check" />
+                <h2>
+                  <FormattedMessage id="getintouch.wrong.title" />
+                </h2>
+                <h6>
+                  <FormattedMessage id="getintouch.wrong.subtitle" />
+                </h6>
+              </Message>
+            </MessageContainer>
+          </>
+        ) : (
+          <>
+            {sending ? (
+              <>
+                <MessageContainer>
+                  <RingContainer>
+                    {" "}
+                    <Ring color="#ff5000" size={30} />{" "}
+                  </RingContainer>
+                </MessageContainer>
+              </>
+            ) : (
+              <>
+                <JobsFormContainer>
                   <Form
                     onSubmit={handleSubmit}
                     initial={{ opacity: 0 }}
@@ -158,86 +162,124 @@ const ContactMobile = () => {
                       required
                     />
 
-                    <InputText
+                    <Input
                       className="form-item"
                       placeholder={
                         language === "es" ? esPlaceholder[2] : enPlaceholder[2]
                       }
-                      value={contact.comments}
+                      value={contact.phoneNumber}
                       onChange={handleChange}
-                      name="comments"
+                      name="phoneNumber"
                       type="text"
                       required
                     />
 
+                    <Input
+                      className="form-item"
+                      placeholder={
+                        language === "es" ? esPlaceholder[3] : enPlaceholder[3]
+                      }
+                      value={contact.jopPosition}
+                      onChange={handleChange}
+                      name="jopPosition"
+                      type="text"
+                      required
+                    />
+
+                    {/* <input type="file" onChange={handleFileSelect} />
+            {selectedFile ? (
+              <>
+                <p style={{ color: "red" }}>{selectedFile.name}</p>
+              </>
+            ) : (
+              <></>
+            )} */}
+
                     <button type="submit" className="bottom-form">
                       <p>
                         {" "}
-                        <FormattedMessage id="contactmobile.button" />
+                        <FormattedMessage id="jobsform.button" />
                       </p>
                     </button>
                   </Form>
-                </>
-              )}
-            </>
-          )}
-        </ContactContainer>
-      </ContactSection>
+                </JobsFormContainer>
+              </>
+            )}
+          </>
+        )}
+      </JobsFormSection>
     </>
   );
 };
 
-const ContactSection = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
-const ContactContainer = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 150px;
-  justify-content: center !important;
-`;
+const JobsFormSection = styled.div`
+  position: fixed;
+  right: 100px;
+  z-index: 100;
 
-const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 45px;
-  color: white;
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #1b1b1b;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+`;
+const JobsFormContainer = styled.div`
+  width: 409px;
 
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    width: 70%;
   }
-  h2 {
-    font-size: 18px;
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 80px;
+    bottom: 0px;
+    width: 100%;
   }
-  p {
-    font-size: 11px;
-    margin-top: -10px;
-    margin-bottom: 40px;
+  @media only screen and (max-width: 600px) {
+    padding-left: 30px;
   }
 `;
 
 const Form = styled.form`
   list-style: none;
   text-decoration: none !important;
-  font-size: 20px !important;
   text-align: center;
   align-items: flex-start;
-  padding-left: 35px;
-  font-weight: 300;
-  letter-spacing: 2px;
   vertical-align: middle !important;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 1200px) {
+    max-width: 600px;
+    min-width: 500px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 0px;
+
+    min-width: 500px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    padding-left: 0px;
+
+    min-width: 400px;
+  }
 
   button {
     margin-top: 15px;
-    margin-bottom: 50px;
     width: 150px;
     height: 38px;
     background-color: black;
@@ -252,28 +294,50 @@ const Form = styled.form`
       font-style: normal;
       font-weight: 600;
     }
+
+    @media only screen and (max-width: 1200px) {
+      width: 120px;
+      height: 32px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 12px;
+      }
+    }
   }
 `;
 
 const Input = styled.input`
-  width: 82%;
-  height: 33px;
+  width: 90%;
+  height: 40px;
   margin: 7px 0;
-  background-color: black;
+  background-color: #282828;
   border-radius: 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid #282828;
   color: #ffffff;
   padding-left: 15px;
+  font-size: 14px !important;
+
+  @media only screen and (max-width: 1200px) {
+    width: 70%;
+    height: 35px;
+    margin: 5px 0;
+  }
 `;
 
-const InputText = styled.input`
-  width: 82%;
-  height: 80px;
+const InputFile = styled.input`
+  width: 80%;
+  height: 40px;
   margin: 7px 0;
-  background-color: black;
-  border-radius: 20px;
-  border: 1px solid #ffffff;
+
+  color: white;
   padding-left: 15px;
+  font-size: 14px !important;
+
+  button {
+    background-color: yellow;
+  }
 `;
 
 const Message = styled.div`
@@ -352,6 +416,11 @@ const MessageContainer = styled.div`
   justify-content: center !important;
   align-items: center;
   padding-top: 150px;
+
+  @media only screen and (max-width: 1200px) {
+    justify-self: center !important;
+    align-self: center;
+  }
 `;
 
 const RingContainer = styled.div`
@@ -361,4 +430,4 @@ const RingContainer = styled.div`
   margin-top: -80px;
 `;
 
-export default ContactMobile;
+export default JobsForm;

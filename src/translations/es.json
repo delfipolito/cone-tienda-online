@@ -197,5 +197,40 @@
   "jobs.3.text": "La posicion de Jr. Technical Support proporcionará asistencia técnica a los clientes y colaboradores a problemas relacionados con el software. Diagnosticará y solucionará problemas técnicos, escalándolos según sea necesario con personal de Soporte Técnico Sr.",
 
   "jobs.4.title": "UI Designer Jr",
-  "jobs.4.text": "El equipo de Product Design es el responsable de prototipar los productos que resuelven los problemas de los clientes. A través de brainstormings, sketching, documentación de flujos, prototipos interactivos, y trabajo con desarrolladores para realizar los diseños. Desde la idea inicial hasta los wireframes en alta del producto final."
+  "jobs.4.text": "El equipo de Product Design es el responsable de prototipar los productos que resuelven los problemas de los clientes. A través de brainstormings, sketching, documentación de flujos, prototipos interactivos, y trabajo con desarrolladores para realizar los diseños. Desde la idea inicial hasta los wireframes en alta del producto final.",
+
+
+"getintouch.title":"Contactanos!",
+
+"getintouch.subtitle":"Nos pondremos en contacto lo antes posible.",
+
+"getintouch.1":"Nombre & Apellido",
+"getintouch.2":"E-Mail",
+"getintouch.3":"Número de telefono",
+"getintouch.4":"País",
+"getintouch.5":"Posición",
+"getintouch.6":"Industria",
+"getintouch.7":"Comentarios",
+"getintouch.button":"Enviar",
+
+
+"getintouch.thanks.title":"Muchas gracias!",
+"getintouch.thanks.subtitle":"La informacion fue enviada correctamente",
+"getintouch.close.button":"Cerrar",
+
+"getintouch.wrong.title":"Algo salió mal.",
+"getintouch.wrong.subtitle":"Perdón, soy yo, no vos. Dejame intentar denuevo.",
+"getintouch.refresh.button":"Refrescar página",
+
+"getintouch.bad.title":"Bad request.",
+"getintouch.bad.subtitle":"Error 400 <br/> Esta página no esta funcionando. Por favor intenta más tarde.",
+
+
+"contactmobile.title":"Contactanos",
+"contactmobile.subtitle1":"ponte en contacto con nosotros!",
+"contactmobile.subtitle2":"Lo contactaremos a la brevedad.",
+"contactmobile.button":"Enviar",
+
+"jobsform.button":"Aplicar"
+
 }

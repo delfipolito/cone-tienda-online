@@ -14,7 +14,9 @@ const Solutions = () => {
       </BackgroundVideo>
       <Element name="solutions">
         <AnimatedText>
-          <SolutionsTitle id="solutions">
+          <SolutionsTitle 
+          id="solutions"
+          >
             {' '}
             <FormattedMessage id="solution.title" />
           </SolutionsTitle>

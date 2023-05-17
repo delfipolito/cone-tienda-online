@@ -209,6 +209,42 @@
 "jobs.3.text":"The Jr. Technical Support position will provide technical assistance to customers and partners for software-related issues. You will diagnose and solve technical problems, escalating them as necessary with Sr. Technical Support personnel.",
 
 "jobs.4.title":"UI Designer Jr",
-"jobs.4.text":"The Product Design team is responsible for prototyping products that solve customer problems. Through brainstorming, sketching, flow documentation, interactive prototypes, and working with developers to make the designs. From the initial idea to the wireframes for the final product."
+"jobs.4.text":"The Product Design team is responsible for prototyping products that solve customer problems. Through brainstorming, sketching, flow documentation, interactive prototypes, and working with developers to make the designs. From the initial idea to the wireframes for the final product.",
+
+
+"getintouch.title":"Get in touch!",
+
+"getintouch.subtitle":"We will contact you as soon as possible.",
+
+"getintouch.form.1":"Name & Last Name",
+"getintouch.2":"E-Mail",
+"getintouch.3":"Phone Number",
+"getintouch.4":"Country",
+"getintouch.5":"Job Position",
+"getintouch.6":"Industry",
+"getintouch.7":"Comments",
+"getintouch.button":"Send",
+
+
+"getintouch.thanks.title":"Thanks!",
+"getintouch.thanks.subtitle":"Your information was sent successfully.",
+"getintouch.close.button":"Close",
+
+"getintouch.wrong.title":"Something went wrong.",
+"getintouch.wrong.subtitle":"Sorry, it's me, not you. Let me try again.",
+"getintouch.refresh.button":"Refresh page",
+
+"getintouch.bad.title":"Bad request.",
+"getintouch.bad.subtitle":"Error 400 <br/> This page isn't working. Please try later.",
+
+
+
+"contactmobile.title":"Contact Us",
+"contactmobile.subtitle1":"get in touch with us!",
+"contactmobile.subtitle2":"We will contact you shortly.",
+"contactmobile.button":"Send",
+
+"jobsform.button":"Apply"
+
 
 }
