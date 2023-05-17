@@ -218,14 +218,19 @@
 "getintouch.thanks.subtitle":"La informacion fue enviada correctamente",
 "getintouch.close.button":"Cerrar",
 
-"getintouch.wrong.title":"Something went wrong.",
+"getintouch.wrong.title":"Algo salió mal.",
 "getintouch.wrong.subtitle":"Perdón, soy yo, no vos. Dejame intentar denuevo.",
 "getintouch.refresh.button":"Refrescar página",
 
 "getintouch.bad.title":"Bad request.",
-"getintouch.bad.subtitle":"Error 400 <br/> Esta página no esta funcionando. Por favor intenta más tarde."
+"getintouch.bad.subtitle":"Error 400 <br/> Esta página no esta funcionando. Por favor intenta más tarde.",
 
 
+"contactmobile.title":"Contactanos",
+"contactmobile.subtitle1":"ponte en contacto con nosotros!",
+"contactmobile.subtitle2":"Lo contactaremos a la brevedad.",
+"contactmobile.button":"Enviar",
 
+"jobsform.button":"Aplicar"
 
 }

@@ -16,11 +16,12 @@ const Modal = ({ open, onClose }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [messageError, setMessageError] = useState(false);
   const [refresh, setRefresh] = useState(false);
-  const [language, setLanguage] = useState("")
+  const [language, setLanguage] = useState("");
   const controls = useAnimation();
   const { ref, inView } = useInView();
+
   useEffect(() => {
-    setLanguage(localStorage.getItem("locale"))
+    setLanguage(localStorage.getItem("locale"));
     if (inView || open) {
       controls.start("visible");
     }
@@ -30,7 +31,6 @@ const Modal = ({ open, onClose }) => {
   }, [controls, inView, open]);
 
   if (!open) return null;
-
 
   const handleRefresh = () => {
     setRefresh(true);
@@ -58,18 +58,15 @@ const Modal = ({ open, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-
-   try {
- 
+    try {
       emailjs
         .send(
-          `service_lsilwkf`,
-          `template_zefnjzw`,
+          `service_mgl9rwi`,
+          `template_h1xkft1`,
           contact,
-          `F-wmz4d9VI_6zEds5`
+          `unlrlZtJhRdSyvGxq`
         )
         .then(
-          //200
           (response) => {
             console.log(`SUCCESS!`, response.status, response.text);
             setContact(frmContact);
@@ -77,21 +74,35 @@ const Modal = ({ open, onClose }) => {
             setMessageSent(true);
           },
           (err) => {
-            //404?
             console.log(`FAILED...`, err);
             setSending(false);
             setMessageError(true);
           }
         );
     } catch {
-      //bad request
       setSending(false);
       setMessageError(true);
     }
   };
 
-  const enPlaceholder = ["Name & Last Name", "E-mail", "Phone Number", "Country", "Job Position", "Industry", "Comments"]
-  const esPlaceholder = ["Nombre & Apellido", "E-mail", "Teléfono", "País", "Posición de trabajo", "Industria", "Comentarios"]
+  const enPlaceholder = [
+    "Name & Last Name",
+    "E-mail",
+    "Phone Number",
+    "Country",
+    "Job Position",
+    "Industry",
+    "Comments",
+  ];
+  const esPlaceholder = [
+    "Nombre & Apellido",
+    "E-mail",
+    "Teléfono",
+    "País",
+    "Posición de trabajo",
+    "Industria",
+    "Comentarios",
+  ];
 
   return (
     <>
@@ -196,68 +207,96 @@ const Modal = ({ open, onClose }) => {
                       >
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[0] : enPlaceholder[0]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[0]
+                              : enPlaceholder[0]
+                          }
                           type="text"
                           required
                           value={contact.nameLastname}
-                          name="userName"
+                          name="nameLastname"
                           onChange={handleChange}
                         />
 
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[1] : enPlaceholder[1]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[1]
+                              : enPlaceholder[1]
+                          }
                           value={contact.email}
                           onChange={handleChange}
-                          name="userEmail"
+                          name="email"
                           type="text"
                           required
                         />
 
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[2] : enPlaceholder[2]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[2]
+                              : enPlaceholder[2]
+                          }
                           value={contact.phoneNumber}
                           onChange={handleChange}
-                          name="message"
+                          name="phoneNumber"
                           type="text"
                           required
                         />
 
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[3] : enPlaceholder[3]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[3]
+                              : enPlaceholder[3]
+                          }
                           value={contact.country}
                           onChange={handleChange}
-                          name="userEmail"
+                          name="country"
                           type="text"
                           required
                         />
 
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[4] : enPlaceholder[4]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[4]
+                              : enPlaceholder[4]
+                          }
                           value={contact.jopPosition}
                           onChange={handleChange}
-                          name="message"
+                          name="jopPosition"
                           type="text"
                           required
                         />
                         <Input
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[5] : enPlaceholder[5]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[5]
+                              : enPlaceholder[5]
+                          }
                           value={contact.industry}
                           onChange={handleChange}
-                          name="message"
+                          name="industry"
                           type="text"
                           required
                         />
                         <InputText
                           className="form-item"
-                          placeholder={language === "es" ? esPlaceholder[6] : enPlaceholder[6]}
+                          placeholder={
+                            language === "es"
+                              ? esPlaceholder[6]
+                              : enPlaceholder[6]
+                          }
                           value={contact.comments}
                           onChange={handleChange}
-                          name="message"
+                          name="comments"
                           type="text"
                           required
                         />

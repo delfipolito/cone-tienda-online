@@ -235,10 +235,16 @@
 "getintouch.refresh.button":"Refresh page",
 
 "getintouch.bad.title":"Bad request.",
-"getintouch.bad.subtitle":"Error 400 <br/> This page isn't working. Please try later."
+"getintouch.bad.subtitle":"Error 400 <br/> This page isn't working. Please try later.",
 
 
 
+"contactmobile.title":"Contact Us",
+"contactmobile.subtitle1":"get in touch with us!",
+"contactmobile.subtitle2":"We will contact you shortly.",
+"contactmobile.button":"Send",
+
+"jobsform.button":"Apply"
 
 
 }
