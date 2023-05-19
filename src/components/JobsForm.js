@@ -48,10 +48,10 @@ const JobsForm = () => {
     try {
       emailjs
         .send(
-          `service_mgl9rwi`,
-          `template_9opjiwc`,
+          `service_yshmxgg`,
+          `template_4srxrsh`,
           contact,
-          `unlrlZtJhRdSyvGxq`
+          `m3Y00BZOBHKvMvcqx`
         )
         .then(
           (response) => {

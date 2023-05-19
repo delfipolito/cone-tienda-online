@@ -42,10 +42,10 @@ const ContactMobile = () => {
     try {
       emailjs
         .send(
-          `service_mgl9rwi`,
-          `template_h1xkft1`,
+          `service_yshmxgg`,
+          `template_zwzz4ds`,
           contact,
-          `unlrlZtJhRdSyvGxq`
+          `m3Y00BZOBHKvMvcqx`
         )
         .then(
           (response) => {
